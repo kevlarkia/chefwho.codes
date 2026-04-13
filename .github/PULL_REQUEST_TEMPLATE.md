@@ -4,7 +4,7 @@
 
 ## Changes
 
-- 
+- (describe key changes)
 
 ## Validation
 

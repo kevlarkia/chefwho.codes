@@ -20,8 +20,8 @@ Any alternatives evaluated?
 
 ## Acceptance Criteria
 
-- [ ] 
-- [ ] 
+- [ ]
+- [ ]
 
 ## Additional Context
 
