@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -11,20 +12,18 @@ export default function ContactPage() {
     <section className="content-card">
       <h1>Contact</h1>
       <p>
-        Ready to collaborate? This starter keeps contact simple until forms and
-        automation are connected.
+        Ready to collaborate? Send a message through the form below and I will
+        get back to you.
       </p>
+      <ContactForm />
       <div className="actions">
-        <a className="primary-button" href="mailto:hello@chefwho.codes">
-          Email hello@chefwho.codes
-        </a>
         <Link className="secondary-button" href="/">
           Back home
         </Link>
       </div>
       <p className="note">
-        Tip: replace this with a hosted form endpoint, CRM integration, or
-        scheduling link as your workflow matures.
+        Tip: for production, connect this endpoint to your email provider or
+        CRM and add rate limiting.
       </p>
     </section>
   );

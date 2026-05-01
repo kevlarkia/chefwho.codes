@@ -212,6 +212,119 @@ h1 {
   color: var(--muted);
 }
 
+.post-title {
+  margin: 0;
+}
+
+.post-link:hover {
+  color: var(--accent);
+}
+
+.post-link-inline {
+  color: var(--accent-soft);
+  font-weight: 600;
+}
+
+.post-link-inline:hover {
+  color: var(--accent);
+}
+
+.post-content {
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  border-radius: 0.8rem;
+  padding: 1.2rem;
+}
+
+.post-content p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.post-content h2,
+.post-content h3 {
+  color: var(--text);
+  margin-top: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.post-content code {
+  background: #1a2330;
+  border-radius: 0.35rem;
+  padding: 0.1rem 0.35rem;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.post-content pre {
+  overflow-x: auto;
+  background: #121923;
+  border: 1px solid #253043;
+  border-radius: 0.7rem;
+  padding: 0.9rem;
+}
+
+.post-content pre code {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.post-content a {
+  color: var(--accent-soft);
+}
+
+.post-content a:hover {
+  color: var(--accent);
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact-field label {
+  font-weight: 600;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  background: #0f1319;
+  color: var(--text);
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 1px;
+}
+
+.form-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.form-feedback {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--accent-soft);
+}
+
+.form-feedback.error {
+  color: #ff8b8b;
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   color: var(--muted);
