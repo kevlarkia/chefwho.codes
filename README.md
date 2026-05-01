@@ -74,10 +74,40 @@ npm run lint
 - `/about`
 - `/contact`
 - `/blog`
+- `/blog/[slug]`
+- `/api/contact` (POST)
+
+## Blog Content
+
+Posts are loaded from markdown files in `content/blog`.
+
+Each post file supports front matter:
+
+```md
+---
+title: "Post title"
+date: "2026-05-01"
+summary: "One-line summary"
+---
+```
+
+## Contact Form
+
+The contact form submits to `POST /api/contact`.
+
+Required runtime env var:
+
+- `CONTACT_EMAIL_TO` (destination inbox)
+
+Optional env vars:
+
+- `CONTACT_EMAIL_FROM` (defaults to `no-reply@chefwho.codes`)
+- `CONTACT_SENDGRID_API_KEY` (if set, SendGrid is used to deliver email)
+
+If SendGrid is not configured, the endpoint logs payload server-side and returns
+success so local development is unblocked.
 
 ## Next Recommended Enhancements
 
-- Add content source for blog posts (MDX or CMS)
 - Add analytics and SEO metadata strategy
-- Add form backend for contact submissions
 - Add automated tests and coverage
