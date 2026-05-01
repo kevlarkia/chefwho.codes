@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { getAllPostMetadata } from "@/lib/posts";
+import { getAllPostsMeta } from "@/lib/posts";
 
-export default function BlogPage() {
-  const posts = getAllPostMetadata();
+export default async function BlogPage() {
+  const posts = await getAllPostsMeta();
 
   return (
     <section className="panel">

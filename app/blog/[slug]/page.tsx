@@ -1,21 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPostBySlug, getPostSlugs } from "@/lib/posts";
+import { getAllPostsMeta, getPostBySlug } from "@/lib/posts";
 
-type PostPageProps = {
-  params: Promise<{ slug: string }>;
-};
+type PostPageProps = { params: { slug: string } };
 
 export async function generateStaticParams() {
-  return getPostSlugs().map((slug) => ({ slug }));
+  const posts = await getAllPostsMeta();
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const post = await getPostBySlug(slug);
+  const post = await getPostBySlug(params.slug);
 
   if (!post) {
     return {
@@ -30,8 +28,7 @@ export async function generateMetadata({
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const { slug } = await params;
-  const post = await getPostBySlug(slug);
+  const post = await getPostBySlug(params.slug);
 
   if (!post) {
     notFound();
@@ -39,12 +36,12 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <article className="panel post-article">
-      <p className="post-date">{post.dateLabel}</p>
+      <p className="post-date">{post.date}</p>
       <h1>{post.title}</h1>
       <p className="lede">{post.summary}</p>
       <div
         className="post-body"
-        dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+        dangerouslySetInnerHTML={{ __html: post.html }}
       />
       <p>
         <Link href="/blog">← Back to blog</Link>
