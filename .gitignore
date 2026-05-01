@@ -17,6 +17,7 @@ build/
 out/
 .cache/
 coverage/
+*.tsbuildinfo
 
 # OS/editor noise
 .DS_Store

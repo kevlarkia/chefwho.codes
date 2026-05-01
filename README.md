@@ -2,15 +2,17 @@
 
 Personal site and codebase for **chefwho.codes**.
 
+## Stack
+
+- [Next.js](https://nextjs.org/) (App Router)
+- React
+- TypeScript
+- ESLint (flat config via `eslint-config-next`)
+
 ## Project Status
 
-This repository is currently in bootstrap mode with foundational engineering
-standards in place:
-
-- repository hygiene files (`.gitignore`, `.editorconfig`, `LICENSE`)
-- GitHub collaboration templates (issues + pull request)
-- CI checks for markdown and workflow quality
-- Dependabot for GitHub Actions updates
+This repository includes both foundational engineering standards and a runnable
+website scaffold.
 
 ## Development Workflow
 
@@ -26,18 +28,56 @@ GitHub Actions runs on push and pull request:
 - Markdown linting
 - GitHub Actions workflow linting (`actionlint`)
 
+## Local Development
+
+### Prerequisites
+
+- Node.js 20+
+- npm 10+
+
+### Install
+
+```bash
+npm install
+```
+
+### Run development server
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:3000`.
+
+### Build and run production mode
+
+```bash
+npm run build
+npm run start
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
 ## Security and Secrets
 
 - Never commit production secrets.
 - Use `.env.example` as the contract for required environment variables.
 - Store real secrets in deployment platform and GitHub repository secrets.
 
-## Next Recommended Setup
+## Routes Included
 
-Pick and scaffold a web stack (for example Next.js, Astro, or Eleventy), then
-add:
+- `/` (home)
+- `/about`
+- `/contact`
+- `/blog`
 
-- runtime version pinning (`.nvmrc`, etc.)
-- formatter/linter config for the selected stack
-- automated tests and coverage
-- deployment workflow (Vercel, Netlify, or GitHub Pages)
+## Next Recommended Enhancements
+
+- Add content source for blog posts (MDX or CMS)
+- Add analytics and SEO metadata strategy
+- Add form backend for contact submissions
+- Add automated tests and coverage
