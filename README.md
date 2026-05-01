@@ -9,6 +9,11 @@ Personal site and codebase for **chefwho.codes**.
 - TypeScript
 - ESLint (flat config via `eslint-config-next`)
 
+## Project Status
+
+This repository includes both foundational engineering standards and a runnable
+website scaffold.
+
 ## Development Workflow
 
 1. Create a feature branch from `main`.
