@@ -101,7 +101,7 @@ Required runtime env var:
 
 Optional env vars:
 
-- `CONTACT_EMAIL_FROM` (defaults to `no-reply@chefwho.codes`)
+- `CONTACT_SENDER_EMAIL` (defaults to `no-reply@chefwho.codes`)
 - `CONTACT_SENDGRID_API_KEY` (if set, SendGrid is used to deliver email)
 - `CONTACT_RATE_LIMIT_WINDOW_SECONDS` (defaults to `60`)
 - `CONTACT_RATE_LIMIT_MAX_REQUESTS` (defaults to `5`)

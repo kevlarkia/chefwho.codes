@@ -192,9 +192,9 @@ export async function POST(request: Request) {
     );
   }
 
-  const recipientEmail = normalizeString(process.env.CONTACT_EMAIL_TO);
+  const recipientEmail = normalizeString(process.env.CONTACT_RECIPIENT_EMAIL);
   const senderEmail =
-    normalizeString(process.env.CONTACT_EMAIL_FROM) || "no-reply@chefwho.codes";
+    normalizeString(process.env.CONTACT_SENDER_EMAIL) || "no-reply@chefwho.codes";
   const hasSendGridConfig =
     Boolean(normalizeString(process.env.CONTACT_SENDGRID_API_KEY)) &&
     recipientEmail.length > 0;
