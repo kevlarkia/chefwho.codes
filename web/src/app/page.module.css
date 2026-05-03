@@ -1,0 +1,18 @@
+.main {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  padding: 56px 20px;
+  font-family: var(--font-geist-sans);
+}
+
+.title {
+  font-size: clamp(2rem, 6vw, 3rem);
+  letter-spacing: -0.04em;
+}
+
+.subtitle {
+  color: color-mix(in oklab, var(--foreground), transparent 30%);
+  line-height: 1.5;
+}
