@@ -97,12 +97,14 @@ The contact form submits to `POST /api/contact`.
 
 Required runtime env var:
 
-- `CONTACT_EMAIL_TO` (destination inbox)
+- `CONTACT_RECIPIENT_EMAIL` (destination inbox)
 
 Optional env vars:
 
-- `CONTACT_EMAIL_FROM` (defaults to `no-reply@chefwho.codes`)
+- `CONTACT_SENDER_EMAIL` (defaults to `no-reply@chefwho.codes`)
 - `CONTACT_SENDGRID_API_KEY` (if set, SendGrid is used to deliver email)
+- `CONTACT_RATE_LIMIT_WINDOW_SECONDS` (defaults to `60`)
+- `CONTACT_RATE_LIMIT_MAX_REQUESTS` (defaults to `5`)
 
 If SendGrid is not configured, the endpoint logs payload server-side and returns
 success so local development is unblocked.
