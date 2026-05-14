@@ -62,7 +62,7 @@ export default function ContactForm() {
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
-      <label className="field">
+      <label className="contact-field">
         Name
         <input
           name="name"
@@ -74,7 +74,7 @@ export default function ContactForm() {
         />
       </label>
 
-      <label className="field">
+      <label className="contact-field">
         Email
         <input
           name="email"
@@ -85,7 +85,7 @@ export default function ContactForm() {
         />
       </label>
 
-      <label className="field">
+      <label className="contact-field">
         Message
         <textarea
           name="message"
@@ -103,9 +103,7 @@ export default function ContactForm() {
 
       {state.message ? (
         <p
-          className={
-            state.status === "error" ? "form-status form-status-error" : "form-status"
-          }
+          className={state.status === "error" ? "form-feedback error" : "form-feedback"}
           role="status"
         >
           {state.message}
