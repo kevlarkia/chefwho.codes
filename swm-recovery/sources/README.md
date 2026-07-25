@@ -35,4 +35,3 @@ Each `SOURCE-META.md` should record:
 
 Do not commit secrets, credentials, or private relationship / medical /
 legal / crisis materials. `content/` is gitignored.
-
