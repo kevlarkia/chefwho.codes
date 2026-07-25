@@ -3,13 +3,23 @@
 Place only **explicitly authorized** SWM source materials here before
 running Prompts 1–5.
 
+## Active bundles
+
+| Bundle | Focus | Index |
+| --- | --- | --- |
+| [`brand-assets/`](brand-assets/) | Logos & visuals (9 authorized Mac paths) | [AUTHORIZED_SOURCE_INDEX.md](brand-assets/AUTHORIZED_SOURCE_INDEX.md) |
+
+Mac ingest helper (run locally):
+`brand-assets/INGEST_FROM_MAC.sh`
+
 Suggested layout:
 
 ```text
 sources/
-  SRC-001-<short-name>/
-    original-file-or-export
-    SOURCE-META.md
+  <bundle>/
+    SRC-...-<short-name>/
+      SOURCE-META.md
+      content/          # gitignored originals
 ```
 
 Each `SOURCE-META.md` should record:
@@ -24,4 +34,5 @@ Each `SOURCE-META.md` should record:
 - Authorization note
 
 Do not commit secrets, credentials, or private relationship / medical /
-legal / crisis materials.
+legal / crisis materials. `content/` is gitignored.
+

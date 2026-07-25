@@ -62,8 +62,13 @@ Commands: `/swm-extract`, `/swm-harvest-prompts`,
 
 ## Current recovery status
 
-See [`runs/000-bootstrap-gap-assessment.md`](runs/000-bootstrap-gap-assessment.md)
-for the initial gap assessment (no authorized SWM sources available yet).
+| Run | Focus | Status |
+| --- | --- | --- |
+| [`000`](runs/000-bootstrap-gap-assessment.md) | Bootstrap environment probe | Complete — no sources then |
+| [`001`](runs/001-brand-assets-source-authorization.md) | Brand Assets (9 Mac paths) | Authorized; **pending ingest** |
+
+Brand source index:
+[`sources/brand-assets/AUTHORIZED_SOURCE_INDEX.md`](sources/brand-assets/AUTHORIZED_SOURCE_INDEX.md)
 
 ## Scope boundary
 
