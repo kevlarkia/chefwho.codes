@@ -4,29 +4,44 @@
 
 ### Project status
 
-This repository is in bootstrap mode — no application framework or runtime
-dependencies exist yet. The `.gitignore` and CI pipeline anticipate a Node.js
-stack. See `README.md` § "Next Recommended Setup" for planned next steps.
+This repository is a runnable **Next.js 16 (App Router)** personal site
+(`chefwho.codes`) written in TypeScript/React. Runtime dependencies live in
+`package.json` and are locked via `package-lock.json`. Standard scripts and
+routes are documented in `README.md`.
+
+### Services
+
+There is a single service: the Next.js web app. Routes include `/`,
+`/about`, `/contact`, `/blog`, `/blog/[slug]`, and the `POST /api/contact`
+endpoint. Blog posts are markdown files in `content/blog`.
 
 ### Quality gates (lint / test / build)
 
-The only CI checks are linting — no tests or builds to run.
+Use the scripts in `package.json`:
 
-- **Markdown lint:** `markdownlint-cli2 "**/*.md"` — runs on all `.md`
-  files. Pre-existing warning in
-  `.github/PULL_REQUEST_TEMPLATE.md` (MD041).
-- **Workflow lint:** `actionlint` — lints
-  `.github/workflows/*.yml`.
+- **Lint:** `npm run lint` (ESLint flat config via `eslint-config-next`).
+- **Typecheck:** `npm run typecheck` (`tsc --noEmit`).
+- **Build:** `npm run build` (`next build`).
+- **Dev server:** `npm run dev` — serves on `http://localhost:3000`.
+
+There are no automated unit/integration tests in the repo yet.
+
+CI (`.github/workflows/ci.yml`) only runs markdown lint
+(`markdownlint-cli2`) and workflow lint (`actionlint`); it does not run the
+Node build/lint. Keep any `.md` edits under 80 columns to satisfy the
+default markdownlint rules.
 
 ### Environment variables
 
-Copy `.env.example` to `.env` for local development. Currently only
-`SITE_URL` is defined.
+Copy `.env.example` to `.env` for local development. `SITE_URL` plus the
+contact-form vars (`CONTACT_RECIPIENT_EMAIL`, `CONTACT_SENDER_EMAIL`, etc.)
+are defined there. See `README.md` § "Contact Form" for details.
 
 ### Gotchas
 
-- `actionlint` is a standalone Go binary installed to `/usr/local/bin`;
-  the update script re-downloads it on each session start if missing.
-- `markdownlint-cli2` is installed globally via npm.
-- There is no `package.json` in the repo yet, so `npm install` at the
-  root is a no-op until a web stack is scaffolded.
+- The `POST /api/contact` endpoint is log-only unless
+  `CONTACT_SENDGRID_API_KEY` is set: it validates input, logs the payload
+  server-side, and returns success so local development is unblocked. No
+  real email is sent without SendGrid configured.
+- `actionlint` and `markdownlint-cli2` are only needed to reproduce CI
+  locally; they are not part of the app's `npm` dependencies.
