@@ -72,7 +72,8 @@ npm run lint
 
 - `/` (home)
 - `/about`
-- `/swm`
+- `/smart-workforce`
+- `/swm` (alias redirect)
 - `/contact`
 - `/blog`
 - `/blog/[slug]`
