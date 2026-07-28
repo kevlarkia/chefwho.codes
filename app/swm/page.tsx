@@ -16,8 +16,8 @@ export default function SmartWorkforceSystemPage() {
     <section className="content-card">
       <h1>Smart Workforce System</h1>
       <p>
-        The Smart Workforce System (SWM) workspace is now connected into the
-        site and ready for next-phase implementation updates.
+        The Smart Workforce System workspace is now connected into the site and
+        ready for next-phase implementation updates.
       </p>
       <ul className="card-list">
         {readinessItems.map((item) => (
