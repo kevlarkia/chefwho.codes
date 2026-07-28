@@ -72,6 +72,7 @@ npm run lint
 
 - `/` (home)
 - `/about`
+- `/swm`
 - `/contact`
 - `/blog`
 - `/blog/[slug]`

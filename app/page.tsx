@@ -1,6 +1,7 @@
 const highlights = [
   "Built with Next.js App Router and TypeScript",
   "Ready-to-edit Home, About, Contact, and Blog pages",
+  "Smart Workforce System page wired in and ready for rollout",
   "CI-enabled repository with templates and security docs",
 ];
 
