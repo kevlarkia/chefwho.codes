@@ -1,0 +1,26 @@
+{
+  "name": "swm-extraction",
+  "displayName": "SWM Extraction Suite",
+  "version": "1.0.0",
+  "description": "Recovery-first SWM forensic extraction prompts with canon gate disabled. Optimized for AI processing, strict tables, and anti-hallucination boundaries.",
+  "author": {
+    "name": "F.C Fernandez"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "swm",
+    "extraction",
+    "recovery-first",
+    "systems-archaeology",
+    "prompt-suite"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "recovery",
+    "forensics",
+    "swm"
+  ],
+  "commands": "./commands/",
+  "rules": "./rules/",
+  "skills": "./skills/"
+}

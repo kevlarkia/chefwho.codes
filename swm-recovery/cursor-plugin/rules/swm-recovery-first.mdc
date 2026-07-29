@@ -1,0 +1,24 @@
+---
+description: SWM recovery-first operating mode — canon gate disabled during extraction
+alwaysApply: false
+globs:
+  - swm-recovery/**/*
+---
+
+# SWM recovery-first mode
+
+When working under `swm-recovery/` or when the user invokes SWM extraction
+commands:
+
+1. Treat the task as extraction, not verification, approval, or canonization.
+2. Do not reject material for conflict, age, experimental status, or missing
+   governance labels.
+3. Do not resolve conflicts; set resolution to
+   `DEFERRED — EXTRACTION PHASE`.
+4. Do not invent missing prompts, architecture, or business facts.
+5. Prefer `REFERENCE-ONLY`, `INCOMPLETE`, `UNCERTAIN`, or Gap Register entries
+   over speculation.
+6. Isolate SWM business material from legal, medical, crisis, or private
+   relationship material.
+7. Process only supplied or specifically authorized sources.
+8. Use exactly one evidence label per extracted item.

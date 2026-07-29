@@ -26,3 +26,8 @@ Thumbs.db
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
+
+# SWM recovery: keep source metadata; ignore proprietary ingested originals
+swm-recovery/sources/**/content/**
+!swm-recovery/sources/**/content/README.md
+
