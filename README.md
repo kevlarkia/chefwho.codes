@@ -109,6 +109,13 @@ Optional env vars:
 If SendGrid is not configured, the endpoint logs payload server-side and returns
 success so local development is unblocked.
 
+## Agent and systems hygiene
+
+- Cursor / cloud agents: see `AGENTS.md` (must stay truthful to the stack).
+- Cross-ecosystem maintenance (AI instructions, CLOUT routing, Drive/disk
+  tidy): see `docs/SYSTEMS_HEALTH.md`.
+- SWM recovery toolkit: see `swm-recovery/README.md`.
+
 ## Next Recommended Enhancements
 
 - Add analytics and SEO metadata strategy

@@ -2,31 +2,69 @@
 
 ## Cursor Cloud specific instructions
 
-### Project status
+### Project overview
 
-This repository is in bootstrap mode — no application framework or runtime
-dependencies exist yet. The `.gitignore` and CI pipeline anticipate a Node.js
-stack. See `README.md` § "Next Recommended Setup" for planned next steps.
+Next.js 16 personal site for **chefwho.codes** (App Router, React 19,
+TypeScript). Blog posts live in `content/blog/*.md`. The contact form
+degrades gracefully when SendGrid is unset.
 
-### Quality gates (lint / test / build)
+This repo also hosts the **SWM recovery toolkit** under `swm-recovery/`
+(extraction prompts, register templates, Cursor plugin). Treat that tree
+as operational recovery tooling, separate from the public site product.
 
-The only CI checks are linting — no tests or builds to run.
+### Quality gates
 
-- **Markdown lint:** `markdownlint-cli2 "**/*.md"` — runs on all `.md`
-  files. Pre-existing warning in
-  `.github/PULL_REQUEST_TEMPLATE.md` (MD041).
-- **Workflow lint:** `actionlint` — lints
-  `.github/workflows/*.yml`.
+| Check | Command | CI |
+| --- | --- | --- |
+| Markdown lint | `markdownlint-cli2 "**/*.md" "#node_modules"` | Yes |
+| Workflow lint | `actionlint` | Yes |
+| ESLint | `npm run lint` | Local / PR hygiene |
+| TypeScript | `npm run typecheck` | Local / PR hygiene |
+| Build | `npm run build` | Local / PR hygiene |
+
+Pre-existing MD041 warning in `.github/PULL_REQUEST_TEMPLATE.md` — safe
+to ignore.
+
+### Running the dev server
+
+```bash
+cp .env.example .env   # first time only
+npm install
+npm run dev            # http://localhost:3000
+```
 
 ### Environment variables
 
-Copy `.env.example` to `.env` for local development. Currently only
-`SITE_URL` is defined.
+Copy `.env.example` to `.env`. See `README.md` § "Contact Form" for the
+full list. No secrets are required for local development.
+
+### Repository map
+
+| Path | Role |
+| --- | --- |
+| `app/` | Next.js App Router pages and API routes |
+| `content/blog/` | Markdown blog posts |
+| `lib/` | Shared TypeScript helpers |
+| `swm-recovery/` | SWM extraction suite (prompts, templates, plugin) |
+| `docs/SYSTEMS_HEALTH.md` | Ecosystem maintenance runbook for AI + operator hygiene |
 
 ### Gotchas
 
 - `actionlint` is a standalone Go binary installed to `/usr/local/bin`;
   the update script re-downloads it on each session start if missing.
-- `markdownlint-cli2` is installed globally via npm.
-- There is no `package.json` in the repo yet, so `npm install` at the
-  root is a no-op until a web stack is scaffolded.
+- `markdownlint-cli2` is installed globally via npm. When running it
+  locally, pass `"#node_modules"` to exclude `node_modules/`.
+- The blog `[slug]` route uses Next.js 16 async params — `params` is a
+  `Promise` and must be awaited.
+- SWM brand sources are authorized but Mac-local (`/Users/fcaf/...`).
+  Cloud agents cannot ingest them until the operator runs
+  `swm-recovery/sources/brand-assets/INGEST_FROM_MAC.sh` and commits
+  metadata (content stays gitignored).
+- Keep AI instructions truthful. If project status changes, update this
+  file in the same PR — stale `AGENTS.md` is high-friction debt.
+
+### Systems health
+
+For cross-tool instruction hygiene, filing structure, and recurring
+cleanup cadence, follow `docs/SYSTEMS_HEALTH.md`. Prefer that runbook
+over inventing a parallel process.
