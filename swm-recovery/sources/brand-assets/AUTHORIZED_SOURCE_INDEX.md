@@ -2,13 +2,13 @@
 
 Category focus: **Brand Assets (Logos & Visuals)**  
 Authorization date: 2026-07-25  
-Last ingest: 2026-08-05 (Run 002)  
+Last ingest: 2026-08-05 (Run 005)  
 Operating mode: Recovery-first · Canon gate disabled
 
 These paths were authorized by the operator for SWM brand/logo/visual
 recovery. They reside on the operator Mac (`/Users/fcaf/...`) and are
 copied into each source's gitignored `content/` folder via
-`INGEST_FROM_MAC.sh`.
+`INGEST_FROM_MAC.sh` (001–009) or Run 005 direct copy (010–011).
 
 | Source ID | Priority | Brand relevance | Local path (authorized) | Ingest status |
 | --- | --- | --- | --- | --- |
@@ -21,6 +21,8 @@ copied into each source's gitignored `content/` folder via
 | SRC-BRAND-007 | P3 Adjacent | EX002 INST-002 report DOCX | `.../SWM_EX002_INST-002_RPRT_20260509.docx` | INGESTED 2026-08-05 (12259 B) |
 | SRC-BRAND-008 | P3 Pack | Universal Recovery Sweep Prompt zip | `.../SWM-Universal-Recovery-Sweep-Prompt-v1.0.zip` | INGESTED 2026-08-05 (14928 B) |
 | SRC-BRAND-009 | P3 Pack | Standing rules zip (skills pack) | `.../swm-standing-rules.zip` | INGESTED 2026-08-05 (1981 B) |
+| SRC-BRAND-010 | P1 Core | OKRAM Brand Guide v0.1 HTML (parent-brand proposal) | AFSTYLE `05_BRAND_AND_IDENTITY/...OKRAM_Brand_Guide_v0.1...html` | INGESTED 2026-08-05 (39486 B) |
+| SRC-BRAND-011 | P1 Core | SWM wordmark SVGs ± dot + logo zips | AFSTYLE `05_BRAND_AND_IDENTITY/AFSTYLE_05_swm-*.svg` (+ zips) | INGESTED 2026-08-05 (4 SVG + 2 zip) |
 
 ## Ingest instruction
 
