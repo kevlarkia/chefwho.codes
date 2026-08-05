@@ -21,3 +21,9 @@ Also present: `AFSTYLE_05_swm-logo-svg_...zip` (bundle),
   not sealed masters; EX004 locked PDF still missing
 - Do not treat as production lockups without design seal under GOVERNANCE
   (SWM parent · af.style design entity)
+
+## Run 006 addendum
+
+Zip internals inventoried in `logo-zip-manifest-run-006.md`:
+SWM preview sheet + 10 OKRAM concept SVGs (doorway → opening).
+OKRAM concepts use cream/amber/gold — not Signal Blue.
