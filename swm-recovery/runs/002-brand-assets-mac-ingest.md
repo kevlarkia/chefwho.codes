@@ -45,7 +45,7 @@ verbatim extraction. **Gate satisfied.**
 | Check | Status |
 | --- | --- |
 | Fernandez Filing System top-level (`00_Inbox`, `01_Active`, `02_Reference`, `Archive`) on Google Drive My Drive | **NOT FOUND** at Drive root (My Drive is unstructured takeout/chat dumps) |
-| Shared drives present | `SWM Shared Drive `, `chefwho.codes shared drive` — filing folders not confirmed this pass |
+| Shared drives present | SWM Shared Drive, chefwho.codes shared drive — empty/unsynced locally; filing folders not confirmed |
 | Desktop item count | 49 |
 | Downloads item count | 108 |
 | Desktop/Downloads → Inbox batch | **Deferred** — no `00_Inbox` to receive into until filing structure is confirmed/created |
