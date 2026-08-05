@@ -67,7 +67,7 @@ Tentative — conflicts preserved with DEFERRED resolution.
 | EXT-B003-025 | Brand and Publication Standards | House format lives in swm-document-kit skill v2.1 (colors, type, components, taxonomy) | VERBATIM | SRC-BRAND-005 | §06 SOP index | OS v0.1 | Kit not re-opened this run |
 | EXT-B003-026 | AI Systems | Brand-role map: Hazel Warden = executive intelligence; OKRAM = enterprise; SIGNL = reporting; Bloom = learning; OSH = governance; Lighthouse = strategic | VERBATIM | SRC-BRAND-006 | §3 | 2026-07-09 | |
 | EXT-B003-027 | Brand and Publication Standards | Install registry cites LOCKED: SWM_EX003 Sanitized Style Guide (11-page PDF); SWM_EX004 OKRAM Brand System Guide (16-page PDF) | VERBATIM | SRC-BRAND-007 | Registry table | 2026-05-09 | Files not in authorized ingest set — GAP |
-| EXT-B003-028 | Brand and Publication Standards | Naming convention for case docs: [CASE]_[EXHIBIT]_[ORDER]_[TYPE]_[DATE] under AF.Style Holdings LLC | VERBATIM | SRC-BRAND-007 | Body | 2026-05-09 | |
+| EXT-B003-028 | Brand and Publication Standards | Naming convention for case docs: `[CASE]_[EXHIBIT]_[ORDER]_[TYPE]_[DATE]` under AF.Style Holdings LLC | VERBATIM | SRC-BRAND-007 | Body | 2026-05-09 | |
 | EXT-B003-029 | Brand and Publication Standards | Standing rules: SWM sole meaning; Compassionate Package spelling; footer AF.Style Holdings LLC; anti-fabrication; sealed decisions stated flat | VERBATIM | SRC-BRAND-009 | SKILL.md | 2026-07-08 | "SEALED" language = Tentative under GOVERNANCE |
 
 ---
