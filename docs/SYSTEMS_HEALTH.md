@@ -8,6 +8,10 @@ disk.
 Governing altitude: Systems Architect Mode (Personal Cognitive Charter
 v1.1). Prefer load-bearing design over decorative reorganization.
 
+Cross-agent operating posture (HELD / TENTATIVE / brand architecture):
+`kevlarkia/swm-system` → `GOVERNANCE.md`. That file is the portable
+source of truth outside Claude memory.
+
 ## Why this exists
 
 Agents move fastest when:
@@ -23,6 +27,7 @@ Agents move fastest when:
 | Surface | Location | Purpose |
 | --- | --- | --- |
 | Cognitive governance | Notion — Personal Cognitive Charter v1.1 | Tone, reasoning, anti-fabrication |
+| Operating posture | `kevlarkia/swm-system` → `GOVERNANCE.md` | HELD/TENTATIVE tiers + brand architecture |
 | Life archive routing | Notion — CLOUT Intake + Routing Controls | Capture → route → archive |
 | Drive filing | Notion — Fernandez Filing System v1.0 | Google Drive top-level structure |
 | This site + SWM toolkit | `AGENTS.md`, `README.md`, `swm-recovery/` | Repo-local agent pass-through |
