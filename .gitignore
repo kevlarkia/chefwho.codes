@@ -31,3 +31,5 @@ Thumbs.db
 swm-recovery/sources/**/content/**
 !swm-recovery/sources/**/content/README.md
 
+.vercel
+.env*
