@@ -122,6 +122,7 @@ without opening random Desktop dumps.
 ## Related links
 
 - `AGENTS.md` — this repository's agent contract
+- `kevlarkia/swm-system` → `GOVERNANCE.md` — cross-agent operating posture
 - `swm-recovery/README.md` — SWM extraction operating mode
 - Notion: Personal Cognitive Charter v1.1
 - Notion: CLOUT Intake and Routing Controls
