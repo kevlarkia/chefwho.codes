@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variable files
+.env
+.env.*
+!.env.example
+
+# OAuth / credentials / local auth state
+credentials.json
+token.json
+
+# Local dry-run / offline artifacts
+output/
+
+# IDE / OS / test caches
+.vscode/
+.idea/
+.DS_Store
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
