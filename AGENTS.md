@@ -12,6 +12,12 @@ This repo also hosts the **SWM recovery toolkit** under `swm-recovery/`
 (extraction prompts, register templates, Cursor plugin). Treat that tree
 as operational recovery tooling, separate from the public site product.
 
+It also mirrors the **Rose Rocket Engine** newsletter toolkit under
+`rose-rocket-engine/` (CI/pytest/changelog staging for upstream
+`kevlarkia/rose-rocket-engine`). Cloud agents can land changes here when
+they lack write access to that separate repo; see
+`rose-rocket-engine/UPSTREAM_APPLY.md`.
+
 ### Quality gates
 
 | Check | Command | CI |
@@ -46,6 +52,7 @@ full list. No secrets are required for local development.
 | `content/blog/` | Markdown blog posts |
 | `lib/` | Shared TypeScript helpers |
 | `swm-recovery/` | SWM extraction suite (prompts, templates, plugin) |
+| `rose-rocket-engine/` | Mirrored AI newsletter engine + CI/test staging |
 | `docs/SYSTEMS_HEALTH.md` | Ecosystem maintenance runbook for AI + operator hygiene |
 
 ### Gotchas
