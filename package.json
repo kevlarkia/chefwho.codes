@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "pressure-test": "bash scripts/pressure-test-repo.sh"
   },
   "repository": {
     "type": "git",
