@@ -12,6 +12,11 @@ This repo also hosts the **SWM recovery toolkit** under `swm-recovery/`
 (extraction prompts, register templates, Cursor plugin). Treat that tree
 as operational recovery tooling, separate from the public site product.
 
+This repository is now the operational home for **Smart Workforce
+Movement (SWM)** under the **SWa Works** GitHub enterprise. See
+`docs/SWM_ENTERPRISE_MIGRATION_PLAN.md` for consolidation strategy,
+phases, and timeline.
+
 It also mirrors the **Rose Rocket Engine** newsletter toolkit under
 `rose-rocket-engine/` (CI/pytest/changelog staging for upstream
 `kevlarkia/rose-rocket-engine`). Cloud agents can land changes here when
@@ -54,6 +59,7 @@ full list. No secrets are required for local development.
 | `swm-recovery/` | SWM extraction suite (prompts, templates, plugin) |
 | `rose-rocket-engine/` | Mirrored AI newsletter engine + CI/test staging |
 | `docs/SYSTEMS_HEALTH.md` | Ecosystem maintenance runbook for AI + operator hygiene |
+| `docs/SWM_ENTERPRISE_MIGRATION_PLAN.md` | SWM → chefwho.codes consolidation plan under SWa Works enterprise |
 
 ### Gotchas
 
