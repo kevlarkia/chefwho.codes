@@ -89,5 +89,11 @@ Notion, etc.). Tag @kevlarkia for operator decisions.
 
 ---
 
-**Created:** 2026-08-13  
-**See Full Plan:** `docs/SWM_ENTERPRISE_MIGRATION_PLAN.md`
+**Created:** 2026-08-13
+
+**Documentation Suite:**
+
+- `docs/SWM_ENTERPRISE_MIGRATION_PLAN.md` — Comprehensive strategy
+- `docs/SWM_MIGRATION_QUICK_REF.md` — This document (quick reference)
+- `docs/SWM_MIGRATION_CHECKLIST.md` — Checkbox tracking
+- `docs/SWM_MIGRATION_VISUAL.md` — Visual overview and diagrams
