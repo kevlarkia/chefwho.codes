@@ -1,12 +1,15 @@
 :root {
-  color-scheme: dark;
-  --bg: #0b0d10;
-  --bg-elevated: #11151a;
-  --text: #ecf0f3;
-  --muted: #9da9b5;
-  --accent: #80c9ff;
-  --accent-soft: #4fa8eb;
-  --border: #1f2630;
+  color-scheme: light;
+  /* SWM Brand Colors (from brand-token-register-document-kit-v2.1.md) */
+  --bg: #F7F3EA; /* Heritage Cream */
+  --bg-elevated: #FFFFFF; /* PAPER (white for cards) */
+  --text: #1A1A1A; /* INK */
+  --muted: #6B5A4D; /* Warm muted brown */
+  --accent: #8C2B2B; /* SEMANTIC RED (Burgundy) */
+  --accent-soft: #A64545; /* Lighter burgundy for hover */
+  --border: #ECE7E3; /* WARM BORDER */
+  --panel: #F5F0EC; /* WARM PANEL */
+  --gold: #B08D3C; /* Heritage Gold (optional accent) */
 }
 
 *,
@@ -39,7 +42,7 @@ a {
 
 .site-header {
   border-bottom: 1px solid var(--border);
-  background: rgba(11, 13, 16, 0.9);
+  background: rgba(247, 243, 234, 0.95); /* Cream with transparency */
   position: sticky;
   top: 0;
   backdrop-filter: blur(8px);
@@ -167,7 +170,7 @@ h1 {
 
 .primary-button {
   background: var(--accent);
-  color: #06111a;
+  color: #FFFFFF; /* White text on burgundy */
 }
 
 .secondary-button {
@@ -249,17 +252,18 @@ h1 {
 }
 
 .post-content code {
-  background: #1a2330;
+  background: var(--panel); /* Warm panel for inline code */
   border-radius: 0.35rem;
   padding: 0.1rem 0.35rem;
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace;
   font-size: 0.9em;
+  color: var(--accent); /* Burgundy for code */
 }
 
 .post-content pre {
   overflow-x: auto;
-  background: #121923;
-  border: 1px solid #253043;
+  background: var(--panel);
+  border: 1px solid var(--border);
   border-radius: 0.7rem;
   padding: 0.9rem;
 }
@@ -268,6 +272,7 @@ h1 {
   background: none;
   border-radius: 0;
   padding: 0;
+  color: var(--text); /* Regular text in code blocks */
 }
 
 .post-content a {
@@ -297,7 +302,7 @@ h1 {
   width: 100%;
   border: 1px solid var(--border);
   border-radius: 0.6rem;
-  background: #0f1319;
+  background: var(--bg-elevated); /* White background */
   color: var(--text);
   padding: 0.65rem 0.75rem;
   font: inherit;
