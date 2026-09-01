@@ -7,31 +7,13 @@ running Prompts 1–5.
 
 | Bundle | Focus | Index |
 | --- | --- | --- |
-| [`brand-assets/`](brand-assets/) | Logos & visuals (9 authorized Mac paths) | [AUTHORIZED_SOURCE_INDEX.md](brand-assets/AUTHORIZED_SOURCE_INDEX.md) |
+| [`brand-assets/`](brand-assets/) | Logos & visuals | [AUTHORIZED_SOURCE_INDEX.md](brand-assets/AUTHORIZED_SOURCE_INDEX.md) |
+| [`architecture/`](architecture/) | Engines, EOS, CIE, SIGNL, Prompt OS, timeline | [AUTHORIZED_SOURCE_INDEX.md](architecture/AUTHORIZED_SOURCE_INDEX.md) |
+| [`takeout/`](takeout/) | Google Takeout major haul (Run 008) | [AUTHORIZED_SOURCE_INDEX.md](takeout/AUTHORIZED_SOURCE_INDEX.md) |
 
-Mac ingest helper (run locally):
+Mac ingest helper (brand):
 `brand-assets/INGEST_FROM_MAC.sh`
 
-Suggested layout:
-
-```text
-sources/
-  <bundle>/
-    SRC-...-<short-name>/
-      SOURCE-META.md
-      content/          # gitignored originals
-```
-
-Each `SOURCE-META.md` should record:
-
-- Source Identifier
-- File/Conversation Name
-- Platform
-- Date
-- Author/System
-- Version
-- Exact Location
-- Authorization note
-
-Do not commit secrets, credentials, or private relationship / medical /
-legal / crisis materials. `content/` is gitignored.
+Architecture sources are primarily **PATH-AUTH** (meta stubs + absolute
+paths). Do not commit secrets or private relationship / medical / legal /
+crisis materials.

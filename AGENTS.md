@@ -32,6 +32,7 @@ they lack write access to that separate repo; see
 | ESLint | `npm run lint` | Local / PR hygiene |
 | TypeScript | `npm run typecheck` | Local / PR hygiene |
 | Build | `npm run build` | Local / PR hygiene |
+| Repo pressure test | `npm run pressure-test` | Local |
 
 Pre-existing MD041 warning in `.github/PULL_REQUEST_TEMPLATE.md` — safe
 to ignore.

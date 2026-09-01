@@ -98,10 +98,26 @@ without opening random Desktop dumps.
 
 | Cadence | Focus |
 | --- | --- |
-| Weekly | CLOUT inbox/triage; Drive inbox; stale chat captures |
-| Monthly | AGENTS/CLAUDE truth pass across active repos; draft PR purge |
+| Weekly | CLOUT inbox/triage; Drive inbox; stale chat captures; Systems Health audit light (Blocks B + D) |
+| Monthly | AGENTS/CLAUDE truth pass across active repos; draft PR purge; `npm run pressure-test`; full Systems Health audit (A–D) |
 | Quarterly | Filing System vs actual disk; plugin/skill inventory |
 | Annually | Cognitive Charter review (or after major life-structure change) |
+| Before SWM handoff | Forensic integrity audit (Prompt 6) |
+
+## Pressure tests & audits
+
+First-wave checks live under [`docs/audits/`](audits/). Shared pass/fail
+contract: [`docs/audits/AUDIT_LOG_TEMPLATE.md`](audits/AUDIT_LOG_TEMPLATE.md).
+
+| Lane | How | Judgment |
+| --- | --- | --- |
+| `repo-pressure` | `npm run pressure-test` | Automatable (script) |
+| `systems-health` | [`docs/prompts/systems-health-audit.md`](prompts/systems-health-audit.md) | Operator / agent checklist |
+| `swm-forensic` | [`swm-recovery/prompts/06-forensic-integrity-audit.md`](../swm-recovery/prompts/06-forensic-integrity-audit.md) | Evidence integrity; not new extraction |
+
+File filled logs to `docs/audits/runs/` (or `swm-recovery/runs/` for
+SWM-scoped forensic notes), then CLOUT / Linear. Do not leave audit
+results only in chat.
 
 ## Failure modes to watch
 
@@ -124,6 +140,12 @@ without opening random Desktop dumps.
 - `AGENTS.md` — this repository's agent contract
 - `kevlarkia/swm-system` → `GOVERNANCE.md` — cross-agent operating posture
 - `swm-recovery/README.md` — SWM extraction operating mode
+- `docs/audits/` — pressure tests & audit log contract
+- `scripts/pressure-test-repo.sh` — Lane `repo-pressure` (`npm run pressure-test`)
+- `docs/prompts/session-save-state.md` — end-of-session Save State prompt
+- `docs/prompts/session-resume.md` — cross-tool resume / sync prompt
+- `docs/prompts/systems-health-audit.md` — Blocks A–D audit prompt
+- `swm-recovery/prompts/06-forensic-integrity-audit.md` — SWM forensic integrity
 - Notion: Personal Cognitive Charter v1.1
 - Notion: CLOUT Intake and Routing Controls
 - Notion: Fernandez Filing System v1.0

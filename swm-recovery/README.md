@@ -25,6 +25,7 @@ canonization, or publication.
 | 3 | [Program Architecture Reconstruction](prompts/03-program-architecture-reconstruction.md) | Observable architecture only |
 | 4 | [Source Gap Recovery](prompts/04-source-gap-recovery.md) | Prioritized missing-source hunt |
 | 5 | [Rebuild Handoff Compiler](prompts/05-rebuild-handoff-compiler.md) | Neutral handoff package |
+| 6 | [Forensic Integrity Audit](prompts/06-forensic-integrity-audit.md) | Integrity of sources/registers/runs (not new extraction) |
 
 ## How to run
 
@@ -32,7 +33,9 @@ canonization, or publication.
 2. Paste Prompt 1 with the authorized sources attached or linked.
 3. Feed Prompt 1 outputs into Prompts 2–4 as needed.
 4. Run Prompt 5 only after registers exist.
-5. Store each run under `runs/` using the next numeric prefix.
+5. Run Prompt 6 before handoff when you need an integrity pass (not a
+   new extraction).
+6. Store each run under `runs/` using the next numeric prefix.
 
 ## Evidence labels
 

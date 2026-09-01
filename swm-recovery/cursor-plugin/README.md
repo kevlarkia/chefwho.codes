@@ -1,6 +1,6 @@
 # SWM Extraction Suite
 
-Recovery-First Edition · No Canon Gate
+Recovery-First Edition · No Canon Gate · Traceability Hardened
 
 Cursor plugin packaging the SWM forensic extraction prompt suite for
 AI-assisted system archaeology and legacy data recovery.
@@ -15,9 +15,14 @@ AI-assisted system archaeology and legacy data recovery.
 | `/swm-gap-recovery` | Source Gap Recovery |
 | `/swm-handoff` | Rebuild Handoff Compiler |
 
+Authoritative prompt text lives in the sibling `swm-recovery/prompts/`
+directory when present in the workspace.
+
 ## Rules
 
-- `swm-recovery-first` — disables canon-gate filtering during SWM recovery work.
+- `swm-recovery-first` — disables canon-gate filtering; enforces
+  NON-FABRICATION RULE, `SWM-EX-######` IDs, Relationship/Timeline/
+  Dependency registers, Gap Confidence, and formal confidence rules.
 
 ## Usage
 

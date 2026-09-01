@@ -17,6 +17,13 @@ TEMPORARY GOVERNANCE OVERRIDE
 - No source is excluded merely because it conflicts with a later source.
 - Do not resolve disagreements, determine the "correct" version, or rewrite material to fit the current model.
 
+NON-FABRICATION RULE
+If an item cannot be directly extracted, summarized, or reconstructed from supplied evidence, do not invent or interpolate missing details.
+Primary evidence labels (exactly one): VERBATIM | SOURCE-SUMMARY | RECONSTRUCTED | INFERRED | REFERENCE-ONLY
+Every RECONSTRUCTED or INFERRED item must cite supporting SWM-EX-###### fragment IDs.
+Never create new prompts, workflows, architectures, pricing, business logic, or methodologies unsupported by evidence.
+Optional status/quality labels (second field when useful): CONFLICTING | INCOMPLETE | UNCERTAIN | DUPLICATE | SUPERSEDED-CLAIM
+
 SOURCE SCOPE & METADATA
 Process only supplied or specifically authorized sources. For every source, record: Source Identifier, File/Conversation Name, Platform, Date, Author/System, Version, Exact Location, and Extraction Confidence.
 
@@ -33,18 +40,20 @@ Extract all relevant data across:
 9. Evidence and Results — testimonials, pilots, field observations, failures, corrections.
 10. Gaps and Unresolved Material — missing sources, broken references, contradictions, abandoned concepts.
 
-EVIDENCE LABELS (exactly one per item)
-VERBATIM | SOURCE-SUMMARY | RECONSTRUCTED | INFERRED | REFERENCE-ONLY | CONFLICTING | INCOMPLETE | UNCERTAIN | DUPLICATE | SUPERSEDED-CLAIM
+CONFIDENCE RULES
+HIGH = Multiple independent sources | MEDIUM = Single complete source | LOW = Fragmentary | UNKNOWN = Only referenced | CONFLICTED = Mutually exclusive evidence
 
 REQUIRED OUTPUT FORMAT — structured tables only:
 A. Source Register: Source ID | Source | Platform | Date | Version | Coverage | Notes
-B. Extraction Ledger: Extraction ID | Category | Extracted Item | Evidence Label | Source ID | Location | Date | Notes
+B. Extraction Ledger: Extraction ID (SWM-EX-######) | Category | Extracted Item | Evidence Label | Evidence Type (FACT|INTERPRETATION|HYPOTHESIS|REFERENCE) | Source ID | Location | Date | Supporting Fragments | Notes
 C. Prompt & Tool Register: Item ID | Name | Type | Purpose | Input | Output | Dependencies | Source | Completeness
-D. Architecture Register: Component | Type | Function | Connected Components | Source | Status in Source
-E. Conflict Register: Conflict ID | Item A | Item B | Nature of Conflict | Sources | Resolution
+D. Architecture Register: Component | Type | Function | Connected Components | Source | Status in Source | Confidence
+E. Relationship Register: Node A | Relationship | Node B | Evidence Label | Source | Confidence
+F. Timeline Register: Date | Artifact | Version | Supersedes | Evidence Label | Source | Notes
+G. Conflict Register: Conflict ID | Item A | Item B | Nature of Conflict | Sources | Resolution
    Resolution must be: DEFERRED — EXTRACTION PHASE
-F. Gap Register: Gap ID | Missing/Unclear Item | Evidence | Required Source | Impact
-G. Recovery Summary: brief quantitative report of items processed and recovered.
+H. Gap Register: Gap ID | Missing/Unclear Item | Evidence | Gap Confidence (Confirmed Missing|Likely Missing|Possibly Missing|Referenced Only|Uncertain) | Required Source | Impact
+I. Recovery Summary: brief quantitative report of items processed and recovered.
 
 INITIATION COMMAND
 Begin your response exactly with:
