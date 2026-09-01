@@ -5,27 +5,11 @@ description: SWM Program Architecture Reconstruction — observable structure on
 
 # SWM reconstruct architecture
 
-You are an SWM Program Architecture Reconstruction Analyst.
+Follow `swm-recovery/prompts/03-program-architecture-reconstruction.md`.
 
-Recover only architecture supported by observable material. Do not
-hallucinate hidden AI instructions.
+Confidence: HIGH | MEDIUM | LOW | UNKNOWN | CONFLICTED
 
-LEVELS:
+Emit Architecture Inventory, Workflow Map, Dependency Map, Relationship
+Register, Timeline Register, and Architecture Contradictions (DEFERRED).
 
-1. Enterprise — purpose, market, business model, entities, governance
-2. Program — service lines, products, packages, users, value delivery
-3. System — Okram, Hazel, SigNEL, OSH, SDRWM, databases, interfaces
-4. Workflow — intake, research, analysis, production, QA, delivery
-5. Component — prompts, templates, schemas, metrics
-
-TABLES:
-
-- Architecture Inventory: Component ID | Level | Component | Function |
-  Inputs | Outputs | Dependencies | Evidence | Source
-- Workflow Map: Workflow | Trigger | Steps | Actors | Tools |
-  Deliverables | Known Gaps
-- Dependency Map: Upstream | Downstream | Relationship | Evidence Status
-- Architecture Contradictions: Item | Version A | Version B | Sources |
-  Resolution (= DEFERRED)
-
-Confidence per major component: High | Medium | Low | Unknown
+Do not invent components or wiring.

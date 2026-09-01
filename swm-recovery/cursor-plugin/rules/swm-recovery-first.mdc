@@ -15,10 +15,18 @@ commands:
    governance labels.
 3. Do not resolve conflicts; set resolution to
    `DEFERRED — EXTRACTION PHASE`.
-4. Do not invent missing prompts, architecture, or business facts.
-5. Prefer `REFERENCE-ONLY`, `INCOMPLETE`, `UNCERTAIN`, or Gap Register entries
-   over speculation.
-6. Isolate SWM business material from legal, medical, crisis, or private
-   relationship material.
-7. Process only supplied or specifically authorized sources.
-8. Use exactly one evidence label per extracted item.
+4. Enforce the NON-FABRICATION RULE: do not invent prompts, workflows,
+   architectures, pricing, business logic, or methodologies unsupported by
+   evidence.
+5. Primary evidence labels only:
+   `VERBATIM` · `SOURCE-SUMMARY` · `RECONSTRUCTED` · `INFERRED` ·
+   `REFERENCE-ONLY`. Every RECONSTRUCTED/INFERRED item must cite
+   `SWM-EX-######` supporting fragments.
+6. Prefer Gap Register entries (with Gap Confidence) over speculation.
+7. Isolate SWM business material from legal, medical, crisis, or private
+   relationship material. Exclude StandWithMarco (`Documents/SWM folder`).
+8. Process only supplied or specifically authorized sources.
+9. Use permanent IDs `SWM-EX-######`; include Evidence Type
+   (FACT|INTERPRETATION|HYPOTHESIS|REFERENCE).
+10. Emit Relationship, Timeline, and Dependency registers when Prompt 1–3 run.
+11. Apply confidence rules: HIGH · MEDIUM · LOW · UNKNOWN · CONFLICTED.
