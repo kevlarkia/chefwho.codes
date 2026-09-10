@@ -115,6 +115,7 @@ success so local development is unblocked.
 - Cross-ecosystem maintenance (AI instructions, CLOUT routing, Drive/disk
   tidy): see `docs/SYSTEMS_HEALTH.md`.
 - SWM recovery toolkit: see `swm-recovery/README.md`.
+- Graph PIM eligibility client: see `graph-pim/README.md`.
 - **SWM enterprise migration:** see `docs/SWM_ENTERPRISE_MIGRATION_PLAN.md`
   and `docs/SWM_MIGRATION_QUICK_REF.md`.
 

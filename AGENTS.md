@@ -12,6 +12,10 @@ This repo also hosts the **SWM recovery toolkit** under `swm-recovery/`
 (extraction prompts, register templates, Cursor plugin). Treat that tree
 as operational recovery tooling, separate from the public site product.
 
+Microsoft Graph PIM directory-role eligibility lives under `graph-pim/`
+(stdlib client for `unifiedRoleEligibilityScheduleRequest`). Tests replay
+official Learn fixtures; live calls need `GRAPH_ACCESS_TOKEN`.
+
 This repository is now the operational home for **Smart Workforce
 Movement (SWM)** under the **SWa Works** GitHub enterprise. See
 `docs/SWM_ENTERPRISE_MIGRATION_PLAN.md` for consolidation strategy,
@@ -29,6 +33,7 @@ they lack write access to that separate repo; see
 | --- | --- | --- |
 | Markdown lint | `markdownlint-cli2 "**/*.md" "#node_modules"` | Yes |
 | Workflow lint | `actionlint` | Yes |
+| Graph PIM tests | `cd graph-pim && ruff check . && pytest -q` | Yes |
 | ESLint | `npm run lint` | Local / PR hygiene |
 | TypeScript | `npm run typecheck` | Local / PR hygiene |
 | Build | `npm run build` | Local / PR hygiene |
@@ -47,7 +52,9 @@ npm run dev            # http://localhost:3000
 ### Environment variables
 
 Copy `.env.example` to `.env`. See `README.md` § "Contact Form" for the
-full list. No secrets are required for local development.
+full list. No secrets are required for local development. Graph PIM live
+calls use `graph-pim/.env.example` (`GRAPH_ACCESS_TOKEN`); pytest does
+not need a token.
 
 ### Repository map
 
@@ -57,6 +64,7 @@ full list. No secrets are required for local development.
 | `content/blog/` | Markdown blog posts |
 | `lib/` | Shared TypeScript helpers |
 | `swm-recovery/` | SWM extraction suite (prompts, templates, plugin) |
+| `graph-pim/` | Microsoft Graph PIM eligibility/activation client |
 | `rose-rocket-engine/` | Mirrored AI newsletter engine + CI/test staging |
 | `docs/SYSTEMS_HEALTH.md` | Ecosystem maintenance runbook for AI + operator hygiene |
 | `docs/SWM_ENTERPRISE_MIGRATION_PLAN.md` | SWM → chefwho.codes consolidation plan under SWa Works enterprise |

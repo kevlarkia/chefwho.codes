@@ -124,6 +124,7 @@ without opening random Desktop dumps.
 - `AGENTS.md` — this repository's agent contract
 - `kevlarkia/swm-system` → `GOVERNANCE.md` — cross-agent operating posture
 - `swm-recovery/README.md` — SWM extraction operating mode
+- `graph-pim/README.md` — Microsoft Graph PIM eligibility client
 - Notion: Personal Cognitive Charter v1.1
 - Notion: CLOUT Intake and Routing Controls
 - Notion: Fernandez Filing System v1.0
