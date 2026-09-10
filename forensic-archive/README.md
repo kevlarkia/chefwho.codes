@@ -48,10 +48,15 @@ variable. If you edit the prompt, keep that trailing JSON contract.
 ### 3. Database portability
 
 SQLite stores the run in a single file, `forensic_archive.sqlite`, written
-next to `archive.json`. Copy both files together. The database is the
-immutable ledger that records source hash, both LLM calls, inclusions,
-and exclusions — proof of how the museum-quality archive was generated.
-Tables reject `UPDATE` and `DELETE`.
+next to `archive.json`. Copy the whole output directory. The database is
+the immutable ledger that records source hash, both LLM calls, inclusions,
+exclusions, and the archive snapshot hash — proof of how the museum-quality
+archive was generated. Tables reject `UPDATE` and `DELETE`.
+
+Each run also writes an immutable snapshot at
+`runs/<run_id>/archive.json`, plus `MANIFEST.json` and `SHA256SUMS`.
+`python3 -m forensic_archive verify output/demo` recomputes those hashes
+and fails closed if the package was tampered with.
 
 ## Run
 
@@ -59,6 +64,7 @@ Tables reject `UPDATE` and `DELETE`.
 cd forensic-archive
 python3 -m forensic_archive archive fixtures/sample-source.md --output output/demo
 python3 -m forensic_archive archive fixtures/swm-source.md --output output/swm --profile swm
+python3 -m forensic_archive verify output/demo
 ```
 
 ## Tests

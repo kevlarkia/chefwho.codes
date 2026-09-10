@@ -26,7 +26,8 @@ they lack write access to that separate repo; see
 The **forensic archive runtime** lives under `forensic-archive/`. It is a
 domain-neutral two-pass LLM pipeline (TEMP-ARC-001 extract, TEMP-ARC-002
 validate) with an append-only `forensic_archive.sqlite` ledger. SWM is one
-profile (`--profile swm`), not the whole toolkit.
+profile (`--profile swm`), not the whole toolkit. After a run,
+`python3 -m forensic_archive verify <output-dir>` must pass.
 
 ### Quality gates
 

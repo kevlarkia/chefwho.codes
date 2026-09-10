@@ -63,8 +63,8 @@ def test_dummy_secondary_emits_exclusions_json() -> None:
     profile = ArchiveProfile(id="generic", addendum="")
     source = "A complete sentence about the reading room log.\n\nTBD later."
     client = DummyLLMClient()
-    primary = client.complete(render_primary_prompt(source, profile))
-    secondary = client.complete(render_secondary_prompt(source, primary, profile))
+    primary = client.complete(render_primary_prompt(source, profile).text)
+    secondary = client.complete(render_secondary_prompt(source, primary, profile).text)
     payload = json.loads(secondary.split("```json")[-1].split("```")[0])
     assert "exclusions" in payload
     assert any(item["rule"] == "placeholder" for item in payload["exclusions"])

@@ -1,4 +1,6 @@
-from forensic_archive.parse import parse_exclusions, parse_items
+import pytest
+
+from forensic_archive.parse import StructuredOutputError, parse_exclusions, parse_items
 
 
 def test_parse_exclusions_from_trailing_json_fence() -> None:
@@ -37,3 +39,26 @@ def test_parse_items_from_primary_tail() -> None:
     items = parse_items(response)
     assert items[0]["id"] == "EXT-001"
     assert items[0]["text"] == "A fact"
+
+
+def test_parse_items_rejects_duplicate_ids() -> None:
+    response = """
+    ```json
+    {"items": [
+      {"id": "EXT-001", "text": "A", "evidence": "VERBATIM"},
+      {"id": "EXT-001", "text": "B", "evidence": "VERBATIM"}
+    ]}
+    ```
+    """
+    with pytest.raises(StructuredOutputError, match="duplicate"):
+        parse_items(response)
+
+
+def test_parse_items_rejects_invalid_evidence() -> None:
+    response = """
+    ```json
+    {"items": [{"id": "EXT-001", "text": "A fact", "evidence": "MADE-UP"}]}
+    ```
+    """
+    with pytest.raises(StructuredOutputError, match="invalid evidence"):
+        parse_items(response)

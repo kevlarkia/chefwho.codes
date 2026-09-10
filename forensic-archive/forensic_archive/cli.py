@@ -7,8 +7,10 @@ import json
 import sys
 from pathlib import Path
 
+from .errors import MuseumIntegrityError, MuseumPackageError
 from .llm import PROVIDER_ENV
 from .pipeline import ForensicArchiver
+from .verify import verify_package
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -40,6 +42,10 @@ def build_parser() -> argparse.ArgumentParser:
         help=f"LLM provider (dummy, anthropic, openai, vertex). Overrides {PROVIDER_ENV}.",
     )
 
+    verify = sub.add_parser("verify", help="Verify a packaged museum archive")
+    verify.add_argument("package", type=Path, help="Output directory to verify")
+    verify.add_argument("--run-id", default=None, help="Verify a specific run id")
+
     sub.add_parser("providers", help="List LLM provider ids")
     return parser
 
@@ -54,22 +60,46 @@ def main(argv: list[str] | None = None) -> int:
         print("vertex")
         return 0
 
+    if args.command == "verify":
+        report = verify_package(args.package, run_id=args.run_id)
+        print(
+            json.dumps(
+                {
+                    "ok": report.ok,
+                    "run_id": report.run_id,
+                    "errors": report.errors,
+                    "warnings": report.warnings,
+                    "checks": report.checks,
+                },
+                indent=2,
+            )
+        )
+        return 0 if report.ok else 2
+
     source = args.source
     if not source.is_file():
         parser.error(f"source file not found: {source}")
 
-    archiver = ForensicArchiver(profile=args.profile, provider=args.provider)
-    result = archiver.run(source, args.output)
+    try:
+        archiver = ForensicArchiver(profile=args.profile, provider=args.provider)
+        result = archiver.run(source, args.output)
+    except (MuseumPackageError, MuseumIntegrityError) as exc:
+        print(json.dumps({"ok": False, "error": str(exc)}, indent=2), file=sys.stderr)
+        return 2
+
     print(
         json.dumps(
             {
+                "ok": True,
                 "run_id": result.run_id,
                 "profile": result.profile,
                 "provider": result.provider,
                 "archive": str(result.archive_path),
+                "snapshot": str(result.snapshot_path),
                 "ledger": str(result.ledger_path),
                 "inclusions": len(result.inclusions),
                 "exclusions": len(result.exclusions),
+                "verified": bool(result.verification and result.verification.ok),
             },
             indent=2,
         )

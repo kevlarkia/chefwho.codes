@@ -64,6 +64,22 @@ def _load_tail_object(text: str) -> dict[str, Any]:
     )
 
 
+EVIDENCE_LABELS = frozenset(
+    {
+        "VERBATIM",
+        "SOURCE-SUMMARY",
+        "RECONSTRUCTED",
+        "INFERRED",
+        "REFERENCE-ONLY",
+        "CONFLICTING",
+        "INCOMPLETE",
+        "UNCERTAIN",
+        "DUPLICATE",
+        "SUPERSEDED-CLAIM",
+    }
+)
+
+
 def parse_items(response: str) -> list[dict[str, Any]]:
     """Read the `items` array from a TEMP-ARC-001 response."""
     payload = _load_tail_object(response)
@@ -72,7 +88,18 @@ def parse_items(response: str) -> list[dict[str, Any]]:
         return []
     if not isinstance(items, list):
         raise StructuredOutputError("TEMP-ARC-001 `items` must be a JSON array")
-    return [_normalize_item(item, index) for index, item in enumerate(items, start=1)]
+    normalized = [_normalize_item(item, index) for index, item in enumerate(items, start=1)]
+    seen: set[str] = set()
+    for item in normalized:
+        item_id = item["id"]
+        if item_id in seen:
+            raise StructuredOutputError(f"duplicate extracted item id {item_id!r}")
+        seen.add(item_id)
+        if item["evidence"] not in EVIDENCE_LABELS:
+            raise StructuredOutputError(
+                f"invalid evidence label {item['evidence']!r} on {item_id}"
+            )
+    return normalized
 
 
 def parse_exclusions(response: str) -> list[dict[str, Any]]:
@@ -130,3 +157,10 @@ def _normalize_item(item: Any, index: int) -> dict[str, Any]:
 
 def exclusion_ids(exclusions: list[dict[str, Any]]) -> set[str]:
     return {str(item["id"]) for item in exclusions if item.get("id")}
+
+
+def dangling_exclusion_ids(
+    items: list[dict[str, Any]], exclusions: list[dict[str, Any]]
+) -> list[str]:
+    known = {item["id"] for item in items}
+    return sorted(item_id for item_id in exclusion_ids(exclusions) if item_id not in known)

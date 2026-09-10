@@ -15,13 +15,7 @@ from dataclasses import dataclass
 from typing import Any, Protocol
 
 from .parse import parse_items
-from .prompts import (
-    EXTRACTION_BEGIN,
-    EXTRACTION_END,
-    SOURCE_BEGIN,
-    SOURCE_END,
-    extract_delimited,
-)
+from .prompts import discover_markers, extract_kind
 
 PROVIDER_ENV = "FORENSIC_LLM_PROVIDER"
 TIMEOUT_ENV = "FORENSIC_LLM_TIMEOUT"
@@ -85,12 +79,12 @@ class DummyLLMClient:
 
     def complete(self, prompt: str, *, system: str | None = None) -> str:
         del system
-        if EXTRACTION_BEGIN in prompt:
+        if discover_markers(prompt, "EXTRACTION"):
             return self._validate(prompt)
         return self._extract(prompt)
 
     def _extract(self, prompt: str) -> str:
-        source = extract_delimited(prompt, SOURCE_BEGIN, SOURCE_END)
+        source = extract_kind(prompt, "SOURCE")
         items = _items_from_source(source, swm="profile: swm" in prompt.lower())
         lines = ["PRIMARY EXTRACTION", ""]
         for item in items:
@@ -99,7 +93,7 @@ class DummyLLMClient:
         return "\n".join(lines)
 
     def _validate(self, prompt: str) -> str:
-        extraction = extract_delimited(prompt, EXTRACTION_BEGIN, EXTRACTION_END)
+        extraction = extract_kind(prompt, "EXTRACTION")
         items = parse_items(extraction) if extraction.strip() else []
         exclusions: list[dict[str, str]] = []
         for item in items:

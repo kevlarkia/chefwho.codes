@@ -28,3 +28,10 @@ def test_cli_archive_and_providers(tmp_path, capsys) -> None:
     assert (output / "forensic_archive.sqlite").is_file()
     assert summary["provider"] == "dummy"
     assert summary["exclusions"] >= 1
+    assert summary["ok"] is True
+    assert summary["verified"] is True
+    assert (output / "MANIFEST.json").is_file()
+    assert (output / "SHA256SUMS").is_file()
+    assert main(["verify", str(output)]) == 0
+    verify = json.loads(capsys.readouterr().out)
+    assert verify["ok"] is True

@@ -48,3 +48,6 @@ def test_swm_profile_is_available_and_labels_items(tmp_path) -> None:
     assert any(item.get("evidence") == "VERBATIM" for item in result.inclusions)
     assert any(item.get("rule") == "placeholder" for item in result.exclusions)
     assert (tmp_path / "swm-out" / "ARCHIVE.md").is_file()
+    assert result.verification is not None
+    assert result.verification.ok
+    assert result.snapshot_path.is_file()

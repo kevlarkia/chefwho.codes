@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any
 
 LEDGER_FILENAME = "forensic_archive.sqlite"
+SCHEMA_VERSION = "2"
 
 _SCHEMA = """
 CREATE TABLE IF NOT EXISTS schema_meta (
@@ -25,6 +26,11 @@ CREATE TABLE IF NOT EXISTS archive_runs (
     source_path TEXT NOT NULL,
     source_sha256 TEXT NOT NULL,
     archive_path TEXT NOT NULL,
+    archive_sha256 TEXT NOT NULL,
+    prompt_template_sha256 TEXT NOT NULL,
+    profile_sha256 TEXT NOT NULL,
+    extracted_ids_json TEXT NOT NULL,
+    dangling_exclusion_ids_json TEXT NOT NULL,
     item_count INTEGER NOT NULL,
     exclusion_count INTEGER NOT NULL
 );
@@ -78,12 +84,16 @@ class ForensicLedger:
     def __init__(self, path: Path) -> None:
         self.path = Path(path)
         self.path.parent.mkdir(parents=True, exist_ok=True)
-        self._conn = sqlite3.connect(self.path)
+        self._conn = sqlite3.connect(self.path, timeout=30)
         self._conn.row_factory = sqlite3.Row
+        self._conn.execute("PRAGMA foreign_keys = ON")
+        self._conn.execute("PRAGMA journal_mode = DELETE")
+        self._conn.execute("PRAGMA synchronous = FULL")
         self._init_schema()
 
     def _init_schema(self) -> None:
         self._conn.executescript(_SCHEMA)
+        self._conn.execute("PRAGMA foreign_keys = ON")
         for table in _IMMUTABLE_TABLES:
             self._conn.execute(
                 f"""
@@ -109,7 +119,7 @@ class ForensicLedger:
         if existing is None:
             self._conn.execute(
                 "INSERT INTO schema_meta(key, value) VALUES (?, ?)",
-                ("schema_version", "1"),
+                ("schema_version", SCHEMA_VERSION),
             )
         self._conn.commit()
 
@@ -124,19 +134,25 @@ class ForensicLedger:
         source_path: str,
         source_sha256: str,
         archive_path: str,
+        archive_sha256: str,
+        prompt_template_sha256: str,
+        profile_sha256: str,
+        extracted_ids: list[str],
+        dangling_exclusion_ids: list[str],
         calls: list[dict[str, str]],
         inclusions: list[dict[str, Any]],
         exclusions: list[dict[str, Any]],
     ) -> None:
         try:
-            self._conn.execute("BEGIN")
             self._conn.execute(
                 """
                 INSERT INTO archive_runs(
                     run_id, started_at, finished_at, profile, provider,
-                    source_path, source_sha256, archive_path,
+                    source_path, source_sha256, archive_path, archive_sha256,
+                    prompt_template_sha256, profile_sha256,
+                    extracted_ids_json, dangling_exclusion_ids_json,
                     item_count, exclusion_count
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     run_id,
@@ -147,6 +163,11 @@ class ForensicLedger:
                     source_path,
                     source_sha256,
                     archive_path,
+                    archive_sha256,
+                    prompt_template_sha256,
+                    profile_sha256,
+                    json.dumps(extracted_ids),
+                    json.dumps(dangling_exclusion_ids),
                     len(inclusions),
                     len(exclusions),
                 ),
@@ -189,10 +210,30 @@ class ForensicLedger:
         row = self._conn.execute("SELECT COUNT(*) AS n FROM archive_runs").fetchone()
         return int(row["n"])
 
+    def list_run_ids(self) -> list[str]:
+        rows = self._conn.execute(
+            "SELECT run_id FROM archive_runs ORDER BY started_at, run_id"
+        ).fetchall()
+        return [row["run_id"] for row in rows]
+
     def fetch_run(self, run_id: str) -> sqlite3.Row | None:
         return self._conn.execute(
             "SELECT * FROM archive_runs WHERE run_id = ?", (run_id,)
         ).fetchone()
+
+    def fetch_calls(self, run_id: str) -> list[sqlite3.Row]:
+        return list(
+            self._conn.execute(
+                "SELECT * FROM llm_calls WHERE run_id = ? ORDER BY id", (run_id,)
+            )
+        )
+
+    def fetch_inclusions(self, run_id: str) -> list[sqlite3.Row]:
+        return list(
+            self._conn.execute(
+                "SELECT * FROM inclusions WHERE run_id = ? ORDER BY id", (run_id,)
+            )
+        )
 
     def fetch_exclusions(self, run_id: str) -> list[sqlite3.Row]:
         return list(
@@ -200,6 +241,16 @@ class ForensicLedger:
                 "SELECT * FROM exclusions WHERE run_id = ? ORDER BY id", (run_id,)
             )
         )
+
+    def trigger_names(self) -> set[str]:
+        rows = self._conn.execute(
+            "SELECT name FROM sqlite_master WHERE type = 'trigger'"
+        ).fetchall()
+        return {row["name"] for row in rows}
+
+    def foreign_keys_enabled(self) -> bool:
+        row = self._conn.execute("PRAGMA foreign_keys").fetchone()
+        return bool(row[0]) if row is not None else False
 
     def close(self) -> None:
         self._conn.close()
