@@ -133,6 +133,7 @@ npm run dev            # Start dev server (http://localhost:3000)
 | `lib/` | Shared TypeScript utilities | Reusable helpers, type-safe |
 | `swm-recovery/` | SWM extraction suite | Operational recovery tooling, separate from site |
 | `rose-rocket-engine/` | Newsletter toolkit mirror | CI/pytest staging for upstream repo |
+| `forensic-archive/` | Dual-pass LLM archive runtime | SQLite ledger; SWM is one profile |
 | `docs/` | Repository documentation | Systems health, migration, policies, guides |
 
 ### Separation of Concerns
@@ -140,6 +141,7 @@ npm run dev            # Start dev server (http://localhost:3000)
 - **Personal site** (`app/`, `content/`) — Marketing presence, blog, contact form
 - **SWM recovery toolkit** (`swm-recovery/`) — Brand asset extraction, prompt harvesting
 - **Rose Rocket Engine** (`rose-rocket-engine/`) — Upstream mirror, cannot push directly
+- **Forensic archive runtime** (`forensic-archive/`) — TEMP-ARC extract/validate + portable SQLite ledger. SWM is one profile (`--profile swm`).
 - **Documentation** (`docs/`) — Cross-cutting concerns, maintenance, planning
 
 **Policy:** Do not mix concerns. If a file serves multiple purposes, it belongs in the wrong place.

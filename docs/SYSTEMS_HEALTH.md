@@ -31,6 +31,7 @@ Agents move fastest when:
 | Life archive routing | Notion — CLOUT Intake + Routing Controls | Capture → route → archive |
 | Drive filing | Notion — Fernandez Filing System v1.0 | Google Drive top-level structure |
 | This site + SWM toolkit | `AGENTS.md`, `README.md`, `swm-recovery/` | Repo-local agent pass-through |
+| Forensic archive runtime | `forensic-archive/` | Dual-pass LLM archive + SQLite ledger; SWM profile optional |
 | TMI / Codex | `Terra-Machina-Imperium/codex`, UC7.5 `AGENTS.md` / `CLAUDE.md` | Mythos + product AI guides |
 
 If a new instruction file is tempting, first ask: which row above does

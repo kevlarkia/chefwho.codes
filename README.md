@@ -115,6 +115,8 @@ success so local development is unblocked.
 - Cross-ecosystem maintenance (AI instructions, CLOUT routing, Drive/disk
   tidy): see `docs/SYSTEMS_HEALTH.md`.
 - SWM recovery toolkit: see `swm-recovery/README.md`.
+- Forensic archive runtime (dummy or live LLM, SQLite ledger; SWM is one
+  profile): see `forensic-archive/README.md`.
 - **SWM enterprise migration:** see `docs/SWM_ENTERPRISE_MIGRATION_PLAN.md`
   and `docs/SWM_MIGRATION_QUICK_REF.md`.
 

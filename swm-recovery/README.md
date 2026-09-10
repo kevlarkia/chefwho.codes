@@ -70,6 +70,20 @@ Commands: `/swm-extract`, `/swm-harvest-prompts`,
 Brand source index:
 [`sources/brand-assets/AUTHORIZED_SOURCE_INDEX.md`](sources/brand-assets/AUTHORIZED_SOURCE_INDEX.md)
 
+## Forensic archive runtime
+
+SWM is one domain of the shared archive pipeline, not the runtime itself.
+To package authorized SWM sources with TEMP-ARC-001 / TEMP-ARC-002 and an
+append-only `forensic_archive.sqlite` ledger:
+
+```bash
+python3 -m forensic_archive archive path/to/source.md \
+  --profile swm \
+  --output dist/swm-archive
+```
+
+See [`../forensic-archive/README.md`](../forensic-archive/README.md).
+
 ## Scope boundary
 
 Isolate SWM business material from legal, medical, crisis, or private

@@ -23,6 +23,11 @@ It also mirrors the **Rose Rocket Engine** newsletter toolkit under
 they lack write access to that separate repo; see
 `rose-rocket-engine/UPSTREAM_APPLY.md`.
 
+The **forensic archive runtime** lives under `forensic-archive/`. It is a
+domain-neutral two-pass LLM pipeline (TEMP-ARC-001 extract, TEMP-ARC-002
+validate) with an append-only `forensic_archive.sqlite` ledger. SWM is one
+profile (`--profile swm`), not the whole toolkit.
+
 ### Quality gates
 
 | Check | Command | CI |
@@ -32,6 +37,7 @@ they lack write access to that separate repo; see
 | ESLint | `npm run lint` | Local / PR hygiene |
 | TypeScript | `npm run typecheck` | Local / PR hygiene |
 | Build | `npm run build` | Local / PR hygiene |
+| Forensic archive tests | `pytest` in `forensic-archive/` | Yes |
 
 Pre-existing MD041 warning in `.github/PULL_REQUEST_TEMPLATE.md` — safe
 to ignore.
@@ -58,6 +64,7 @@ full list. No secrets are required for local development.
 | `lib/` | Shared TypeScript helpers |
 | `swm-recovery/` | SWM extraction suite (prompts, templates, plugin) |
 | `rose-rocket-engine/` | Mirrored AI newsletter engine + CI/test staging |
+| `forensic-archive/` | Dual-pass LLM archive runtime + SQLite ledger (SWM is one profile) |
 | `docs/SYSTEMS_HEALTH.md` | Ecosystem maintenance runbook for AI + operator hygiene |
 | `docs/SWM_ENTERPRISE_MIGRATION_PLAN.md` | SWM → chefwho.codes consolidation plan under SWa Works enterprise |
 
