@@ -4,6 +4,10 @@ Domain-neutral two-pass archive pipeline. A dummy LLM client ships so the
 ledger can run offline. Swap that client for Anthropic, OpenAI, or Google
 Vertex when you want live model calls.
 
+**House:** This runtime lives with the recovery pipeline, not the
+chefwho.codes site. Intended GitHub home and signup values:
+[`../docs/RECOVERY_HOUSE.md`](../docs/RECOVERY_HOUSE.md).
+
 **SWM is one profile**, not the product. Use `--profile swm` to apply
 recovery-first addenda from the SWM extraction suite. The same runtime
 packages any other authorized source with `--profile generic`.

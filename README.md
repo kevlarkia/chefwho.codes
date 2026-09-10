@@ -114,9 +114,9 @@ success so local development is unblocked.
 - Cursor / cloud agents: see `AGENTS.md` (must stay truthful to the stack).
 - Cross-ecosystem maintenance (AI instructions, CLOUT routing, Drive/disk
   tidy): see `docs/SYSTEMS_HEALTH.md`.
-- SWM recovery toolkit: see `swm-recovery/README.md`.
-- Forensic archive runtime (dummy or live LLM, SQLite ledger; SWM is one
-  profile): see `forensic-archive/README.md`.
+- Recovery pipeline (own GitHub house; guest trees here): see
+  `docs/RECOVERY_HOUSE.md`, `swm-recovery/README.md`, and
+  `forensic-archive/README.md`.
 - **SWM enterprise migration:** see `docs/SWM_ENTERPRISE_MIGRATION_PLAN.md`
   and `docs/SWM_MIGRATION_QUICK_REF.md`.
 
@@ -124,7 +124,8 @@ success so local development is unblocked.
 
 This repository is part of the **SWa Works** GitHub enterprise
 (<https://github.com/enterprises/swa-works>). The Chefwho.Codes organization
-is the first member org. See migration plan for consolidation strategy.
+is the first member org. The recovery pipeline is **not** that org; it
+gets its own house (`docs/RECOVERY_HOUSE.md`).
 
 ## Next Recommended Enhancements
 

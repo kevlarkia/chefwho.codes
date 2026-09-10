@@ -8,9 +8,10 @@ Next.js 16 personal site for **chefwho.codes** (App Router, React 19,
 TypeScript). Blog posts live in `content/blog/*.md`. The contact form
 degrades gracefully when SendGrid is unset.
 
-This repo also hosts the **SWM recovery toolkit** under `swm-recovery/`
-(extraction prompts, register templates, Cursor plugin). Treat that tree
-as operational recovery tooling, separate from the public site product.
+The **recovery pipeline** (`swm-recovery/` and `forensic-archive/`) is a
+guest in this repo. Its intended house is a separate GitHub organization
+(see `docs/RECOVERY_HOUSE.md`). Do not fold it into the public site
+product.
 
 This repository is now the operational home for **Smart Workforce
 Movement (SWM)** under the **SWa Works** GitHub enterprise. See
@@ -68,6 +69,7 @@ full list. No secrets are required for local development.
 | `forensic-archive/` | Dual-pass LLM archive runtime + SQLite ledger (SWM is one profile) |
 | `docs/SYSTEMS_HEALTH.md` | Ecosystem maintenance runbook for AI + operator hygiene |
 | `docs/SWM_ENTERPRISE_MIGRATION_PLAN.md` | SWM → chefwho.codes consolidation plan under SWa Works enterprise |
+| `docs/RECOVERY_HOUSE.md` | Separate GitHub house for the recovery pipeline (filled org form + inventory) |
 
 ### Gotchas
 

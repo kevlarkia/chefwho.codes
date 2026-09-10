@@ -8,7 +8,8 @@
 The **SWa Works** GitHub enterprise has been created, and this repository
 (`kevlarkia/chefwho.codes`) will become the unified home for:
 
-- **SWM Recovery Toolkit** (already here under `swm-recovery/`)
+- **SWM Recovery Toolkit** (guest under `swm-recovery/`; intended house is
+  a separate GitHub org — `docs/RECOVERY_HOUSE.md`)
 - **SWM Business Operations** (brand, product, governance)
 - **Personal Site** (chefwho.codes)
 - **Rose Rocket Engine** (newsletter mirror)

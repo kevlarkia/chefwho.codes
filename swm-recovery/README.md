@@ -6,6 +6,10 @@ Operational toolkit for Smart Workforce Movement (SWM) system archaeology
 and legacy data recovery. Optimized for AI processing: token-efficient
 prompts, strict table schemas, and hard boundaries against hallucination.
 
+**House:** This tree is part of the recovery pipeline, not the chefwho.codes
+site. Intended GitHub home and signup values:
+[`../docs/RECOVERY_HOUSE.md`](../docs/RECOVERY_HOUSE.md).
+
 ## Operating mode
 
 This is an **extraction** operation, not verification, approval,

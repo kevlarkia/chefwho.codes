@@ -75,7 +75,8 @@ Unified SWM Home (kevlarkia/chefwho.codes):
 ├── content/blog/
 ├── lib/
 │
-├── swm-recovery/ (extraction toolkit)
+├── swm-recovery/ (extraction toolkit; guest until recovery house)
+├── forensic-archive/ (TEMP-ARC ledger; guest until recovery house)
 │   ├── prompts/
 │   ├── templates/
 │   ├── registers/

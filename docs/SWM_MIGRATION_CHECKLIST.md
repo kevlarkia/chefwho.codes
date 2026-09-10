@@ -95,6 +95,8 @@ Use this checklist to track migration progress. Update as tasks complete.
 - [ ] Configure repository access policies
 - [ ] Set up GitHub Actions runner policies
 - [ ] Configure SSO/SAML if required (likely not needed yet)
+- [ ] Create the recovery pipeline house (`docs/RECOVERY_HOUSE.md`) and
+      transfer `swm-recovery/` + `forensic-archive/` out of chefwho.codes
 
 **Completion Criteria:**
 

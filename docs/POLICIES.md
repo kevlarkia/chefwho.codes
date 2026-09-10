@@ -143,6 +143,9 @@ npm run dev            # Start dev server (http://localhost:3000)
 - **Rose Rocket Engine** (`rose-rocket-engine/`) — Upstream mirror, cannot push directly
 - **Forensic archive runtime** (`forensic-archive/`) — TEMP-ARC extract/validate + portable SQLite ledger. SWM is one profile (`--profile swm`).
 - **Documentation** (`docs/`) — Cross-cutting concerns, maintenance, planning
+- **Recovery pipeline house** — `swm-recovery/` and `forensic-archive/` belong
+  in a separate GitHub organization (`docs/RECOVERY_HOUSE.md`). They are
+  guests in this repo until that transfer.
 
 **Policy:** Do not mix concerns. If a file serves multiple purposes, it belongs in the wrong place.
 
