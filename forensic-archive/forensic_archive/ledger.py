@@ -9,7 +9,12 @@ from pathlib import Path
 from typing import Any
 
 LEDGER_FILENAME = "forensic_archive.sqlite"
-SCHEMA_VERSION = "2"
+SCHEMA_VERSION = "3"
+LLM_HTTP_COLUMNS = (
+    ("client_request_id", "TEXT"),
+    ("provider_request_id", "TEXT"),
+    ("http_meta_json", "TEXT"),
+)
 
 _SCHEMA = """
 CREATE TABLE IF NOT EXISTS schema_meta (
@@ -45,6 +50,9 @@ CREATE TABLE IF NOT EXISTS llm_calls (
     response_sha256 TEXT NOT NULL,
     response_text TEXT NOT NULL,
     created_at TEXT NOT NULL,
+    client_request_id TEXT,
+    provider_request_id TEXT,
+    http_meta_json TEXT,
     FOREIGN KEY (run_id) REFERENCES archive_runs(run_id)
 );
 
@@ -81,7 +89,7 @@ def utc_now() -> str:
 class ForensicLedger:
     """Single-file immutable ledger proving how an archive was generated."""
 
-    def __init__(self, path: Path) -> None:
+    def __init__(self, path: Path, *, migrate: bool = True) -> None:
         self.path = Path(path)
         self.path.parent.mkdir(parents=True, exist_ok=True)
         self._conn = sqlite3.connect(self.path, timeout=30)
@@ -89,11 +97,13 @@ class ForensicLedger:
         self._conn.execute("PRAGMA foreign_keys = ON")
         self._conn.execute("PRAGMA journal_mode = DELETE")
         self._conn.execute("PRAGMA synchronous = FULL")
-        self._init_schema()
+        self._init_schema(migrate=migrate)
 
-    def _init_schema(self) -> None:
+    def _init_schema(self, *, migrate: bool) -> None:
         self._conn.executescript(_SCHEMA)
         self._conn.execute("PRAGMA foreign_keys = ON")
+        if migrate:
+            self._ensure_llm_http_columns()
         for table in _IMMUTABLE_TABLES:
             self._conn.execute(
                 f"""
@@ -123,6 +133,16 @@ class ForensicLedger:
             )
         self._conn.commit()
 
+    def _table_columns(self, table: str) -> set[str]:
+        rows = self._conn.execute(f"PRAGMA table_info({table})").fetchall()
+        return {row[1] for row in rows}
+
+    def _ensure_llm_http_columns(self) -> None:
+        columns = self._table_columns("llm_calls")
+        for name, decl in LLM_HTTP_COLUMNS:
+            if name not in columns:
+                self._conn.execute(f"ALTER TABLE llm_calls ADD COLUMN {name} {decl}")
+
     def record_run(
         self,
         *,
@@ -139,7 +159,7 @@ class ForensicLedger:
         profile_sha256: str,
         extracted_ids: list[str],
         dangling_exclusion_ids: list[str],
-        calls: list[dict[str, str]],
+        calls: list[dict[str, Any]],
         inclusions: list[dict[str, Any]],
         exclusions: list[dict[str, Any]],
     ) -> None:
@@ -172,25 +192,54 @@ class ForensicLedger:
                     len(exclusions),
                 ),
             )
+            http_columns = self._table_columns("llm_calls")
             for call in calls:
-                self._conn.execute(
-                    """
-                    INSERT INTO llm_calls(
-                        run_id, role, prompt_id, provider,
-                        prompt_sha256, response_sha256, response_text, created_at
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-                    """,
-                    (
-                        run_id,
-                        call["role"],
-                        call["prompt_id"],
-                        call["provider"],
-                        call["prompt_sha256"],
-                        call["response_sha256"],
-                        call["response_text"],
-                        call["created_at"],
-                    ),
+                meta = call.get("http_meta")
+                http_meta_json = (
+                    json.dumps(meta, sort_keys=True) if isinstance(meta, dict) and meta else None
                 )
+                if {"client_request_id", "provider_request_id", "http_meta_json"} <= http_columns:
+                    self._conn.execute(
+                        """
+                        INSERT INTO llm_calls(
+                            run_id, role, prompt_id, provider,
+                            prompt_sha256, response_sha256, response_text, created_at,
+                            client_request_id, provider_request_id, http_meta_json
+                        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        """,
+                        (
+                            run_id,
+                            call["role"],
+                            call["prompt_id"],
+                            call["provider"],
+                            call["prompt_sha256"],
+                            call["response_sha256"],
+                            call["response_text"],
+                            call["created_at"],
+                            call.get("client_request_id"),
+                            call.get("provider_request_id"),
+                            http_meta_json,
+                        ),
+                    )
+                else:
+                    self._conn.execute(
+                        """
+                        INSERT INTO llm_calls(
+                            run_id, role, prompt_id, provider,
+                            prompt_sha256, response_sha256, response_text, created_at
+                        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                        """,
+                        (
+                            run_id,
+                            call["role"],
+                            call["prompt_id"],
+                            call["provider"],
+                            call["prompt_sha256"],
+                            call["response_sha256"],
+                            call["response_text"],
+                            call["created_at"],
+                        ),
+                    )
             for item in inclusions:
                 self._conn.execute(
                     "INSERT INTO inclusions(run_id, item_id, item_json) VALUES (?, ?, ?)",

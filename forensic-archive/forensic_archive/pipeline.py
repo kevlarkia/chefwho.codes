@@ -13,7 +13,7 @@ from typing import Any, Iterator
 from .errors import MuseumPackageError
 from .hashes import sha256_file, sha256_text, write_sha256sums
 from .ledger import LEDGER_FILENAME, ForensicLedger, utc_now
-from .llm import LLMClient, client_from_env
+from .llm import LLMCallTrace, LLMClient, client_from_env, consume_call_trace
 from .parse import dangling_exclusion_ids, exclusion_ids, parse_exclusions, parse_items
 from .prompts import (
     PRIMARY_PROMPT_ID,
@@ -55,6 +55,7 @@ class ArchiveResult:
     source_sha256: str
     verification: VerificationReport | None = None
     extra: dict[str, Any] = field(default_factory=dict)
+    llm_traces: dict[str, dict[str, Any]] = field(default_factory=dict)
 
 
 @contextmanager
@@ -84,17 +85,29 @@ class ForensicArchiver:
         self._primary_prompt_text = ""
         self._secondary_prompt_text = ""
 
-    def primary_extraction_call(self, source_text: str) -> str:
+    def primary_extraction_call(
+        self, source_text: str, *, client_request_id: str | None = None
+    ) -> str:
         """TEMP-ARC-001. Swap the client to use Anthropic, OpenAI, or Vertex."""
         rendered = render_primary_prompt(source_text, self.profile)
         self._primary_prompt_text = rendered.text
-        return self.client.complete(rendered.text, system=self.profile.addendum)
+        return self.client.complete(
+            rendered.text,
+            system=self.profile.addendum,
+            client_request_id=client_request_id,
+        )
 
-    def secondary_validation_call(self, extraction: str, source_text: str) -> str:
+    def secondary_validation_call(
+        self, extraction: str, source_text: str, *, client_request_id: str | None = None
+    ) -> str:
         """TEMP-ARC-002. Response must end with an `exclusions` JSON array."""
         rendered = render_secondary_prompt(source_text, extraction, self.profile)
         self._secondary_prompt_text = rendered.text
-        return self.client.complete(rendered.text, system=self.profile.addendum)
+        return self.client.complete(
+            rendered.text,
+            system=self.profile.addendum,
+            client_request_id=client_request_id,
+        )
 
     def run(self, source: Path, output_dir: Path) -> ArchiveResult:
         source = Path(source)
@@ -112,9 +125,17 @@ class ForensicArchiver:
         source_sha256 = sha256_file(source)
         started_at = utc_now()
         run_id = str(uuid.uuid4())
+        primary_request_id = f"{run_id}:primary"
+        secondary_request_id = f"{run_id}:secondary"
 
-        primary = self.primary_extraction_call(source_text)
-        secondary = self.secondary_validation_call(primary, source_text)
+        primary = self.primary_extraction_call(
+            source_text, client_request_id=primary_request_id
+        )
+        primary_trace = consume_call_trace(self.client)
+        secondary = self.secondary_validation_call(
+            primary, source_text, client_request_id=secondary_request_id
+        )
+        secondary_trace = consume_call_trace(self.client)
         items = parse_items(primary)
         if not items:
             raise MuseumPackageError("TEMP-ARC-001 returned no parseable items")
@@ -135,6 +156,10 @@ class ForensicArchiver:
         snapshot_path = output_dir / snapshot_rel
         archive_path = output_dir / ARCHIVE_FILENAME
         ledger_path = output_dir / LEDGER_FILENAME
+        llm_traces = {
+            "primary_extraction": _trace_record(primary_trace, primary_request_id),
+            "secondary_validation": _trace_record(secondary_trace, secondary_request_id),
+        }
         payload = {
             "schema": "forensic-archive/v1",
             "run_id": run_id,
@@ -149,6 +174,7 @@ class ForensicArchiver:
                 "primary": PRIMARY_PROMPT_ID,
                 "secondary": SECONDARY_PROMPT_ID,
             },
+            "llm": llm_traces,
             "inclusions": inclusions,
             "exclusions": exclusions,
             "ledger": LEDGER_FILENAME,
@@ -182,24 +208,26 @@ class ForensicArchiver:
                 extracted_ids=[item["id"] for item in items],
                 dangling_exclusion_ids=dangling,
                 calls=[
-                    {
-                        "role": "primary_extraction",
-                        "prompt_id": PRIMARY_PROMPT_ID,
-                        "provider": self.client.name,
-                        "prompt_sha256": sha256_text(self._primary_prompt_text),
-                        "response_sha256": sha256_text(primary),
-                        "response_text": primary,
-                        "created_at": started_at,
-                    },
-                    {
-                        "role": "secondary_validation",
-                        "prompt_id": SECONDARY_PROMPT_ID,
-                        "provider": self.client.name,
-                        "prompt_sha256": sha256_text(self._secondary_prompt_text),
-                        "response_sha256": sha256_text(secondary),
-                        "response_text": secondary,
-                        "created_at": finished_at,
-                    },
+                    _ledger_call(
+                        role="primary_extraction",
+                        prompt_id=PRIMARY_PROMPT_ID,
+                        provider=self.client.name,
+                        prompt_text=self._primary_prompt_text,
+                        response_text=primary,
+                        created_at=started_at,
+                        client_request_id=primary_request_id,
+                        trace=primary_trace,
+                    ),
+                    _ledger_call(
+                        role="secondary_validation",
+                        prompt_id=SECONDARY_PROMPT_ID,
+                        provider=self.client.name,
+                        prompt_text=self._secondary_prompt_text,
+                        response_text=secondary,
+                        created_at=finished_at,
+                        client_request_id=secondary_request_id,
+                        trace=secondary_trace,
+                    ),
                 ],
                 inclusions=inclusions,
                 exclusions=exclusions,
@@ -225,7 +253,54 @@ class ForensicArchiver:
             secondary_response=secondary,
             source_sha256=source_sha256,
             verification=verification,
+            llm_traces=llm_traces,
         )
+
+
+def _trace_record(trace: LLMCallTrace | None, client_request_id: str) -> dict[str, Any]:
+    record: dict[str, Any] = {"client_request_id": client_request_id}
+    if trace is None:
+        return record
+    if trace.client_request_id:
+        record["client_request_id"] = trace.client_request_id
+    if trace.provider_request_id:
+        record["provider_request_id"] = trace.provider_request_id
+    if trace.organization:
+        record["organization"] = trace.organization
+    if trace.processing_ms:
+        record["processing_ms"] = trace.processing_ms
+    if trace.api_version:
+        record["api_version"] = trace.api_version
+    if trace.surface:
+        record["surface"] = trace.surface
+    if trace.rate_limits:
+        record["rate_limits"] = dict(trace.rate_limits)
+    return record
+
+
+def _ledger_call(
+    *,
+    role: str,
+    prompt_id: str,
+    provider: str,
+    prompt_text: str,
+    response_text: str,
+    created_at: str,
+    client_request_id: str,
+    trace: LLMCallTrace | None,
+) -> dict[str, Any]:
+    return {
+        "role": role,
+        "prompt_id": prompt_id,
+        "provider": provider,
+        "prompt_sha256": sha256_text(prompt_text),
+        "response_sha256": sha256_text(response_text),
+        "response_text": response_text,
+        "created_at": created_at,
+        "client_request_id": (trace.client_request_id if trace and trace.client_request_id else client_request_id),
+        "provider_request_id": trace.provider_request_id if trace else None,
+        "http_meta": trace.as_http_meta() if trace else {},
+    }
 
 
 def _write_human_readme(path: Path, payload: dict[str, Any]) -> None:

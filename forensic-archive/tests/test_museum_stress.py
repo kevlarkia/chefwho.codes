@@ -25,8 +25,14 @@ class ScriptedClient:
         self.primary = primary
         self.secondary = secondary
 
-    def complete(self, prompt: str, *, system: str | None = None) -> str:
-        del system
+    def complete(
+        self,
+        prompt: str,
+        *,
+        system: str | None = None,
+        client_request_id: str | None = None,
+    ) -> str:
+        del system, client_request_id
         if discover_markers(prompt, "EXTRACTION"):
             return self.secondary
         return self.primary

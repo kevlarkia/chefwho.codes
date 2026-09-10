@@ -100,6 +100,7 @@ def main(argv: list[str] | None = None) -> int:
                 "inclusions": len(result.inclusions),
                 "exclusions": len(result.exclusions),
                 "verified": bool(result.verification and result.verification.ok),
+                "llm": result.llm_traces,
             },
             indent=2,
         )

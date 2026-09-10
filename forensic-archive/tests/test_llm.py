@@ -48,9 +48,15 @@ def test_anthropic_wrapper_posts_messages(monkeypatch: pytest.MonkeyPatch) -> No
 
 def test_openai_and_vertex_wrappers(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setattr(
+        "forensic_archive.llm.request_json",
+        lambda url, headers, payload, client_request_id=None: _result(
+            {"output_text": "from-openai"},
+            client_request_id=client_request_id,
+        ),
+    )
+    monkeypatch.setattr(
         "forensic_archive.llm.post_json",
         lambda url, headers, payload: {
-            "choices": [{"message": {"content": "from-openai"}}],
             "candidates": [{"content": {"parts": [{"text": "from-vertex"}]}}],
         },
     )
@@ -68,3 +74,14 @@ def test_dummy_secondary_emits_exclusions_json() -> None:
     payload = json.loads(secondary.split("```json")[-1].split("```")[0])
     assert "exclusions" in payload
     assert any(item["rule"] == "placeholder" for item in payload["exclusions"])
+
+
+def _result(body: dict, *, headers: dict | None = None, client_request_id: str | None = None):
+    from forensic_archive.llm import HttpJsonResult
+
+    return HttpJsonResult(
+        body=body,
+        status=200,
+        headers=headers or {"x-request-id": "req_test"},
+        client_request_id=client_request_id,
+    )

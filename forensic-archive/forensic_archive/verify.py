@@ -65,7 +65,7 @@ def verify_package(output_dir: Path, *, run_id: str | None = None) -> Verificati
     report.run_id = current_id or None
     _check(report, "archive_json", True)
 
-    ledger = ForensicLedger(ledger_path)
+    ledger = ForensicLedger(ledger_path, migrate=False)
     try:
         _verify_ledger(report, ledger, archive, current_id, archive_path)
         _verify_snapshots(report, output_dir, ledger)
@@ -193,6 +193,7 @@ def _verify_ledger(
         roles == ["primary_extraction", "secondary_validation"],
         f"unexpected LLM call roles: {roles}",
     )
+    llm_meta = archive.get("llm") if isinstance(archive.get("llm"), dict) else {}
     for call in calls:
         recomputed = sha256_text(call["response_text"])
         if recomputed != call["response_sha256"]:
@@ -204,6 +205,19 @@ def _verify_ledger(
             )
         else:
             _check(report, f"response_hash_{call['role']}", True)
+        keys = set(call.keys())
+        if "client_request_id" in keys and llm_meta:
+            expected = (llm_meta.get(call["role"]) or {}).get("client_request_id")
+            stored = call["client_request_id"]
+            if expected and stored and expected != stored:
+                _check(
+                    report,
+                    f"client_request_id_{call['role']}",
+                    False,
+                    f"{call['role']} X-Client-Request-Id disagrees between archive and ledger",
+                )
+            elif expected or stored:
+                _check(report, f"client_request_id_{call['role']}", True)
 
 
 def _verify_snapshots(report: VerificationReport, output_dir: Path, ledger: ForensicLedger) -> None:
