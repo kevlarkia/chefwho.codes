@@ -81,6 +81,7 @@ This document defines the official naming conventions for the `chefwho.codes` re
 - ✅ `app/`
 - ✅ `swm-recovery/`
 - ✅ `rose-rocket-engine/`
+- ✅ `graph-pim/`
 - ✅ `content/`
 - ❌ `swmRecovery/` (camelCase not allowed)
 - ❌ `SWM_Recovery/` (mixed case not allowed)

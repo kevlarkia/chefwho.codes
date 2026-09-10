@@ -1,0 +1,38 @@
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#roleManagement/directory/roleAssignmentScheduleRequests/$entity",
+    "id": "911bab8a-6912-4de2-9dc0-2648ede7dd6d",
+    "status": "Granted",
+    "createdDateTime": "2022-04-13T08:52:32.6485851Z",
+    "completedDateTime": "2022-04-14T00:00:00Z",
+    "approvalId": null,
+    "customData": null,
+    "action": "selfActivate",
+    "principalId": "aaaaaaaa-bbbb-cccc-1111-222222222222",
+    "roleDefinitionId": "8424c6f0-a189-499e-bbd0-26c1753c96d4",
+    "directoryScopeId": "/",
+    "appScopeId": null,
+    "isValidationOnly": false,
+    "targetScheduleId": "911bab8a-6912-4de2-9dc0-2648ede7dd6d",
+    "justification": "I need access to the Attribute Administrator role to manage attributes to be assigned to restricted AUs",
+    "createdBy": {
+        "application": null,
+        "device": null,
+        "user": {
+            "displayName": null,
+            "id": "071cc716-8147-4397-a5ba-b2105951cc0b"
+        }
+    },
+    "scheduleInfo": {
+        "startDateTime": "2022-04-14T00:00:00Z",
+        "recurrence": null,
+        "expiration": {
+            "type": "afterDuration",
+            "endDateTime": null,
+            "duration": "PT5H"
+        }
+    },
+    "ticketInfo": {
+        "ticketNumber": "CONTOSO:Normal-67890",
+        "ticketSystem": "MS Project"
+    }
+}

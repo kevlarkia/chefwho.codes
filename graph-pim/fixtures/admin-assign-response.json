@@ -1,0 +1,38 @@
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#roleManagement/directory/roleEligibilityScheduleRequests/$entity",
+    "id": "50877283-9d40-433c-bab8-7986dc10458a",
+    "status": "Provisioned",
+    "createdDateTime": "2022-04-12T09:05:39.7594064Z",
+    "completedDateTime": "2022-04-12T09:05:41.8532931Z",
+    "approvalId": null,
+    "customData": null,
+    "action": "adminAssign",
+    "principalId": "071cc716-8147-4397-a5ba-b2105951cc0b",
+    "roleDefinitionId": "8424c6f0-a189-499e-bbd0-26c1753c96d4",
+    "directoryScopeId": "/",
+    "appScopeId": null,
+    "isValidationOnly": false,
+    "targetScheduleId": "50877283-9d40-433c-bab8-7986dc10458a",
+    "justification": "Assign Attribute Assignment Admin eligibility to restricted user",
+    "createdBy": {
+        "application": null,
+        "device": null,
+        "user": {
+            "displayName": null,
+            "id": "3fbd929d-8c56-4462-851e-0eb9a7b3a2a5"
+        }
+    },
+    "scheduleInfo": {
+        "startDateTime": "2022-04-12T09:05:41.8532931Z",
+        "recurrence": null,
+        "expiration": {
+            "type": "afterDateTime",
+            "endDateTime": "2024-04-10T00:00:00Z",
+            "duration": null
+        }
+    },
+    "ticketInfo": {
+        "ticketNumber": null,
+        "ticketSystem": null
+    }
+}

@@ -1,6 +1,6 @@
 # Repository Policies
 
-**Last Updated:** 2026-08-13  
+**Last Updated:** 2026-09-10  
 **Status:** Consolidated from AGENTS.md, SYSTEMS_HEALTH.md, README.md, and tribal knowledge
 
 This document consolidates ALL repository policies in one canonical location. If a policy isn't documented here, it doesn't exist.
@@ -63,6 +63,7 @@ Follow Conventional Commits:
 
 - ✅ **Markdown linting** — `markdownlint-cli2 "**/*.md" "#node_modules"`
 - ✅ **Workflow linting** — `actionlint`
+- ✅ **Graph PIM tests** — `pytest` / `ruff` in `graph-pim/`
 
 ### Local/PR Hygiene (Should Pass)
 
@@ -132,6 +133,7 @@ npm run dev            # Start dev server (http://localhost:3000)
 | `content/blog/` | Markdown blog posts | Blog content only, no code |
 | `lib/` | Shared TypeScript utilities | Reusable helpers, type-safe |
 | `swm-recovery/` | SWM extraction suite | Operational recovery tooling, separate from site |
+| `graph-pim/` | Graph PIM eligibility client | Entra PIM `unifiedRoleEligibilityScheduleRequest` toolkit |
 | `rose-rocket-engine/` | Newsletter toolkit mirror | CI/pytest staging for upstream repo |
 | `docs/` | Repository documentation | Systems health, migration, policies, guides |
 
@@ -139,6 +141,7 @@ npm run dev            # Start dev server (http://localhost:3000)
 
 - **Personal site** (`app/`, `content/`) — Marketing presence, blog, contact form
 - **SWM recovery toolkit** (`swm-recovery/`) — Brand asset extraction, prompt harvesting
+- **Graph PIM** (`graph-pim/`) — Microsoft Graph PIM eligibility and activation client
 - **Rose Rocket Engine** (`rose-rocket-engine/`) — Upstream mirror, cannot push directly
 - **Documentation** (`docs/`) — Cross-cutting concerns, maintenance, planning
 

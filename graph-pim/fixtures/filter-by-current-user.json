@@ -1,0 +1,43 @@
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#Collection(unifiedRoleEligibilityScheduleRequest)",
+    "value": [
+        {
+            "@odata.type": "#microsoft.graph.unifiedRoleEligibilityScheduleRequest",
+            "id": "50d34326-f243-4540-8bb5-2af6692aafd0",
+            "status": "Provisioned",
+            "createdDateTime": "2022-04-12T18:26:08.843Z",
+            "completedDateTime": "2022-04-12T18:26:08.89Z",
+            "approvalId": null,
+            "customData": null,
+            "action": "adminAssign",
+            "principalId": "aaaaaaaa-bbbb-cccc-1111-222222222222",
+            "roleDefinitionId": "8424c6f0-a189-499e-bbd0-26c1753c96d4",
+            "directoryScopeId": "/",
+            "appScopeId": null,
+            "isValidationOnly": false,
+            "targetScheduleId": "50d34326-f243-4540-8bb5-2af6692aafd0",
+            "justification": "Assign Attribute Assignment Admin eligibility to myself",
+            "createdBy": {
+                "application": null,
+                "device": null,
+                "user": {
+                    "displayName": null,
+                    "id": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
+                }
+            },
+            "scheduleInfo": {
+                "startDateTime": "2022-04-12T18:26:08.8911834Z",
+                "recurrence": null,
+                "expiration": {
+                    "type": "afterDateTime",
+                    "endDateTime": "2024-04-10T00:00:00Z",
+                    "duration": null
+                }
+            },
+            "ticketInfo": {
+                "ticketNumber": null,
+                "ticketSystem": null
+            }
+        }
+    ]
+}

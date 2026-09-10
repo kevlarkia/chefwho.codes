@@ -1,0 +1,11 @@
+{
+  "error": {
+    "code": "AccessDenied",
+    "message": "The caller does not have permission to perform this operation.",
+    "innerError": {
+      "date": "2022-04-12T18:26:08",
+      "request-id": "11111111-2222-3333-4444-555555555555",
+      "client-request-id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
+    }
+  }
+}
