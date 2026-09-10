@@ -38,3 +38,7 @@ swm-recovery/sources/**/content/**
 
 .vercel
 .env*
+!.env.example
+!forensic-archive/.env.example
+!.env.example
+!forensic-archive/.env.example
