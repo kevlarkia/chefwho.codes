@@ -27,9 +27,18 @@ Thumbs.db
 !.vscode/extensions.json
 !.vscode/settings.json
 
+# Generated forensic archive packages (ledger is produced at run time)
+forensic-archive/output/
+__pycache__/
+.pytest_cache/
+
 # SWM recovery: keep source metadata; ignore proprietary ingested originals
 swm-recovery/sources/**/content/**
 !swm-recovery/sources/**/content/README.md
 
 .vercel
 .env*
+!.env.example
+!forensic-archive/.env.example
+!.env.example
+!forensic-archive/.env.example

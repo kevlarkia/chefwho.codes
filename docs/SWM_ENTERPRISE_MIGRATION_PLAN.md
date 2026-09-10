@@ -61,6 +61,9 @@ chefwho.codes/
 - **Ownership:** All previous Chefwho.Codes org owners are now SWa Works
   enterprise owners
 - **Billing:** Transferred from Chefwho.Codes org to SWa Works enterprise
+- **Recovery pipeline house:** separate GitHub organization (not this site
+  org). Filled signup + inventory: `docs/RECOVERY_HOUSE.md`. Trees
+  `swm-recovery/` and `forensic-archive/` move there when the house exists.
 
 ## Migration Phases
 
