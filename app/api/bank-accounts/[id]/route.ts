@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import Stripe from "stripe";
 import { stripe, mapStripeErrorToResponse } from "@/lib/stripe";
 import type {
   UpdateBankAccountRequest,
@@ -27,12 +28,46 @@ export async function GET(
   }
 
   try {
-    const bankAccount = await stripe.v2.core.vault.usBankAccounts.retrieve(id);
+    const customers = await stripe.customers.list({ limit: 100 });
+    
+    for (const customer of customers.data) {
+      try {
+        const bankAccount = await stripe.customers.retrieveSource(
+          customer.id,
+          id,
+        ) as Stripe.BankAccount;
 
-    return NextResponse.json({
-      ok: true,
-      data: bankAccount as unknown as USBankAccount,
-    });
+        const response: USBankAccount = {
+          id: bankAccount.id,
+          object: "us_bank_account",
+          account_holder_name: bankAccount.account_holder_name || "",
+          account_holder_type: (bankAccount.account_holder_type || "individual") as "individual" | "company",
+          account_type: bankAccount.account_type || "checking",
+          bank_name: bankAccount.bank_name || null,
+          country: bankAccount.country,
+          currency: bankAccount.currency,
+          fingerprint: bankAccount.fingerprint || "",
+          last4: bankAccount.last4,
+          routing_number: bankAccount.routing_number || "",
+          status: bankAccount.status as "new" | "verified" | "verification_failed" | "errored",
+          created: Math.floor(Date.now() / 1000),
+          livemode: false,
+          metadata: { customer_id: customer.id },
+        };
+
+        return NextResponse.json({
+          ok: true,
+          data: response,
+        });
+      } catch {
+        continue;
+      }
+    }
+
+    return NextResponse.json(
+      { error: "Bank account not found." },
+      { status: 404 },
+    );
   } catch (error) {
     console.error("Failed to retrieve US bank account", {
       error,
@@ -100,15 +135,56 @@ export async function POST(
   }
 
   try {
-    const bankAccount = await stripe.v2.core.vault.usBankAccounts.update(
-      id,
-      updateData,
-    );
+    const customers = await stripe.customers.list({ limit: 100 });
+    
+    for (const customer of customers.data) {
+      try {
+        await stripe.customers.retrieveSource(
+          customer.id,
+          id,
+        );
 
-    return NextResponse.json({
-      ok: true,
-      data: bankAccount as unknown as USBankAccount,
-    });
+        const bankAccount = await stripe.customers.updateSource(
+          customer.id,
+          id,
+          {
+            account_holder_name: updateData.account_holder_name,
+            account_holder_type: updateData.account_holder_type,
+            metadata: updateData.metadata,
+          },
+        ) as Stripe.BankAccount;
+
+        const response: USBankAccount = {
+          id: bankAccount.id,
+          object: "us_bank_account",
+          account_holder_name: bankAccount.account_holder_name || "",
+          account_holder_type: (bankAccount.account_holder_type || "individual") as "individual" | "company",
+          account_type: bankAccount.account_type || "checking",
+          bank_name: bankAccount.bank_name || null,
+          country: bankAccount.country,
+          currency: bankAccount.currency,
+          fingerprint: bankAccount.fingerprint || "",
+          last4: bankAccount.last4,
+          routing_number: bankAccount.routing_number || "",
+          status: bankAccount.status as "new" | "verified" | "verification_failed" | "errored",
+          created: Math.floor(Date.now() / 1000),
+          livemode: false,
+          metadata: { customer_id: customer.id },
+        };
+
+        return NextResponse.json({
+          ok: true,
+          data: response,
+        });
+      } catch {
+        continue;
+      }
+    }
+
+    return NextResponse.json(
+      { error: "Bank account not found." },
+      { status: 404 },
+    );
   } catch (error) {
     console.error("Failed to update US bank account", {
       error,

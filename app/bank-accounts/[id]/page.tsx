@@ -19,27 +19,27 @@ export default function BankAccountDetailPage() {
   const [microdepositAmounts, setMicrodepositAmounts] = useState({ amount1: "", amount2: "" });
 
   useEffect(() => {
+    const fetchAccount = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const response = await fetch(`/api/bank-accounts/${id}`);
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.error || "Failed to fetch bank account");
+        }
+
+        setAccount(data.data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "An error occurred");
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchAccount();
   }, [id]);
-
-  const fetchAccount = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      const response = await fetch(`/api/bank-accounts/${id}`);
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || "Failed to fetch bank account");
-      }
-
-      setAccount(data.data);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "An error occurred");
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const handleArchive = async () => {
     if (!confirm("Are you sure you want to archive this bank account?")) {
@@ -80,7 +80,12 @@ export default function BankAccountDetailPage() {
       }
 
       alert(data.message || "Microdeposits sent successfully!");
-      await fetchAccount();
+      
+      const refreshResponse = await fetch(`/api/bank-accounts/${id}`);
+      const refreshData = await refreshResponse.json();
+      if (refreshResponse.ok) {
+        setAccount(refreshData.data);
+      }
     } catch (err) {
       alert(err instanceof Error ? err.message : "Failed to send microdeposits");
     } finally {
@@ -113,7 +118,12 @@ export default function BankAccountDetailPage() {
 
       alert(data.message || "Bank account verified successfully!");
       setMicrodepositAmounts({ amount1: "", amount2: "" });
-      await fetchAccount();
+      
+      const refreshResponse = await fetch(`/api/bank-accounts/${id}`);
+      const refreshData = await refreshResponse.json();
+      if (refreshResponse.ok) {
+        setAccount(refreshData.data);
+      }
     } catch (err) {
       alert(err instanceof Error ? err.message : "Failed to confirm microdeposits");
     } finally {

@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { stripe, mapStripeErrorToResponse } from "@/lib/stripe";
-import type { USBankAccount } from "@/lib/types/stripe-bank-account";
 
 type RouteContext = {
   params: Promise<{ id: string }>;
@@ -20,13 +19,26 @@ export async function POST(
   }
 
   try {
-    const bankAccount = await stripe.v2.core.vault.usBankAccounts.archive(id);
+    const customers = await stripe.customers.list({ limit: 100 });
+    
+    for (const customer of customers.data) {
+      try {
+        await stripe.customers.deleteSource(customer.id, id);
 
-    return NextResponse.json({
-      ok: true,
-      data: bankAccount as unknown as USBankAccount,
-      message: "Bank account archived successfully.",
-    });
+        return NextResponse.json({
+          ok: true,
+          data: { id, deleted: true },
+          message: "Bank account archived successfully.",
+        });
+      } catch {
+        continue;
+      }
+    }
+
+    return NextResponse.json(
+      { error: "Bank account not found." },
+      { status: 404 },
+    );
   } catch (error) {
     console.error("Failed to archive US bank account", {
       error,

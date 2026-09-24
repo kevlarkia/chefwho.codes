@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import Stripe from "stripe";
 import { stripe, mapStripeErrorToResponse } from "@/lib/stripe";
 import type {
   CreateBankAccountRequest,
@@ -34,7 +35,6 @@ export async function POST(request: Request) {
   const accountHolderType = payload.account_holder_type;
   const accountNumber = normalizeString(payload.account_number);
   const routingNumber = normalizeString(payload.routing_number);
-  const accountType = payload.account_type || "checking";
 
   if (accountHolderName.length < 2) {
     return NextResponse.json(
@@ -65,18 +65,46 @@ export async function POST(request: Request) {
   }
 
   try {
-    const bankAccount = await stripe.v2.core.vault.usBankAccounts.create({
-      account_holder_name: accountHolderName,
-      account_holder_type: accountHolderType,
-      account_number: accountNumber,
-      routing_number: routingNumber,
-      account_type: accountType,
+    const token = await stripe.tokens.create({
+      bank_account: {
+        country: "US",
+        currency: "usd",
+        account_holder_name: accountHolderName,
+        account_holder_type: accountHolderType,
+        account_number: accountNumber,
+        routing_number: routingNumber,
+      },
+    });
+
+    const customer = await stripe.customers.create({
       metadata: payload.metadata || {},
     });
 
+    const bankAccount = await stripe.customers.createSource(customer.id, {
+      source: token.id,
+    }) as Stripe.BankAccount;
+
+    const response: USBankAccount = {
+      id: bankAccount.id,
+      object: "us_bank_account",
+      account_holder_name: bankAccount.account_holder_name || "",
+      account_holder_type: (bankAccount.account_holder_type || "individual") as "individual" | "company",
+      account_type: bankAccount.account_type || "checking",
+      bank_name: bankAccount.bank_name || null,
+      country: bankAccount.country,
+      currency: bankAccount.currency,
+      fingerprint: bankAccount.fingerprint || "",
+      last4: bankAccount.last4,
+      routing_number: bankAccount.routing_number || "",
+      status: bankAccount.status as "new" | "verified" | "verification_failed" | "errored",
+      created: Math.floor(Date.now() / 1000),
+      livemode: false,
+      metadata: { customer_id: customer.id },
+    };
+
     return NextResponse.json({
       ok: true,
-      data: bankAccount as unknown as USBankAccount,
+      data: response,
     });
   } catch (error) {
     console.error("Failed to create US bank account", {
@@ -89,23 +117,51 @@ export async function POST(request: Request) {
   }
 }
 
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const limit = Math.min(
-    parseInt(searchParams.get("limit") || "10", 10),
-    100,
-  );
-  const startingAfter = searchParams.get("starting_after") || undefined;
+export async function GET() {
+  const limit = 10;
 
   try {
-    const bankAccounts = await stripe.v2.core.vault.usBankAccounts.list({
-      limit,
-      starting_after: startingAfter,
-    });
+    const customers = await stripe.customers.list({ limit: 100 });
+    const allBankAccounts: USBankAccount[] = [];
+
+    for (const customer of customers.data) {
+      const sources = await stripe.customers.listSources(customer.id, {
+        object: "bank_account",
+        limit: 100,
+      });
+
+      for (const source of sources.data) {
+        const bankAccount = source as Stripe.BankAccount;
+        allBankAccounts.push({
+          id: bankAccount.id,
+          object: "us_bank_account",
+          account_holder_name: bankAccount.account_holder_name || "",
+          account_holder_type: (bankAccount.account_holder_type || "individual") as "individual" | "company",
+          account_type: bankAccount.account_type || "checking",
+          bank_name: bankAccount.bank_name || null,
+          country: bankAccount.country,
+          currency: bankAccount.currency,
+          fingerprint: bankAccount.fingerprint || "",
+          last4: bankAccount.last4,
+          routing_number: bankAccount.routing_number || "",
+          status: bankAccount.status as "new" | "verified" | "verification_failed" | "errored",
+          created: Math.floor(Date.now() / 1000),
+          livemode: false,
+          metadata: { customer_id: customer.id },
+        });
+      }
+    }
+
+    const response: ListBankAccountsResponse = {
+      object: "list",
+      data: allBankAccounts.slice(0, limit),
+      has_more: allBankAccounts.length > limit,
+      url: "/api/bank-accounts",
+    };
 
     return NextResponse.json({
       ok: true,
-      data: bankAccounts as unknown as ListBankAccountsResponse,
+      data: response,
     });
   } catch (error) {
     console.error("Failed to list US bank accounts", {

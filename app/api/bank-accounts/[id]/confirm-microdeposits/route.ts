@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import Stripe from "stripe";
 import { stripe, mapStripeErrorToResponse } from "@/lib/stripe";
 import type { USBankAccount } from "@/lib/types/stripe-bank-account";
 
@@ -56,16 +57,55 @@ export async function POST(
   }
 
   try {
-    const bankAccount = await stripe.v2.core.vault.usBankAccounts.confirmMicrodeposits(
-      id,
-      payload,
-    );
+    const customers = await stripe.customers.list({ limit: 100 });
+    
+    for (const customer of customers.data) {
+      try {
+        await stripe.customers.retrieveSource(
+          customer.id,
+          id,
+        );
 
-    return NextResponse.json({
-      ok: true,
-      data: bankAccount as unknown as USBankAccount,
-      message: "Bank account verified successfully.",
-    });
+        const verifiedBankAccount = await stripe.customers.verifySource(
+          customer.id,
+          id,
+          {
+            amounts: payload.amounts,
+          },
+        ) as Stripe.BankAccount;
+
+        const response: USBankAccount = {
+          id: verifiedBankAccount.id,
+          object: "us_bank_account",
+          account_holder_name: verifiedBankAccount.account_holder_name || "",
+          account_holder_type: (verifiedBankAccount.account_holder_type || "individual") as "individual" | "company",
+          account_type: verifiedBankAccount.account_type || "checking",
+          bank_name: verifiedBankAccount.bank_name || null,
+          country: verifiedBankAccount.country,
+          currency: verifiedBankAccount.currency,
+          fingerprint: verifiedBankAccount.fingerprint || "",
+          last4: verifiedBankAccount.last4,
+          routing_number: verifiedBankAccount.routing_number || "",
+          status: verifiedBankAccount.status as "new" | "verified" | "verification_failed" | "errored",
+          created: Math.floor(Date.now() / 1000),
+          livemode: false,
+          metadata: { customer_id: customer.id },
+        };
+
+        return NextResponse.json({
+          ok: true,
+          data: response,
+          message: "Bank account verified successfully.",
+        });
+      } catch {
+        continue;
+      }
+    }
+
+    return NextResponse.json(
+      { error: "Bank account not found." },
+      { status: 404 },
+    );
   } catch (error) {
     console.error("Failed to confirm microdeposits", {
       error,

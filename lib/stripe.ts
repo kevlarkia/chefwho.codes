@@ -6,19 +6,17 @@ if (!process.env.STRIPE_SECRET_KEY) {
   );
 }
 
-const apiVersion = (process.env.STRIPE_API_VERSION || "2026-08-26.preview") as Stripe.LatestApiVersion;
-
 export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion,
+  apiVersion: "2026-08-26.dahlia",
   typescript: true,
 });
 
-export function isStripeError(error: unknown): error is Stripe.StripeError {
+export function isStripeError(error: unknown): error is Stripe.errors.StripeError {
   return (
     typeof error === "object" &&
     error !== null &&
     "type" in error &&
-    typeof (error as Stripe.StripeError).type === "string"
+    typeof (error as { type: string }).type === "string"
   );
 }
 

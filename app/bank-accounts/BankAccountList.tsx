@@ -4,14 +4,6 @@ import { useEffect, useState } from "react";
 import type { USBankAccount } from "@/lib/types/stripe-bank-account";
 import Link from "next/link";
 
-type APIResponse = {
-  ok: true;
-  data: {
-    data: USBankAccount[];
-    has_more: boolean;
-  };
-};
-
 export default function BankAccountList() {
   const [accounts, setAccounts] = useState<USBankAccount[]>([]);
   const [loading, setLoading] = useState(true);
@@ -19,27 +11,27 @@ export default function BankAccountList() {
   const [archiving, setArchiving] = useState<string | null>(null);
 
   useEffect(() => {
+    const fetchAccounts = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const response = await fetch("/api/bank-accounts");
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.error || "Failed to fetch bank accounts");
+        }
+
+        setAccounts(data.data.data || []);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "An error occurred");
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchAccounts();
   }, []);
-
-  const fetchAccounts = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      const response = await fetch("/api/bank-accounts");
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || "Failed to fetch bank accounts");
-      }
-
-      setAccounts(data.data.data || []);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "An error occurred");
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const handleArchive = async (id: string) => {
     if (!confirm("Are you sure you want to archive this bank account?")) {
@@ -58,7 +50,11 @@ export default function BankAccountList() {
         throw new Error(data.error || "Failed to archive bank account");
       }
 
-      await fetchAccounts();
+      const refreshResponse = await fetch("/api/bank-accounts");
+      const refreshData = await refreshResponse.json();
+      if (refreshResponse.ok) {
+        setAccounts(refreshData.data.data || []);
+      }
     } catch (err) {
       alert(err instanceof Error ? err.message : "Failed to archive bank account");
     } finally {
