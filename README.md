@@ -75,7 +75,14 @@ npm run lint
 - `/contact`
 - `/blog`
 - `/blog/[slug]`
+- `/bank-accounts` (bank account management)
+- `/bank-accounts/[id]` (bank account details)
 - `/api/contact` (POST)
+- `/api/bank-accounts` (GET, POST)
+- `/api/bank-accounts/[id]` (GET, POST)
+- `/api/bank-accounts/[id]/archive` (POST)
+- `/api/bank-accounts/[id]/send-microdeposits` (POST)
+- `/api/bank-accounts/[id]/confirm-microdeposits` (POST)
 
 ## Blog Content
 
@@ -108,6 +115,124 @@ Optional env vars:
 
 If SendGrid is not configured, the endpoint logs payload server-side and returns
 success so local development is unblocked.
+
+## US Bank Accounts (Stripe Integration)
+
+The application integrates with Stripe's v2 Core Vault API to manage US bank
+accounts for ACH payment collection.
+
+### Features
+
+- Add new bank accounts with routing and account numbers
+- List all stored bank accounts
+- View individual bank account details
+- Archive (soft delete) bank accounts
+- Verify bank accounts via microdeposits
+- Secure storage using Stripe's vault (never stores raw account numbers)
+
+### Required Environment Variables
+
+Get your Stripe API keys from <https://dashboard.stripe.com/apikeys>:
+
+- `STRIPE_SECRET_KEY` - Your Stripe secret key (sk_test_... for test mode)
+- `STRIPE_PUBLISHABLE_KEY` - Your Stripe publishable key (pk_test_... for test mode)
+- `STRIPE_API_VERSION` - API version (defaults to `2026-08-26.preview`)
+
+### API Endpoints
+
+All bank account endpoints return JSON responses. Successful responses include
+`ok: true` and `data` fields. Errors include an `error` field with a
+user-friendly message.
+
+#### Create Bank Account
+
+`POST /api/bank-accounts`
+
+Request body:
+
+```json
+{
+  "account_holder_name": "John Doe",
+  "account_holder_type": "individual",
+  "account_number": "000123456789",
+  "routing_number": "110000000",
+  "account_type": "checking"
+}
+```
+
+#### List Bank Accounts
+
+`GET /api/bank-accounts?limit=10&starting_after=ba_xxx`
+
+Query parameters:
+
+- `limit` (optional, default 10, max 100)
+- `starting_after` (optional, bank account ID for pagination)
+
+#### Retrieve Bank Account
+
+`GET /api/bank-accounts/:id`
+
+#### Update Bank Account
+
+`POST /api/bank-accounts/:id`
+
+Request body (all fields optional):
+
+```json
+{
+  "account_holder_name": "Jane Doe",
+  "metadata": {"custom_field": "value"}
+}
+```
+
+#### Archive Bank Account
+
+`POST /api/bank-accounts/:id/archive`
+
+Soft deletes the bank account, preventing it from being used for new payments.
+
+#### Send Microdeposits
+
+`POST /api/bank-accounts/:id/send-microdeposits`
+
+Initiates microdeposit verification. Stripe will send two small deposits to the
+bank account within 1-2 business days.
+
+#### Confirm Microdeposits
+
+`POST /api/bank-accounts/:id/confirm-microdeposits`
+
+Request body:
+
+```json
+{
+  "amounts": [32, 45]
+}
+```
+
+Verifies the bank account by confirming the two microdeposit amounts (in cents).
+
+### Frontend Routes
+
+- `/bank-accounts` - Main bank accounts management page
+- `/bank-accounts/[id]` - Individual bank account detail page with verification
+
+### Security Notes
+
+- Bank account numbers are never exposed in full (only last 4 digits)
+- All sensitive data is stored in Stripe's PCI-compliant vault
+- Routing number validation ensures 9-digit format
+- Account number validation ensures 4-17 digit format
+- Consider adding authentication middleware before production use
+
+### Testing with Stripe Test Mode
+
+Use Stripe's test mode credentials for development:
+
+- Test routing number: `110000000`
+- Test account number: `000123456789`
+- See <https://stripe.com/docs/testing> for more test data
 
 ## Agent and systems hygiene
 
