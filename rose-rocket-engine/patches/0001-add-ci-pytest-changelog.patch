@@ -1,0 +1,598 @@
+diff -ruN a/ai_news_scraper.py b/ai_news_scraper.py
+--- a/ai_news_scraper.py	2026-08-06 04:08:27.678405789 +0000
++++ b/ai_news_scraper.py	2026-08-06 04:10:20.906955606 +0000
+@@ -1,6 +1,5 @@
+ import requests
+ from bs4 import BeautifulSoup
+-from typing import List, Dict
+ 
+ HN_BASE_URL = "https://news.ycombinator.com"
+ 
+@@ -22,12 +21,12 @@
+     return (text or "").strip().lower()
+ 
+ 
+-def _contains_ai_keyword(text: str, keywords: List[str]) -> bool:
++def _contains_ai_keyword(text: str, keywords: list[str]) -> bool:
+     haystack = _normalize(text)
+     return any(_normalize(k) in haystack for k in keywords)
+ 
+ 
+-def fetch_hn_ai_stories(limit: int = 15, keywords: List[str] = None) -> List[Dict[str, str]]:
++def fetch_hn_ai_stories(limit: int = 15, keywords: list[str] = None) -> list[dict[str, str]]:
+     """
+     Scrape Hacker News front page and return stories matching AI-related keywords.
+ 
+diff -ruN a/CHANGELOG.md b/CHANGELOG.md
+--- a/CHANGELOG.md	1970-01-01 00:00:00.000000000 +0000
++++ b/CHANGELOG.md	2026-08-06 04:09:59.498806008 +0000
+@@ -0,0 +1,39 @@
++# Changelog
++
++All notable changes to Rose Rocket Engine are documented in this file.
++
++The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
++and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
++
++## [Unreleased]
++
++### Planned
++
++- Create git tag `v0.1.0` after CI is green on `main`
++- Expand test coverage beyond schedule/mode guards
++
++## [0.1.0] - 2026-08-06
++
++### Added
++
++- Core newsletter orchestration (`rose_rocket_engine.py`)
++- Hacker News AI scraper (`ai_news_scraper.py`)
++- Gmail draft creator (`gmail_draft_creator.py`)
++- Feature cooldown persistence (`feature_cooldowns.json`)
++- `FORCE_EDITION` env override for out-of-schedule test runs
++- Local-time edition routing (OS wall clock)
++- `DRY_RUN` mode (Gemini on, Gmail skipped, local markdown artifact)
++- `OFFLINE_DRY_RUN` mode (no Gemini/Gmail; fixture-driven output)
++- Sample offline fixtures (`fixtures/mock_stories.json`)
++- Builder implementation checklist (`docs/builder-implementation-checklist.md`)
++- GitHub Actions CI (lint + pytest + offline smoke)
++- Minimal pytest suite for schedule gating and mode paths
++- Dev dependencies (`requirements-dev.txt`: pytest, ruff)
++
++### Security
++
++- `.gitignore` covers `.env`, OAuth tokens, virtualenvs, and `output/` artifacts
++- `.env.example` documents required and optional environment variables
++
++[Unreleased]: https://github.com/kevlarkia/rose-rocket-engine/compare/v0.1.0...HEAD
++[0.1.0]: https://github.com/kevlarkia/rose-rocket-engine/releases/tag/v0.1.0
+diff -ruN a/docs/builder-implementation-checklist.md b/docs/builder-implementation-checklist.md
+--- a/docs/builder-implementation-checklist.md	2026-08-06 04:08:27.678405789 +0000
++++ b/docs/builder-implementation-checklist.md	2026-08-06 04:09:59.498806008 +0000
+@@ -1,33 +1,33 @@
+-## 🛠️ The Builder’s Implementation Checklist
++# The Builder’s Implementation Checklist
+ 
+-### Phase 1: Workflow Automation (The 60% Rule)
++## Phase 1: Workflow Automation (The 60% Rule)
+ 
+ - [ ] **Identify the target:** Pick one high-friction, repeatable internal process (e.g., weekly reporting, support ticket triage, or outbound email prep).
+ - [ ] **Draw the line:** Map the exact point where "data processing" ends and "human judgment" begins.
+ - [ ] **Automate the first half:** Deploy a script/prompt chain to handle *only* the first 60% of the task.
+ - [ ] **Standardize the handoff:** Create a clean UI or dashboard where the human operator reviews the AI's draft, edits it, and hits "Approve/Send."
+ 
+-### Phase 2: Feedback & Iteration Moats
++## Phase 2: Feedback & Iteration Moats
+ 
+ - [ ] **Install micro-feedback UI:** Add a simple mechanism (thumbs up/down, "Was this helpful?") to one core AI feature.
+ - [ ] **Capture the "Why":** Add an optional open-text field ("What was missing?") immediately after a negative rating.
+ - [ ] **Centralize the logs:** Pipe all feedback data directly into a dedicated Slack channel or a central tracking sheet.
+ - [ ] **Establish the ritual:** Schedule a mandatory 30-minute weekly block for the product team to review logs and adjust system prompts.
+ 
+-### Phase 3: Cost & Latency Routing
++## Phase 3: Cost & Latency Routing
+ 
+ - [ ] **Audit current API calls:** List every LLM touchpoint in your application.
+ - [ ] **Down-tier the basics:** Swap the model for all routing, classification, and basic formatting tasks to a faster, cheaper tier (e.g., Gemini 1.5 Flash or Claude Haiku).
+ - [ ] **Protect the premium tier:** Restrict your most expensive, highest-latency models strictly to the final, user-facing reasoning or synthesis steps.
+ 
+-### Phase 4: Production Reliability
++## Phase 4: Production Reliability
+ 
+ - [ ] **Enforce structured outputs:** Wrap critical generations in strict schema validation (e.g., JSON schemas) before passing the data downstream.
+ - [ ] **Install the safety net:** Deploy a lightweight banned-word or policy-violation filter *after* the generation step.
+ - [ ] **Define the fallback:** Write hardcoded, graceful error copy for users when the model times out or fails validation.
+ - [ ] **Build the escalation path:** Automatically route failed generations to a human admin queue rather than silently dropping them.
+ 
+-### Phase 5: The "Brief, Then Build" Prompt Migration
++## Phase 5: The "Brief, Then Build" Prompt Migration
+ 
+ - [ ] **Identify the weakest output:** Pick the one feature where the AI rambles the most or loses the plot.
+ - [ ] **Split the prompt:** Break the single prompt into a two-step chain.  
+diff -ruN a/docs/RELEASE_NOTES_v0.1.0.md b/docs/RELEASE_NOTES_v0.1.0.md
+--- a/docs/RELEASE_NOTES_v0.1.0.md	1970-01-01 00:00:00.000000000 +0000
++++ b/docs/RELEASE_NOTES_v0.1.0.md	2026-08-06 04:09:59.498806008 +0000
+@@ -0,0 +1,51 @@
++# Rose Rocket Engine v0.1.0 — Release Notes (prep)
++
++Status: **prepared, not tagged yet**.
++Cut the `v0.1.0` git tag only after CI is green on `main`.
++
++## Highlights
++
++- End-to-end newsletter scaffold: scrape → generate → (optional) Gmail draft
++- Monday / Wednesday / Friday edition routing using local OS time
++- Developer-friendly run modes:
++  - Production (Gemini + Gmail)
++  - `DRY_RUN=1` (Gemini + local artifact, no Gmail)
++  - `OFFLINE_DRY_RUN=1` (fixtures only, zero external API calls)
++- `FORCE_EDITION=1` bypass for schedule-gated testing
++- CI workflow with lint, unit tests, and offline smoke run
++
++## Install
++
++```bash
++git clone https://github.com/kevlarkia/rose-rocket-engine.git
++cd rose-rocket-engine
++python -m venv .venv
++source .venv/bin/activate
++pip install -r requirements.txt
++pip install -r requirements-dev.txt  # optional, for local CI parity
++```
++
++## Quick validation
++
++```bash
++# Offline smoke (no API keys required)
++export OFFLINE_DRY_RUN=1
++export FORCE_EDITION=1
++python rose_rocket_engine.py
++
++# Unit tests
++pytest -q
++```
++
++## Tag checklist (manual)
++
++1. Confirm CI is green on `main`
++2. Review `CHANGELOG.md` `[0.1.0]` section
++3. Create annotated tag:
++
++   ```bash
++   git tag -a v0.1.0 -m "Release v0.1.0"
++   git push origin v0.1.0
++   ```
++
++4. Publish GitHub Release from the tag using these notes
+diff -ruN a/.env.example b/.env.example
+--- a/.env.example	2026-08-06 04:08:27.678405789 +0000
++++ b/.env.example	2026-08-06 04:09:59.498806008 +0000
+@@ -3,3 +3,12 @@
+ 
+ # Optional: destination email address used by your own wrappers/scripts
+ NEWSLETTER_TO_EMAIL=
++
++# Optional: force run on non M/W/F days (1=true, 0=false)
++FORCE_EDITION=0
++
++# Optional: skip Gmail draft creation (still calls Gemini)
++DRY_RUN=0
++
++# Optional: skip Gemini + Gmail; use local fixtures only
++OFFLINE_DRY_RUN=0
+diff -ruN a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+--- a/.github/workflows/ci.yml	1970-01-01 00:00:00.000000000 +0000
++++ b/.github/workflows/ci.yml	2026-08-06 04:09:59.498806008 +0000
+@@ -0,0 +1,38 @@
++name: CI
++
++on:
++  push:
++    branches: [main]
++  pull_request:
++
++jobs:
++  lint-test-smoke:
++    runs-on: ubuntu-latest
++
++    steps:
++      - name: Checkout
++        uses: actions/checkout@v4
++
++      - name: Set up Python
++        uses: actions/setup-python@v5
++        with:
++          python-version: "3.11"
++          cache: pip
++
++      - name: Install dependencies
++        run: |
++          python -m pip install --upgrade pip
++          pip install -r requirements.txt
++          pip install -r requirements-dev.txt
++
++      - name: Lint
++        run: ruff check .
++
++      - name: Unit tests
++        run: pytest -q
++
++      - name: Offline dry-run smoke
++        env:
++          OFFLINE_DRY_RUN: "1"
++          FORCE_EDITION: "1"
++        run: python rose_rocket_engine.py
+diff -ruN a/.gitignore b/.gitignore
+--- a/.gitignore	2026-08-06 04:08:27.678405789 +0000
++++ b/.gitignore	2026-08-06 04:09:59.498806008 +0000
+@@ -23,7 +23,14 @@
+ credentials.json
+ token.json
+ 
+-# IDE / OS
++# Local dry-run / offline artifacts
++output/
++
++# IDE / OS / test caches
+ .vscode/
+ .idea/
+ .DS_Store
++.pytest_cache/
++.ruff_cache/
++.coverage
++htmlcov/
+diff -ruN a/gmail_draft_creator.py b/gmail_draft_creator.py
+--- a/gmail_draft_creator.py	2026-08-06 04:08:27.678405789 +0000
++++ b/gmail_draft_creator.py	2026-08-06 04:09:59.502806036 +0000
+@@ -1,7 +1,6 @@
+ import base64
+ from email.mime.text import MIMEText
+ from pathlib import Path
+-from typing import Optional
+ 
+ from google.auth.transport.requests import Request
+ from google.oauth2.credentials import Credentials
+@@ -33,7 +32,7 @@
+ def create_gmail_draft(
+     subject: str,
+     body: str,
+-    to_email: Optional[str] = None,
++    to_email: str | None = None,
+     credentials_file: str = "credentials.json",
+ ) -> str:
+     """
+diff -ruN a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	1970-01-01 00:00:00.000000000 +0000
++++ b/pyproject.toml	2026-08-06 04:09:59.502806036 +0000
+@@ -0,0 +1,11 @@
++[tool.ruff]
++line-length = 100
++target-version = "py311"
++
++[tool.ruff.lint]
++select = ["E", "F", "I", "B", "UP"]
++ignore = ["E501"]
++
++[tool.pytest.ini_options]
++testpaths = ["tests"]
++pythonpath = ["."]
+diff -ruN a/README.md b/README.md
+--- a/README.md	2026-08-06 04:08:27.678405789 +0000
++++ b/README.md	2026-08-06 04:09:59.498806008 +0000
+@@ -1,6 +1,7 @@
+ # Rose Rocket Engine
+ 
+ Automated AI newsletter scaffold with:
++
+ - Hacker News AI scraping
+ - Gemini-powered draft assembly
+ - M/W/F edition routing
+@@ -9,20 +10,28 @@
+ - Gmail draft creation via Gmail API
+ 
+ ## Files
++
+ - `rose_rocket_engine.py` — main orchestration engine
+ - `ai_news_scraper.py` — Hacker News scraper filtered for AI keywords
+ - `gmail_draft_creator.py` — Gmail draft creation module
+ - `feature_cooldowns.json` — persisted legacy feature rotation state
+ - `fixtures/mock_stories.json` — deterministic local stories for offline mode
+ - `requirements.txt` — pinned Python dependencies
++- `requirements-dev.txt` — pytest + ruff for local CI parity
++- `tests/` — schedule gate and mode-path unit tests
++- `.github/workflows/ci.yml` — lint + pytest + offline smoke
++- `CHANGELOG.md` — version history
++- `docs/RELEASE_NOTES_v0.1.0.md` — tag prep notes (tag not created yet)
+ 
+ ## Requirements
++
+ - Python 3.10+
+ - A Google Cloud project with Gmail API enabled
+ - OAuth client credentials downloaded as `credentials.json`
+ - Gemini API key
+ 
+ ## Environment & credentials
++
+ Set environment variable:
+ 
+ ```bash
+@@ -41,6 +50,16 @@
+ python -m venv .venv
+ source .venv/bin/activate
+ pip install -r requirements.txt
++# Optional for local CI parity:
++pip install -r requirements-dev.txt
++```
++
++## Local CI parity
++
++```bash
++ruff check .
++pytest -q
++OFFLINE_DRY_RUN=1 FORCE_EDITION=1 python rose_rocket_engine.py
+ ```
+ 
+ ## Run
+@@ -70,6 +89,7 @@
+ ```
+ 
+ Expected:
++
+ - Gemini is called.
+ - Gmail draft is created successfully.
+ - Console prints draft ID.
+@@ -84,6 +104,7 @@
+ ```
+ 
+ Expected:
++
+ - Gemini is called.
+ - Gmail draft is skipped.
+ - Console prints `DRY_RUN enabled: skipping Gmail draft creation.`
+@@ -99,6 +120,7 @@
+ ```
+ 
+ Expected:
++
+ - Gemini is skipped.
+ - Gmail draft is skipped.
+ - Local fixture stories are loaded from `fixtures/mock_stories.json`.
+@@ -132,6 +154,7 @@
+ If fixture parsing fails or the file is empty, the engine falls back to built-in mock stories.
+ 
+ ## Key constraints implemented
++
+ - Output is enforced under **30,000 characters**.
+ - A **banned-word content filter** runs before final output.
+ - Publishing route supports **Monday/Wednesday/Friday** with distinct edition types.
+diff -ruN a/requirements-dev.txt b/requirements-dev.txt
+--- a/requirements-dev.txt	1970-01-01 00:00:00.000000000 +0000
++++ b/requirements-dev.txt	2026-08-06 04:09:59.502806036 +0000
+@@ -0,0 +1,2 @@
++pytest==8.3.3
++ruff==0.6.9
+diff -ruN a/rose_rocket_engine.py b/rose_rocket_engine.py
+--- a/rose_rocket_engine.py	2026-08-06 04:08:27.678405789 +0000
++++ b/rose_rocket_engine.py	2026-08-06 04:09:59.502806036 +0000
+@@ -2,7 +2,6 @@
+ import os
+ from datetime import datetime
+ from pathlib import Path
+-from typing import Dict, List
+ 
+ import google.generativeai as genai
+ 
+@@ -45,13 +44,13 @@
+     return os.getenv(name, "").strip().lower() in {"1", "true", "yes", "on"}
+ 
+ 
+-def _load_cooldowns() -> Dict[str, Dict[str, str]]:
++def _load_cooldowns() -> dict[str, dict[str, str]]:
+     if not COOLDOWN_FILE.exists():
+         return {"last_used": {}}
+     return json.loads(COOLDOWN_FILE.read_text(encoding="utf-8"))
+ 
+ 
+-def _save_cooldowns(data: Dict[str, Dict[str, str]]) -> None:
++def _save_cooldowns(data: dict[str, dict[str, str]]) -> None:
+     COOLDOWN_FILE.write_text(json.dumps(data, indent=2), encoding="utf-8")
+ 
+ 
+@@ -60,7 +59,7 @@
+     return (_now_local() - previous).days
+ 
+ 
+-def _eligible_features(cooldowns: Dict[str, Dict[str, str]], candidates: List[str]) -> List[str]:
++def _eligible_features(cooldowns: dict[str, dict[str, str]], candidates: list[str]) -> list[str]:
+     last_used = cooldowns.get("last_used", {})
+     eligible = []
+     for feature in candidates:
+@@ -116,7 +115,7 @@
+     return EDITION_ROUTING[weekday]
+ 
+ 
+-def _assemble_prompt(edition_name: str, feature: str, stories: List[Dict[str, str]]) -> str:
++def _assemble_prompt(edition_name: str, feature: str, stories: list[dict[str, str]]) -> str:
+     story_lines = "\n".join(f"- {s['title']} ({s['url']})" for s in stories)
+     return f"""
+ You are writing the {edition_name} edition of Rose Rocket Engine.
+@@ -137,7 +136,7 @@
+ """.strip()
+ 
+ 
+-def _load_mock_stories() -> List[Dict[str, str]]:
++def _load_mock_stories() -> list[dict[str, str]]:
+     if MOCK_STORIES_PATH.exists():
+         data = json.loads(MOCK_STORIES_PATH.read_text(encoding="utf-8"))
+         stories = data.get("stories", []) if isinstance(data, dict) else data
+@@ -158,7 +157,7 @@
+     ]
+ 
+ 
+-def _generate_offline_newsletter_text(edition_name: str, feature: str, stories: List[Dict[str, str]]) -> str:
++def _generate_offline_newsletter_text(edition_name: str, feature: str, stories: list[dict[str, str]]) -> str:
+     top = stories[:5]
+     summaries = "\n".join(
+         f"- **{s['title']}** — Practical signal for operators. Source: {s['url']}" for s in top
+@@ -194,7 +193,7 @@
+ 
+     api_key = os.getenv("GEMINI_API_KEY")
+     if not api_key:
+-        raise EnvironmentError("Missing required environment variable: GEMINI_API_KEY")
++        raise OSError("Missing required environment variable: GEMINI_API_KEY")
+ 
+     stories = fetch_hn_ai_stories(limit=10)
+ 
+diff -ruN a/tests/test_schedule_and_modes.py b/tests/test_schedule_and_modes.py
+--- a/tests/test_schedule_and_modes.py	1970-01-01 00:00:00.000000000 +0000
++++ b/tests/test_schedule_and_modes.py	2026-08-06 04:09:59.502806036 +0000
+@@ -0,0 +1,149 @@
++"""Minimal tests for schedule gating and dry-run mode paths."""
++
++from __future__ import annotations
++
++from collections.abc import Iterator
++from datetime import datetime
++from pathlib import Path
++from unittest.mock import MagicMock, patch
++
++import pytest
++
++import rose_rocket_engine as engine
++
++
++@pytest.fixture(autouse=True)
++def _isolate_cooldown_file(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Iterator[None]:
++    cooldown = tmp_path / "feature_cooldowns.json"
++    cooldown.write_text('{"last_used": {}}', encoding="utf-8")
++    monkeypatch.setattr(engine, "COOLDOWN_FILE", cooldown)
++    yield
++
++
++@pytest.fixture(autouse=True)
++def _clear_mode_env(monkeypatch: pytest.MonkeyPatch) -> None:
++    for name in (
++        engine.FORCE_EDITION_ENV,
++        engine.DRY_RUN_ENV,
++        engine.OFFLINE_DRY_RUN_ENV,
++        "GEMINI_API_KEY",
++    ):
++        monkeypatch.delenv(name, raising=False)
++
++
++def test_force_edition_bypasses_schedule(monkeypatch: pytest.MonkeyPatch) -> None:
++    monkeypatch.setenv(engine.FORCE_EDITION_ENV, "1")
++    assert engine._edition_for_today() == "Forced Test Edition"
++
++
++@pytest.mark.parametrize(
++    ("when", "edition"),
++    [
++        (datetime(2026, 8, 3, 12, 0, 0), "Monday Market Radar"),  # Monday
++        (datetime(2026, 8, 5, 18, 0, 0), "Wednesday Builder Brief"),  # Wednesday
++        (datetime(2026, 8, 7, 9, 0, 0), "Friday Frontier Signals"),  # Friday
++    ],
++)
++def test_edition_routing_on_publish_days(
++    monkeypatch: pytest.MonkeyPatch, when: datetime, edition: str
++) -> None:
++    monkeypatch.setattr(engine, "_now_local", lambda: when)
++    assert engine._edition_for_today() == edition
++
++
++@pytest.mark.parametrize(
++    "when",
++    [
++        datetime(2026, 8, 4, 12, 0, 0),  # Tuesday
++        datetime(2026, 8, 6, 12, 0, 0),  # Thursday
++        datetime(2026, 8, 8, 12, 0, 0),  # Saturday
++        datetime(2026, 8, 9, 12, 0, 0),  # Sunday
++    ],
++)
++def test_edition_raises_on_non_publish_days(
++    monkeypatch: pytest.MonkeyPatch, when: datetime
++) -> None:
++    monkeypatch.setattr(engine, "_now_local", lambda: when)
++    with pytest.raises(RuntimeError, match="Monday/Wednesday/Friday"):
++        engine._edition_for_today()
++
++
++def test_content_filter_blocks_banned_words() -> None:
++    with pytest.raises(ValueError, match="banned words"):
++        engine._validate_content_filter("This is pure clickbait nonsense.")
++
++
++def test_content_filter_allows_clean_text() -> None:
++    engine._validate_content_filter("Operator-focused brief with clear takeaways.")
++
++
++def test_offline_dry_run_skips_gemini_and_gmail(
++    monkeypatch: pytest.MonkeyPatch, tmp_path: Path, capsys: pytest.CaptureFixture[str]
++) -> None:
++    monkeypatch.setenv(engine.OFFLINE_DRY_RUN_ENV, "1")
++    monkeypatch.setenv(engine.FORCE_EDITION_ENV, "1")
++    monkeypatch.setattr(engine, "OUTPUT_DIR", tmp_path / "output")
++    monkeypatch.setattr(
++        engine,
++        "MOCK_STORIES_PATH",
++        Path(__file__).resolve().parents[1] / "fixtures" / "mock_stories.json",
++    )
++
++    with (
++        patch("rose_rocket_engine.fetch_hn_ai_stories") as mock_fetch,
++        patch("rose_rocket_engine.create_gmail_draft") as mock_gmail,
++        patch.object(engine.genai, "GenerativeModel") as mock_model,
++    ):
++        engine.run()
++
++    mock_fetch.assert_not_called()
++    mock_gmail.assert_not_called()
++    mock_model.assert_not_called()
++
++    out = capsys.readouterr().out
++    assert "OFFLINE_DRY_RUN enabled" in out
++    assert "skipping Gemini and Gmail" in out
++
++    artifacts = list((tmp_path / "output").glob("newsletter-*.md"))
++    assert len(artifacts) == 1
++    assert "Forced Test Edition" in artifacts[0].read_text(encoding="utf-8")
++
++
++def test_dry_run_skips_gmail_but_uses_gemini(
++    monkeypatch: pytest.MonkeyPatch, tmp_path: Path, capsys: pytest.CaptureFixture[str]
++) -> None:
++    monkeypatch.setenv(engine.DRY_RUN_ENV, "1")
++    monkeypatch.setenv(engine.FORCE_EDITION_ENV, "1")
++    monkeypatch.setenv("GEMINI_API_KEY", "test-key")
++    monkeypatch.setattr(engine, "OUTPUT_DIR", tmp_path / "output")
++
++    mock_response = MagicMock()
++    mock_response.text = "Clean dry-run newsletter body without banned terms."
++    mock_model = MagicMock()
++    mock_model.generate_content.return_value = mock_response
++
++    with (
++        patch(
++            "rose_rocket_engine.fetch_hn_ai_stories",
++            return_value=[{"title": "AI tooling update", "url": "https://example.com/ai"}],
++        ),
++        patch("rose_rocket_engine.create_gmail_draft") as mock_gmail,
++        patch.object(engine.genai, "configure"),
++        patch.object(engine.genai, "GenerativeModel", return_value=mock_model),
++    ):
++        engine.run()
++
++    mock_gmail.assert_not_called()
++    mock_model.generate_content.assert_called_once()
++
++    out = capsys.readouterr().out
++    assert "DRY_RUN enabled: skipping Gmail draft creation." in out
++    artifacts = list((tmp_path / "output").glob("newsletter-*.md"))
++    assert len(artifacts) == 1
++
++
++def test_truthy_env_helpers(monkeypatch: pytest.MonkeyPatch) -> None:
++    monkeypatch.setenv("SAMPLE_FLAG", "yes")
++    assert engine._is_truthy_env("SAMPLE_FLAG") is True
++    monkeypatch.setenv("SAMPLE_FLAG", "0")
++    assert engine._is_truthy_env("SAMPLE_FLAG") is False

@@ -1,0 +1,28 @@
+{
+  "stories": [
+    {
+      "title": "Teams adopt eval-driven release checklists for AI features",
+      "url": "https://example.com/ai/eval-driven-release-checklists"
+    },
+    {
+      "title": "Smaller routing models cut inference costs without harming UX",
+      "url": "https://example.com/ai/small-model-routing-costs"
+    },
+    {
+      "title": "Structured JSON outputs reduce downstream workflow failures",
+      "url": "https://example.com/ai/structured-json-reliability"
+    },
+    {
+      "title": "Support organizations automate first-response triage with LLMs",
+      "url": "https://example.com/ai/support-triage-automation"
+    },
+    {
+      "title": "Prompt review rituals improve consistency in production assistants",
+      "url": "https://example.com/ai/prompt-review-rituals"
+    },
+    {
+      "title": "Builders standardize fallback copy for model timeout scenarios",
+      "url": "https://example.com/ai/fallback-copy-timeouts"
+    }
+  ]
+}

@@ -115,6 +115,14 @@ success so local development is unblocked.
 - Cross-ecosystem maintenance (AI instructions, CLOUT routing, Drive/disk
   tidy): see `docs/SYSTEMS_HEALTH.md`.
 - SWM recovery toolkit: see `swm-recovery/README.md`.
+- **SWM enterprise migration:** see `docs/SWM_ENTERPRISE_MIGRATION_PLAN.md`
+  and `docs/SWM_MIGRATION_QUICK_REF.md`.
+
+## Enterprise Context
+
+This repository is part of the **SWa Works** GitHub enterprise
+(<https://github.com/enterprises/swa-works>). The Chefwho.Codes organization
+is the first member org. See migration plan for consolidation strategy.
 
 ## Next Recommended Enhancements
 
