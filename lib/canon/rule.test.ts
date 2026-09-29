@@ -20,10 +20,10 @@ import {
   setStanding,
   verifyEntry,
 } from "./record";
-import { barFor, canCarry, weigh } from "./rule";
+import { barFor, canCarry, parseStandingInput, weigh } from "./rule";
 import { booksIn, seedShelf } from "./shelf";
 import { specimenEntries, specimenSources } from "./specimen";
-import type { Source } from "./types";
+import type { Entry, Source } from "./types";
 
 function source(
   id: string,
@@ -427,6 +427,75 @@ test("moving a book does not remove it from the shelf", () => {
       "The Art of Seduction",
     ],
   );
+});
+
+test("a repeated cite counts once, and a different role still counts", () => {
+  const sources = [
+    source("record", "record", 80),
+    source("a", "primary", 60),
+    source("b", "primary", 60),
+  ];
+  const doubled = weigh(
+    [
+      { sourceId: "record", role: "support" },
+      { sourceId: "record", role: "support" },
+    ],
+    sources,
+  );
+  assert.equal(doubled.support, 80);
+  assert.equal(doubled.carriers, 1);
+  const bothRoles = weigh(
+    [
+      { sourceId: "record", role: "support" },
+      { sourceId: "record", role: "contest" },
+    ],
+    sources,
+  );
+  assert.equal(bothRoles.support, 80);
+  assert.equal(bothRoles.contest, 80);
+  assert.equal(bothRoles.carriers, 1);
+});
+
+test("standing below zero is refused, and a blank standing is not zero", () => {
+  const state = createInitialState();
+  const next = setStanding(
+    state,
+    "src-bodleian-catalogue",
+    -1,
+    "No.",
+    "2026-09-29T00:00:00.000Z",
+  );
+  assert.equal(next, state);
+  assert.equal(parseStandingInput(""), null);
+  assert.equal(parseStandingInput("58"), 58);
+  assert.equal(parseStandingInput("-3"), null);
+  assert.equal(parseStandingInput("1e2"), null);
+});
+
+test("a claim written in another script still matches the question", () => {
+  const claim: Entry = {
+    id: "ent-greek",
+    text: "κανών κρατεῖ the rule",
+    cites: [],
+    disposition: "desk",
+    humanHold: false,
+    journey: [],
+  };
+  const lines = answerQuestion("Does κανών κρατεῖ hold?", [claim], []);
+  assert.equal(lines.length, 1);
+  assert.match(lines[0], /κανών κρατεῖ/);
+  assert.match(lines[0], /Not canon/);
+  const kept = guardRephrase("Held by the rule κρατεῖ.", ["Held by the rule."], "Held", "");
+  assert.deepEqual(kept, ["Held by the rule."]);
+});
+
+test("a copy with a standing below zero is not read", () => {
+  const copy = exportCopy(specimenSources(), specimenEntries(), false);
+  const broken = JSON.parse(JSON.stringify(copy)) as {
+    sources: { standing: number }[];
+  };
+  broken.sources[0].standing = -5;
+  assert.equal(parseCopy(broken).ok, false);
 });
 
 test("an empty record can load the specimen, and a filled record is not replaced", () => {

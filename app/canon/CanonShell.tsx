@@ -27,7 +27,7 @@ function elementOf(node: Node | null): Element | null {
 
 function CanonFrame({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const { ready, notice, acceptStoredReplacement } = useCanon();
+  const { ready, notice, storage, acceptStoredReplacement, loadOtherTab } = useCanon();
   const rootRef = useRef<HTMLDivElement>(null);
   const [phrase, setPhrase] = useState<string | null>(null);
   const [view, setView] = useState<ReaderView | null>(null);
@@ -133,13 +133,22 @@ function CanonFrame({ children }: { children: ReactNode }) {
       {notice ? (
         <div className="canon-notice" role="status">
           <p>{notice}</p>
-          <button
-            type="button"
-            className="secondary-button"
-            onClick={acceptStoredReplacement}
-          >
-            Write what is on screen over the stored text
-          </button>
+          <div className="canon-actions">
+            <button
+              type="button"
+              className="secondary-button"
+              onClick={acceptStoredReplacement}
+            >
+              {storage === "conflict"
+                ? "Keep this tab's record"
+                : "Write what is on screen over the stored text"}
+            </button>
+            {storage === "conflict" ? (
+              <button type="button" className="secondary-button" onClick={loadOtherTab}>
+                Load the other tab&apos;s record
+              </button>
+            ) : null}
+          </div>
         </div>
       ) : null}
       <div className="canon-layout">

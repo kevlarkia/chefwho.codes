@@ -1,6 +1,7 @@
+import { dedupeCites, isSourceKind, isUsableStanding } from "./rule";
 import { specimenEntries, specimenSources } from "./specimen";
 import type { Cite, Disposition, Entry, JourneyEvent, Source } from "./types";
-import { COPY_KIND, DISPOSITIONS, JOURNEY_KINDS, SOURCE_KINDS } from "./types";
+import { COPY_KIND, DISPOSITIONS, JOURNEY_KINDS } from "./types";
 import type { JourneyKind, SourceKind } from "./types";
 
 export type CanonCopy = {
@@ -15,8 +16,8 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
-function isSourceKind(value: unknown): value is SourceKind {
-  return typeof value === "string" && (SOURCE_KINDS as readonly string[]).includes(value);
+function isStoredSourceKind(value: unknown): value is SourceKind {
+  return typeof value === "string" && isSourceKind(value);
 }
 
 function isDisposition(value: unknown): value is Disposition {
@@ -51,10 +52,10 @@ function parseSource(value: unknown): Source | null {
   if (typeof value.id !== "string" || typeof value.name !== "string") {
     return null;
   }
-  if (!isSourceKind(value.kind) || typeof value.standing !== "number") {
+  if (value.name.trim().length === 0 || !isStoredSourceKind(value.kind)) {
     return null;
   }
-  if (!Number.isFinite(value.standing) || !Array.isArray(value.history)) {
+  if (!isUsableStanding(value.standing) || !Array.isArray(value.history)) {
     return null;
   }
   const history = [];
@@ -65,7 +66,7 @@ function parseSource(value: unknown): Source | null {
     if (typeof item.at !== "string" || typeof item.note !== "string") {
       return null;
     }
-    if (typeof item.standing !== "number" || !Number.isFinite(item.standing)) {
+    if (!isUsableStanding(item.standing)) {
       return null;
     }
     history.push({
@@ -135,6 +136,7 @@ function parseEntry(value: unknown): Entry | null {
     }
     cites.push(parsed);
   }
+  const uniqueCites = dedupeCites(cites);
   const journey: JourneyEvent[] = [];
   for (const event of value.journey) {
     const parsed = parseJourney(event);
@@ -146,7 +148,7 @@ function parseEntry(value: unknown): Entry | null {
   return {
     id: value.id,
     text: value.text,
-    cites,
+    cites: uniqueCites,
     disposition: value.disposition,
     humanHold: value.humanHold,
     journey,

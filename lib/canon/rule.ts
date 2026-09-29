@@ -51,6 +51,33 @@ export function barFor(sources: Pick<Source, "standing">[]): number {
   return Math.min(CAP, Math.max(FLOOR, middle));
 }
 
+export function isUsableStanding(value: unknown): value is number {
+  return typeof value === "number" && Number.isFinite(value) && value >= 0;
+}
+
+export function parseStandingInput(value: string): number | null {
+  const trimmed = value.trim();
+  if (!/^\d+(\.\d+)?$/.test(trimmed)) {
+    return null;
+  }
+  const standing = Number(trimmed);
+  return isUsableStanding(standing) ? standing : null;
+}
+
+export function dedupeCites(cites: Cite[]): Cite[] {
+  const seen = new Set<string>();
+  const unique: Cite[] = [];
+  for (const cite of cites) {
+    const key = `${cite.sourceId}\u0000${cite.role}`;
+    if (seen.has(key)) {
+      continue;
+    }
+    seen.add(key);
+    unique.push(cite);
+  }
+  return unique;
+}
+
 export function weigh(
   cites: Cite[],
   sources: Source[],
@@ -59,7 +86,7 @@ export function weigh(
   let support = 0;
   let contest = 0;
   let carriers = 0;
-  for (const cite of cites) {
+  for (const cite of dedupeCites(cites)) {
     const source = sources.find((item) => item.id === cite.sourceId);
     if (!source) {
       continue;

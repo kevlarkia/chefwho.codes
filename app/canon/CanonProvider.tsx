@@ -8,10 +8,12 @@ import {
   type ReactNode,
 } from "react";
 import {
+  adoptStoredRecord,
   getCanonServerSnapshot,
   getCanonSnapshot,
   replaceCanon,
   subscribeCanon,
+  type CanonSnapshot,
 } from "@/lib/canon/browser-store";
 import { parseCopy } from "@/lib/canon/copy";
 import {
@@ -47,9 +49,11 @@ type AskResult = {
 type CanonContextValue = {
   ready: boolean;
   notice: string | null;
+  storage: CanonSnapshot["storage"];
   state: RecordState;
   specimenIsLoad: boolean;
   acceptStoredReplacement: () => void;
+  loadOtherTab: () => void;
   setStanding: (id: string, standing: number, note: string) => void;
   addSource: (input: { name: string; kind: SourceKind; standing: number }) => void;
   addEntry: (input: { text: string; cites: Cite[] }) => void;
@@ -91,14 +95,21 @@ export function CanonProvider({ children }: { children: ReactNode }) {
     () => ({
       ready: snapshot.ready,
       notice: snapshot.notice,
+      storage: snapshot.storage,
       state: snapshot.state,
       specimenIsLoad: recordIsSpecimen(snapshot.state),
       acceptStoredReplacement: () => {
-        replaceCanon((current) => ({
-          ...current,
-          notice: null,
-          persist: true,
-        }));
+        replaceCanon(
+          (current) => ({
+            ...current,
+            notice: null,
+            persist: true,
+          }),
+          { force: true },
+        );
+      },
+      loadOtherTab: () => {
+        adoptStoredRecord();
       },
       setStanding: (id, standing, note) => {
         withState((state) => setStandingOnRecord(state, id, standing, note, now()));

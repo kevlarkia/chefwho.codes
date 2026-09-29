@@ -78,6 +78,9 @@ full list. No secrets are required for local development.
   fill the acronym, the Bitcoin title, or the listening decision. A
   fight is measured with the floor (58) and the current bar because no
   separate cutoff was stored.
+- A Canon storage failure stays on screen. A write that throws, and a
+  write from another tab, leave the stored record in place. Standing
+  has to be a number, zero or greater. No upper cap was stored.
 - SWM brand sources are authorized but Mac-local (`/Users/fcaf/...`).
   Cloud agents cannot ingest them until the operator runs
   `swm-recovery/sources/brand-assets/INGEST_FROM_MAC.sh` and commits

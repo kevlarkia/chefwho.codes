@@ -86,6 +86,9 @@ export const NOT_IN_RECORD =
   "That is not in the record. I will not supply it from anywhere else.";
 
 function stem(word: string): string {
+  if (!/^[a-z]+$/.test(word)) {
+    return word;
+  }
   if (word.endsWith("ing") && word.length > 6) {
     return word.slice(0, -3);
   }
@@ -98,8 +101,12 @@ function stem(word: string): string {
   return word;
 }
 
+function wordsOf(text: string): string[] {
+  return text.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? [];
+}
+
 function tokens(text: string): string[] {
-  return (text.toLowerCase().match(/[a-z0-9]+/g) ?? []).filter(
+  return wordsOf(text).filter(
     (word) => word.length >= 4 && !STOP_WORDS.has(word),
   );
 }
@@ -174,9 +181,7 @@ export function answerQuestion(
 }
 
 export function contentWords(text: string): string[] {
-  return (text.toLowerCase().match(/[a-z0-9]+/g) ?? []).filter(
-    (word) => word.length >= 5,
-  );
+  return wordsOf(text).filter((word) => word.length >= 5);
 }
 
 export function rephraseKeepsLines(

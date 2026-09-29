@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { barFor, formatWeight } from "@/lib/canon/rule";
+import { barFor, formatWeight, parseStandingInput } from "@/lib/canon/rule";
 import type { SourceKind } from "@/lib/canon/types";
 import { SEASONED_AT, SOURCE_KINDS } from "@/lib/canon/types";
 import { useCanon } from "./CanonProvider";
@@ -15,6 +15,7 @@ export function SourcesRoom() {
   const [name, setName] = useState("");
   const [kind, setKind] = useState<SourceKind>("primary");
   const [standing, setNewStanding] = useState("");
+  const [standingMessage, setStandingMessage] = useState<string | null>(null);
 
   return (
     <section className="canon-stack">
@@ -96,10 +97,14 @@ export function SourcesRoom() {
         className="canon-form"
         onSubmit={(event) => {
           event.preventDefault();
-          const next = Number(standing);
-          if (!name.trim() || !Number.isFinite(next)) {
+          const next = parseStandingInput(standing);
+          if (!name.trim() || next === null) {
+            setStandingMessage(
+              "A source needs a name, and a standing that is a number, zero or greater.",
+            );
             return;
           }
+          setStandingMessage(null);
           addSource({ name, kind, standing: next });
           setName("");
           setNewStanding("");
@@ -134,6 +139,7 @@ export function SourcesRoom() {
         <button type="submit" className="primary-button">
           Add the source
         </button>
+        {standingMessage ? <p role="alert">{standingMessage}</p> : null}
       </form>
     </section>
   );
@@ -150,15 +156,18 @@ function StandingForm({
 }) {
   const [value, setValue] = useState(String(current));
   const [note, setNote] = useState("");
+  const [message, setMessage] = useState<string | null>(null);
   return (
     <form
       className="canon-form"
       onSubmit={(event) => {
         event.preventDefault();
-        const next = Number(value);
-        if (!Number.isFinite(next)) {
+        const next = parseStandingInput(value);
+        if (next === null) {
+          setMessage("Standing has to be a number, zero or greater.");
           return;
         }
+        setMessage(null);
         onSet(id, next, note);
         setNote("");
       }}
@@ -179,6 +188,7 @@ function StandingForm({
       <button type="submit" className="secondary-button">
         Set standing
       </button>
+      {message ? <p role="alert">{message}</p> : null}
     </form>
   );
 }

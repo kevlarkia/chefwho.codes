@@ -8,6 +8,7 @@ import {
   useSyncExternalStore,
   type ReactNode,
 } from "react";
+import { readKey, writeKey, openLocalStorage } from "@/lib/canon/safe-storage";
 import { CALM_PITCH, CALM_RATE, VOICE_STORAGE_KEY } from "@/lib/canon/types";
 
 type VoiceChoice = {
@@ -17,8 +18,7 @@ type VoiceChoice = {
 const voiceListeners = new Set<() => void>();
 let storedVoice: string | null | undefined;
 
-function readStoredVoice(): string | null {
-  const raw = window.localStorage.getItem(VOICE_STORAGE_KEY);
+function voiceFromRaw(raw: string | null): string | null {
   if (!raw) {
     return null;
   }
@@ -31,6 +31,24 @@ function readStoredVoice(): string | null {
     return null;
   }
   return null;
+}
+
+function readStoredVoice(): string | null {
+  const opened = openLocalStorage();
+  if (!opened.store) {
+    return null;
+  }
+  const read = readKey(opened.store, VOICE_STORAGE_KEY);
+  if (!read.ok) {
+    return null;
+  }
+  return voiceFromRaw(read.value);
+}
+
+function notifyVoice() {
+  for (const listener of voiceListeners) {
+    listener();
+  }
 }
 
 function subscribeVoice(listener: () => void): () => void {
@@ -56,13 +74,15 @@ function getVoiceServerSnapshot(): string | null {
 
 function writeVoice(next: string | null) {
   storedVoice = next;
-  window.localStorage.setItem(
-    VOICE_STORAGE_KEY,
-    JSON.stringify({ voiceURI: next } satisfies VoiceChoice),
-  );
-  for (const listener of voiceListeners) {
-    listener();
+  const opened = openLocalStorage();
+  if (opened.store) {
+    writeKey(
+      opened.store,
+      VOICE_STORAGE_KEY,
+      JSON.stringify({ voiceURI: next } satisfies VoiceChoice),
+    );
   }
+  notifyVoice();
 }
 
 function useVoice() {
@@ -87,9 +107,18 @@ function useVoice() {
     };
     const timer = window.setTimeout(loadVoices, 0);
     synthesis.addEventListener("voiceschanged", loadVoices);
+    const onStorage = (event: StorageEvent) => {
+      if (event.key !== VOICE_STORAGE_KEY) {
+        return;
+      }
+      storedVoice = voiceFromRaw(event.newValue);
+      notifyVoice();
+    };
+    window.addEventListener("storage", onStorage);
     return () => {
       window.clearTimeout(timer);
       synthesis.removeEventListener("voiceschanged", loadVoices);
+      window.removeEventListener("storage", onStorage);
       synthesis.cancel();
     };
   }, []);

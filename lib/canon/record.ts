@@ -1,6 +1,6 @@
 import { parseCopy, specimenIsLoad } from "./copy";
 import { answerQuestion } from "./pipe";
-import { weigh } from "./rule";
+import { dedupeCites, isSourceKind, isUsableStanding, weigh } from "./rule";
 import { moveBook, seedShelf } from "./shelf";
 import { specimenEntries, specimenSources } from "./specimen";
 import type {
@@ -93,7 +93,7 @@ export function setStanding(
   note: string,
   at: string,
 ): RecordState {
-  if (!Number.isFinite(standing)) {
+  if (!isUsableStanding(standing)) {
     return state;
   }
   const sources = state.sources.map((source) => {
@@ -123,7 +123,7 @@ export function addSource(
   at: string,
 ): RecordState {
   const name = input.name.trim();
-  if (!name || !Number.isFinite(input.standing)) {
+  if (!name || !isUsableStanding(input.standing) || !isSourceKind(input.kind)) {
     return state;
   }
   const source: Source = {
@@ -156,7 +156,7 @@ export function addEntry(
   const draft: Entry = {
     id: withId("ent"),
     text,
-    cites: input.cites,
+    cites: dedupeCites(input.cites),
     disposition: "desk",
     humanHold: false,
     journey: [
