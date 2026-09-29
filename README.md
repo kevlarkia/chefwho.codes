@@ -76,6 +76,15 @@ npm run lint
 - `/blog`
 - `/blog/[slug]`
 - `/api/contact` (POST)
+- `/canon` (Canon, Desk, Sources, Enter, Ask, Books)
+
+## Canon
+
+`/canon` is a two-track record. The rule canonizes what sources can
+carry. What is not provable waits. The live record stays in this
+browser under `kanon-v1`. It is not a shared database. Decisions from
+27 and 29 September 2026 are in `docs/kanon-handoff-2026-09-27.md` and
+`docs/canon-2026-09-29.md`.
 
 ## Blog Content
 
