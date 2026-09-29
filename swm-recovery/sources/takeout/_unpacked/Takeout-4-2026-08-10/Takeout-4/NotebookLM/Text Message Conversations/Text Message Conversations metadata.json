@@ -1,0 +1,17 @@
+{
+  "title": "Text Message Conversations",
+  "emoji": "😬",
+  "metadata": {
+    "isShared": false,
+    "lastViewed": "2025-03-12T23:26:05.274208Z",
+    "createTime": "2025-03-12T19:29:34.791843Z"
+  },
+  "advancedSettings": {
+    "persona": {
+      "type": "PERSONA_TYPE_GUIDE"
+    },
+    "outputFormat": {
+      "style": "OUTPUT_FORMAT_STYLE_VERBOSE"
+    }
+  }
+}

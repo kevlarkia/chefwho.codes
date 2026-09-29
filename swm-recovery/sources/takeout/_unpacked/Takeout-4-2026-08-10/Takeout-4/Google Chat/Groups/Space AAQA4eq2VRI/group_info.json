@@ -1,0 +1,59 @@
+{
+  "name": "Celebration of Life",
+  "members": [
+    {
+      "name": "FC Andrade-Fernandez",
+      "email": "frank@clintonfernandez.com",
+      "user_type": "Human"
+    },
+    {
+      "name": "Christina Ross",
+      "email": "ChristyRoss2008@gmail.com",
+      "user_type": "Human"
+    },
+    {
+      "name": "margo breck",
+      "email": "margo.breck@gmail.com",
+      "user_type": "Human"
+    },
+    {
+      "name": "Steven Hunter",
+      "email": "bullet4blink@gmail.com",
+      "user_type": "Human"
+    },
+    {
+      "name": "Rebecca Postles",
+      "email": "beccapostles@gmail.com",
+      "user_type": "Human"
+    },
+    {
+      "name": "Krista Knapp",
+      "email": "krista.r.knapp@gmail.com",
+      "user_type": "Human"
+    },
+    {
+      "name": "Audrey Andrade",
+      "email": "aandrade1015@gmail.com",
+      "user_type": "Human"
+    },
+    {
+      "name": "Lauren",
+      "email": "lskam678@gmail.com",
+      "user_type": "Human"
+    },
+    {
+      "name": "Nathan Andrade",
+      "email": "peacablecard78@gmail.com",
+      "user_type": "Human"
+    },
+    {
+      "name": "Abang Translator",
+      "user_type": "Bot"
+    },
+    {
+      "name": "Absolute Poll",
+      "user_type": "Bot"
+    }
+  ],
+  "emoji_id": "💜"
+}

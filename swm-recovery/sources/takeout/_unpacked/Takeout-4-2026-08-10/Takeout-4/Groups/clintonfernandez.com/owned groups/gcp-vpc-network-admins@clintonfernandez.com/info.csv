@@ -1,0 +1,2 @@
+autoReplyForMembersInOrg,autoReplyForMembersOutsideOrg,autoReplyForNonMembersInOrg,autoReplyForNonMembersOutsideOrg,customReplyTo,defaultMessageDenyNotificationText,description,footerText,groupEmailAddress,name,subjectPrefix,welcomeMessage
+,,,,,,"Network administrators are responsible for creating VPC networks, subnets, and firewall rules.",,gcp-vpc-network-admins@clintonfernandez.com,gcp-vpc-network-admins,,

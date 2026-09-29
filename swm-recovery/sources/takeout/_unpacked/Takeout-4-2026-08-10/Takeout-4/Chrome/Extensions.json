@@ -1,0 +1,312 @@
+{
+    "Extensions": [
+        {
+            "incognito_enabled": false,
+            "remote_install": false,
+            "disable_reasons": 1,
+            "update_url": "https://clients2.google.com/service/update2/crx",
+            "id": "lpcaedmchfhocbbapmcbpinfpgnhiddi",
+            "disable_reasons_list": [1],
+            "version": "4.26091.600.1",
+            "enabled": false
+},
+        {
+            "incognito_enabled": true,
+            "remote_install": false,
+            "disable_reasons": 0,
+            "update_url": "https://clients2.google.com/service/update2/crx",
+            "id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "version": "13.2.1",
+            "enabled": true
+},
+        {
+            "incognito_enabled": false,
+            "remote_install": false,
+            "disable_reasons": 1,
+            "update_url": "https://clients2.google.com/service/update2/crx",
+            "id": "cdnapgfjopgaggbmfgbiinmmbdcglnam",
+            "disable_reasons_list": [1],
+            "version": "2025.5.17",
+            "enabled": false
+},
+        {
+            "incognito_enabled": true,
+            "remote_install": false,
+            "disable_reasons": 1,
+            "update_url": "https://clients2.google.com/service/update2/crx",
+            "id": "fnmihdojmnkclgjpcoonokmkhjpjechg",
+            "disable_reasons_list": [1],
+            "version": "2.0.0",
+            "enabled": false
+},
+        {
+            "incognito_enabled": false,
+            "remote_install": false,
+            "disable_reasons": 1,
+            "update_url": "https://clients2.google.com/service/update2/crx",
+            "id": "ndlcgjaacmkkapeepnofmmiinlkcbjfb",
+            "version": "2.0",
+            "enabled": false
+},
+        {
+            "incognito_enabled": false,
+            "remote_install": false,
+            "disable_reasons": 0,
+            "update_url": "https://clients2.google.com/service/update2/crx",
+            "id": "ghbmnnjooekpmoecnnnilnnbdlolhkhi",
+            "version": "1.100.1",
+            "enabled": true
+},
+        {
+            "incognito_enabled": true,
+            "remote_install": false,
+            "disable_reasons": 1,
+            "update_url": "https://clients2.google.com/service/update2/crx",
+            "id": "ocggccaacacpienfcgmgcihoombokbbj",
+            "disable_reasons_list": [1],
+            "version": "40.5.2",
+            "enabled": false
+},
+        {
+            "incognito_enabled": false,
+            "remote_install": false,
+            "disable_reasons": 1,
+            "update_url": "https://clients2.google.com/service/update2/crx",
+            "id": "pejdijmoenmkgeppbflobdenhhabjlaj",
+            "disable_reasons_list": [1],
+            "version": "3.2.0",
+            "enabled": false
+},
+        {
+            "incognito_enabled": false,
+            "remote_install": false,
+            "disable_reasons": 0,
+            "update_url": "https://clients2.google.com/service/update2/crx",
+            "id": "kigfbkddbfgbdbdekajodpggpkpfdjfp",
+            "version": "1.6.4",
+            "enabled": true
+}
+    ],
+    "Extension Settings": [
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"enabled\"}",
+            "key": "listeningHints"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"h1 h2 h3 h4 h5 h6 select textarea button label audio video dialog embed menu nav noframes noscript object script style svg aside footer #footer pre summary form input iframe img map meta link title track area base basefont col colgroup head html param source table tbody td tfoot th thead tr\"}",
+            "key": "ceHoverPlayerIgnoredTags"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"preferred\"}",
+            "key": "spatialParsingV2"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"span a li ol ul h1 h2 h3 h4 h5 h6 select textarea button label audio video dialog embed menu nav noframes noscript object script style svg aside footer #footer pre summary form input iframe img map meta link title track area base basefont col colgroup head html param source table tbody td tfoot th thead tr\"}",
+            "key": "ceHoverPlayerTopLevelIgnoredTags"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"enabled\"}",
+            "key": "settingsSync"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"control\"}",
+            "key": "ceCursorDictation"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"gmail-compose-button\":true}",
+            "key": "oneTimeTooltips"
+},
+        {
+            "extension_id": "ocggccaacacpienfcgmgcihoombokbbj",
+            "value": "\"2025-10-08\"",
+            "key": "install_date"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"control\"}",
+            "key": "cvlVariantFree"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"preferred\"}",
+            "key": "spatialParsing"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"redesignAutoShow\"}",
+            "key": "ceVoiceSelectionImprovement"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"youtube.com auth0.openai.com accounts.google.com www.youtube.com facebook.com www.facebook.com google.com www.google.com www.linkedin.com www.reddit.com www.gmail.com linkedin.com reddit.com gmail.com instagram.com amazon.com calendar.google.com messenger.com hulu.com roblox.com disneyplus.com studio.speechify.com whatsapp.com canva.com outlook.live.com mail.google.com  www.instagram.com www.disneyplus.com www.hulu.com www.techcrunch.com\"}",
+            "key": "cePillPlayerDisabledSites"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"300wpmLimit\"}",
+            "key": "increasedSpeedLimit"
+},
+        {
+            "extension_id": "fnmihdojmnkclgjpcoonokmkhjpjechg",
+            "value": "\"aitopia\"",
+            "key": "urlTogglePreference"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"enabled\"}",
+            "key": "ceUseVMS"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"control\"}",
+            "key": "ceSpeedRampEnabledByDefault"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"enabled\"}",
+            "key": "cevoicetypingFree"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"control\"}",
+            "key": "ceKeypointsExtraction"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"enabled\"}",
+            "key": "embeddedPlayerUseContent"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"enabled\"}",
+            "key": "cevoicetyping"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"control\"}",
+            "key": "ceEmbeddedSummaries"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"control\"}",
+            "key": "removePremiumWordTrial"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"feedback_form\"}",
+            "key": "desktopFeedback"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "\"dark\"",
+            "key": "theme"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"control\"}",
+            "key": "grafanaAnonymousTotalVisitLogging"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"enabled\"}",
+            "key": "shortcutReminderPlayPause"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":true}",
+            "key": "listeningHintsEnabled"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"{\\\"auto\\\":604800000,\\\"short\\\":604800000,\\\"long\\\":2592000000}\"}",
+            "key": "shortcutPromptTimerStrategy"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"model\"}",
+            "key": "spatialParsingV4"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"enabled\"}",
+            "key": "ceSidepanelSummaries"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"model\"}",
+            "key": "spatialParsingV3_1"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"enabled\"}",
+            "key": "ceSlidingWindow"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"control\"}",
+            "key": "ceParsingMode"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"header\"}",
+            "key": "googleDocsShare"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"control\"}",
+            "key": "ListeningHistoryNotification"
+},
+        {
+            "extension_id": "ocggccaacacpienfcgmgcihoombokbbj",
+            "value": "\"Free\"",
+            "key": "user_type"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"control\"}",
+            "key": "cvlVariantPremium"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"orator\"}",
+            "key": "cePlaybackEngine"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"control\"}",
+            "key": "cvlVariantTrial"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"v2_design\"}",
+            "key": "newGDocsNudge"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"introduce-autoplay\"}",
+            "key": "introduceAiAutoplay"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"docs.google.com\"}",
+            "key": "cePillPlayerEnabledSites"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"show\"}",
+            "key": "removeListeningBar"
+},
+        {
+            "extension_id": "ljflmlehinmoeknoonhibbjpldiijjmm",
+            "value": "{\"variant\":\"control\"}",
+            "key": "grafanaAnonymousUniqueVisitLogging"
+}
+    ]
+}

@@ -1,0 +1,45 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          -121.3432,
+          38.786699999999996
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Home"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -121.3432019,
+          38.7867281
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "address": "6197 Strawberry Station Loop, Roseville, CA 95747, United States",
+        "name": "Work"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -121.34310599999999,
+          38.786535099999995
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": " Park here 📍🚗Addy 👉🏻📌6197"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

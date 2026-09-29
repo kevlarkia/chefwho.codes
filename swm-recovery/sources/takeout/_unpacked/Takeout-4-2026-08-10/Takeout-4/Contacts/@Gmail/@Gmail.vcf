@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+item1.EMAIL;TYPE=INTERNET:6197@StrawberryStationLoop.casa
+item1.X-ABLabel:
+item2.EMAIL;TYPE=INTERNET:StrawberryStationLoopcasa@gmail.com
+item2.X-ABLabel:Willowtree#1
+item3.EMAIL;TYPE=INTERNET:6197@strawberrystationloop.com
+item3.X-ABLabel:Willowtree#1
+ADR;TYPE=HOME:;;6197 Strawberry Station Loop;Roseville\,;CA;95747;US;6197 S
+ trawberry Station Loop\nRoseville\, CA 95747\nUS
+ORG:StrawberryStationLoopcasa
+TITLE:Willowtree#1
+PHOTO:https://lh3.googleusercontent.com/contacts/AG6tpzEvwk8VyG00SgnQla01vd
+ Mo-3QGW2kEz87Ynmww7AD3FcuGQ05X
+CATEGORIES:@Gmail,myContacts
+END:VCARD

@@ -1,0 +1,2 @@
+autoReplyForMembersInOrg,autoReplyForMembersOutsideOrg,autoReplyForNonMembersInOrg,autoReplyForNonMembersOutsideOrg,customReplyTo,defaultMessageDenyNotificationText,description,footerText,groupEmailAddress,name,subjectPrefix,welcomeMessage
+,,,,,,Logging-monitoring administrators have access to all features of Logging and Cloud Monitoring.,,gcp-logging-monitoring-admins@clintonfernandez.com,gcp-logging-monitoring-admins,,

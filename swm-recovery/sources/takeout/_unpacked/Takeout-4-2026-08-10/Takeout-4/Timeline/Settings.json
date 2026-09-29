@@ -1,0 +1,248 @@
+{
+  "createdTime": "2024-03-13T01:16:59.738Z",
+  "modifiedTime": "2026-01-31T04:09:36.618Z",
+  "deviceSettings": [{
+    "deviceTag": 906307865,
+    "reportingEnabled": false,
+    "devicePrettyName": "Pixel 10 Pro Fold",
+    "platformType": "ANDROID",
+    "deviceCreationTime": "2026-02-12T22:31:46.788Z",
+    "latestLocationReportingSettingChange": {
+      "reportingEnabledModificationTime": "2026-02-12T22:31:46.788Z"
+    },
+    "androidOsLevel": 36,
+    "deviceSpec": {
+      "manufacturer": "Google",
+      "brand": "google",
+      "product": "rango",
+      "device": "rango",
+      "model": "Pixel 10 Pro Fold",
+      "isLowRam": false
+    },
+    "deviceActiveness": {
+      "hasSavedTimelineData": true,
+      "observedPlaceVisitsFor30PercentOfTheLast7d": false
+    }
+  }, {
+    "deviceTag": -1712880795,
+    "reportingEnabled": false,
+    "devicePrettyName": "Pixel 10 Pro Fold",
+    "platformType": "ANDROID",
+    "deviceCreationTime": "2026-02-10T17:26:03.791Z",
+    "latestLocationReportingSettingChange": {
+      "reportingEnabledModificationTime": "2026-02-10T17:26:03.791Z"
+    },
+    "androidOsLevel": 36,
+    "deviceSpec": {
+      "manufacturer": "Google",
+      "brand": "google",
+      "product": "rango",
+      "device": "rango",
+      "model": "Pixel 10 Pro Fold",
+      "isLowRam": false
+    }
+  }, {
+    "deviceTag": -112054815,
+    "reportingEnabled": false,
+    "legalCountryCode": "us",
+    "devicePrettyName": "iPhone",
+    "platformType": "IOS",
+    "deviceCreationTime": "2026-01-31T04:09:36.618Z",
+    "latestLocationReportingSettingChange": {
+      "reportingEnabledModificationTime": "2026-01-31T04:09:36.618Z"
+    },
+    "iosVersion": "26.3.1",
+    "deviceSpec": {
+      "device": "iPhone18,1"
+    },
+    "deviceActiveness": {
+      "hasSavedTimelineData": true,
+      "observedPlaceVisitsFor30PercentOfTheLast7d": false
+    }
+  }, {
+    "deviceTag": -101779856,
+    "reportingEnabled": false,
+    "devicePrettyName": "Pixel 10 Pro Fold",
+    "platformType": "ANDROID",
+    "deviceCreationTime": "2026-01-23T02:33:15.862Z",
+    "latestLocationReportingSettingChange": {
+      "reportingEnabledModificationTime": "2026-01-23T02:33:15.862Z"
+    },
+    "androidOsLevel": 36,
+    "deviceSpec": {
+      "manufacturer": "Google",
+      "brand": "google",
+      "product": "rango",
+      "device": "rango",
+      "model": "Pixel 10 Pro Fold",
+      "isLowRam": false
+    },
+    "deviceActiveness": {
+      "hasSavedTimelineData": true
+    }
+  }, {
+    "deviceTag": -788584729,
+    "reportingEnabled": false,
+    "legalCountryCode": "us",
+    "devicePrettyName": "iPhone",
+    "platformType": "IOS",
+    "deviceCreationTime": "2025-10-28T03:39:54.013Z",
+    "latestLocationReportingSettingChange": {
+      "reportingEnabledModificationTime": "2025-10-28T03:39:54.013Z"
+    },
+    "iosVersion": "26.2",
+    "deviceSpec": {
+      "device": "iPhone17,2"
+    },
+    "deviceActiveness": {
+      "hasSavedTimelineData": false
+    }
+  }, {
+    "deviceTag": -1215731422,
+    "reportingEnabled": false,
+    "legalCountryCode": "us",
+    "devicePrettyName": "iPhone",
+    "platformType": "IOS",
+    "deviceCreationTime": "2025-10-07T17:54:08.841Z",
+    "latestLocationReportingSettingChange": {
+      "reportingEnabledModificationTime": "2025-10-07T17:54:08.841Z"
+    },
+    "iosVersion": "26.0.1",
+    "deviceSpec": {
+      "device": "iPhone18,4"
+    },
+    "deviceActiveness": {
+      "hasSavedTimelineData": true
+    }
+  }, {
+    "deviceTag": -1461073156,
+    "reportingEnabled": false,
+    "legalCountryCode": "us",
+    "devicePrettyName": "iPhone",
+    "platformType": "IOS",
+    "deviceCreationTime": "2025-09-15T14:55:05.571Z",
+    "latestLocationReportingSettingChange": {
+      "reportingEnabledModificationTime": "2025-09-15T14:55:05.571Z"
+    },
+    "iosVersion": "18.7",
+    "deviceSpec": {
+      "device": "iPhone17,2"
+    },
+    "deviceActiveness": {
+      "hasSavedTimelineData": false
+    }
+  }, {
+    "deviceTag": -624128545,
+    "reportingEnabled": false,
+    "devicePrettyName": "Pixel 8 Pro",
+    "platformType": "ANDROID",
+    "deviceCreationTime": "2025-08-28T20:55:46.529Z",
+    "latestLocationReportingSettingChange": {
+      "reportingEnabledModificationTime": "2025-08-28T20:55:46.529Z"
+    },
+    "androidOsLevel": 36,
+    "deviceSpec": {
+      "manufacturer": "Google",
+      "brand": "google",
+      "product": "husky",
+      "device": "husky",
+      "model": "Pixel 8 Pro",
+      "isLowRam": false
+    },
+    "deviceActiveness": {
+      "hasSavedTimelineData": false
+    }
+  }, {
+    "deviceTag": -907943805,
+    "reportingEnabled": false,
+    "devicePrettyName": "Pixel 7 Pro",
+    "platformType": "ANDROID",
+    "deviceCreationTime": "2024-10-18T01:05:52.309Z",
+    "latestLocationReportingSettingChange": {
+      "reportingEnabledModificationTime": "2024-10-18T01:05:52.309Z"
+    },
+    "androidOsLevel": 35,
+    "deviceSpec": {
+      "manufacturer": "Google",
+      "brand": "google",
+      "product": "cheetah",
+      "device": "cheetah",
+      "model": "Pixel 7 Pro",
+      "isLowRam": false
+    },
+    "deviceActiveness": {
+      "hasSavedTimelineData": true
+    }
+  }, {
+    "deviceTag": 220891918,
+    "reportingEnabled": false,
+    "legalCountryCode": "us",
+    "devicePrettyName": "iPhone",
+    "platformType": "IOS",
+    "deviceCreationTime": "2024-10-06T13:28:20.538Z",
+    "latestLocationReportingSettingChange": {
+      "reportingEnabledModificationTime": "2024-10-06T13:28:20.538Z"
+    },
+    "iosVersion": "18.6.2",
+    "deviceSpec": {
+      "device": "iPhone17,2"
+    },
+    "deviceActiveness": {
+      "hasSavedTimelineData": false
+    }
+  }],
+  "hasReportedLocations": false,
+  "hasSetRetention": true,
+  "storeVisitControl": {
+    "enabled": true,
+    "updateTime": "2024-03-13T01:16:59.738502236Z"
+  },
+  "timelineEditUploadsControl": {
+    "enabled": true,
+    "updateTime": "2024-04-08T01:13:08.308530126Z"
+  },
+  "encryptedBackupsControls": {
+    "-1215731422": {
+      "enabled": false
+    },
+    "-101779856": {
+      "enabled": false
+    },
+    "906307865": {
+      "enabled": false
+    },
+    "220891918": {
+      "enabled": false
+    },
+    "-1461073156": {
+      "enabled": false
+    },
+    "-112054815": {
+      "enabled": false
+    },
+    "-624128545": {
+      "enabled": false
+    },
+    "-1712880795": {
+      "enabled": false
+    },
+    "-907943805": {
+      "enabled": false
+    },
+    "-788584729": {
+      "enabled": false
+    }
+  },
+  "retentionControl": {
+    "retentionWindowDays": 2147483647,
+    "updateTime": "2024-05-02T15:06:19.573242658Z"
+  },
+  "timelineEnabled": true,
+  "latestTimelineSettingChange": {
+    "timelineEnabledModificationTime": "2024-04-08T01:12:43.432Z"
+  },
+  "googleOpinionRewardsControl": {
+    "enabled": true,
+    "updateTime": "2025-02-24T08:06:02.633077166Z"
+  }
+}

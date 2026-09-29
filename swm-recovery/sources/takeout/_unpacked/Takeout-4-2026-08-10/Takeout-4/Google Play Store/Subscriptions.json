@@ -1,0 +1,336 @@
+[{
+  "subscription": {
+    "doc": {
+      "documentType": "Subscription",
+      "title": "Store Unlimited 1 Month  (Grindr - Gay Dating \u0026 Chat)"
+    },
+    "pricing": [{
+      "period": {
+        "unit": "MONTH",
+        "count": 1
+      },
+      "price": "$39.99",
+      "repeatedPricing": true
+    }],
+    "userChangeRecord": [{
+      "date": "2024-07-16T15:20:54.960Z",
+      "type": "UpdatePaymentMethod",
+      "updatePaymentMethodRecord": {
+        "paymentMethodAfterUpdate": {
+          "displayName": "Self"
+        },
+        "rank": "Backup"
+      }
+    }, {
+      "date": "2024-08-30T22:39:43.645Z",
+      "type": "Cancel",
+      "cancelRecord": {
+        "userCancellationReason": "Decline to answer"
+      }
+    }],
+    "state": "Canceled"
+  }
+},
+{
+  "subscription": {
+    "doc": {
+      "documentType": "Subscription",
+      "title": "Store Unlimited 1 Month  (Grindr - Gay Dating \u0026 Chat)"
+    },
+    "pricing": [{
+      "period": {
+        "unit": "MONTH",
+        "count": 1
+      },
+      "price": "$39.99",
+      "repeatedPricing": true
+    }],
+    "userChangeRecord": [{
+      "date": "2024-07-16T15:20:54.960Z",
+      "type": "UpdatePaymentMethod",
+      "updatePaymentMethodRecord": {
+        "paymentMethodAfterUpdate": {
+          "displayName": "Self"
+        },
+        "rank": "Backup"
+      }
+    }, {
+      "date": "2024-08-30T22:39:43.645Z",
+      "type": "Cancel",
+      "cancelRecord": {
+        "userCancellationReason": "Decline to answer"
+      }
+    }],
+    "state": "Canceled"
+  }
+},
+{
+  "subscription": {
+    "doc": {
+      "documentType": "Subscription",
+      "title": "Telegram Premium (Telegram)"
+    },
+    "pricing": [{
+      "period": {
+        "unit": "MONTH",
+        "count": 1
+      },
+      "price": "$4.99",
+      "repeatedPricing": true
+    }],
+    "userChangeRecord": [{
+      "date": "2024-08-30T22:39:28.640Z",
+      "type": "Cancel",
+      "cancelRecord": {
+        "userCancellationReason": "Decline to answer"
+      }
+    }],
+    "state": "Canceled"
+  }
+},
+{
+  "subscription": {
+    "doc": {
+      "documentType": "Subscription",
+      "title": "Telegram Premium (Telegram)"
+    },
+    "pricing": [{
+      "period": {
+        "unit": "MONTH",
+        "count": 1
+      },
+      "price": "$4.99",
+      "repeatedPricing": true
+    }],
+    "userChangeRecord": [{
+      "date": "2024-08-30T22:39:28.640Z",
+      "type": "Cancel",
+      "cancelRecord": {
+        "userCancellationReason": "Decline to answer"
+      }
+    }],
+    "state": "Canceled"
+  }
+},
+{
+  "subscription": {
+    "doc": {
+      "documentType": "Subscription",
+      "title": "Telegram Premium (Telegram)"
+    },
+    "pricing": [{
+      "period": {
+        "unit": "MONTH",
+        "count": 1
+      },
+      "price": "$4.99",
+      "repeatedPricing": true
+    }],
+    "userChangeRecord": [{
+      "date": "2024-06-22T03:28:44.575Z",
+      "type": "Cancel",
+      "cancelRecord": {
+        "userCancellationReason": "Technical issue"
+      }
+    }],
+    "state": "Canceled"
+  }
+},
+{
+  "subscription": {
+    "doc": {
+      "documentType": "Subscription",
+      "title": "Telegram Premium (Telegram)"
+    },
+    "pricing": [{
+      "period": {
+        "unit": "MONTH",
+        "count": 1
+      },
+      "price": "$4.99",
+      "repeatedPricing": true
+    }],
+    "userChangeRecord": [{
+      "date": "2024-06-22T03:28:44.575Z",
+      "type": "Cancel",
+      "cancelRecord": {
+        "userCancellationReason": "Technical issue"
+      }
+    }],
+    "state": "Canceled"
+  }
+},
+{
+  "subscription": {
+    "doc": {
+      "documentType": "Subscription",
+      "title": "ChatGPT Plus (ChatGPT)"
+    },
+    "pricing": [{
+      "period": {
+        "unit": "MONTH",
+        "count": 1
+      },
+      "price": "$19.99",
+      "repeatedPricing": true
+    }],
+    "userChangeRecord": [{
+      "date": "2024-06-01T16:39:54.106Z",
+      "type": "UpdatePaymentMethod",
+      "updatePaymentMethodRecord": {
+        "paymentMethodAfterUpdate": {
+          "displayName": "Self"
+        },
+        "rank": "Backup"
+      }
+    }, {
+      "date": "2024-06-01T17:01:53.967Z",
+      "type": "UpdatePaymentMethod",
+      "updatePaymentMethodRecord": {
+        "paymentMethodBeforeUpdate": {
+          "displayName": "Self"
+        },
+        "paymentMethodAfterUpdate": {
+          "displayName": "Visa-0533"
+        },
+        "rank": "Backup"
+      }
+    }, {
+      "date": "2024-06-06T06:51:43.732Z",
+      "type": "UpdatePaymentMethod",
+      "updatePaymentMethodRecord": {
+        "paymentMethodBeforeUpdate": {
+          "displayName": "Google Play balance"
+        },
+        "paymentMethodAfterUpdate": {
+          "displayName": "Google Play balance"
+        },
+        "rank": "Primary"
+      }
+    }, {
+      "date": "2024-07-01T00:25:58.613Z",
+      "type": "Cancel",
+      "cancelRecord": {
+        "userCancellationReason": "Technical issue"
+      }
+    }],
+    "state": "Canceled"
+  }
+},
+{
+  "subscription": {
+    "doc": {
+      "documentType": "Subscription",
+      "title": "ChatGPT Plus (ChatGPT)"
+    },
+    "pricing": [{
+      "period": {
+        "unit": "MONTH",
+        "count": 1
+      },
+      "price": "$19.99",
+      "repeatedPricing": true
+    }],
+    "userChangeRecord": [{
+      "date": "2024-06-01T16:39:54.106Z",
+      "type": "UpdatePaymentMethod",
+      "updatePaymentMethodRecord": {
+        "paymentMethodAfterUpdate": {
+          "displayName": "Self"
+        },
+        "rank": "Backup"
+      }
+    }, {
+      "date": "2024-06-01T17:01:53.967Z",
+      "type": "UpdatePaymentMethod",
+      "updatePaymentMethodRecord": {
+        "paymentMethodBeforeUpdate": {
+          "displayName": "Self"
+        },
+        "paymentMethodAfterUpdate": {
+          "displayName": "Visa-0533"
+        },
+        "rank": "Backup"
+      }
+    }, {
+      "date": "2024-06-06T06:51:43.732Z",
+      "type": "UpdatePaymentMethod",
+      "updatePaymentMethodRecord": {
+        "paymentMethodBeforeUpdate": {
+          "displayName": "Google Play balance"
+        },
+        "paymentMethodAfterUpdate": {
+          "displayName": "Google Play balance"
+        },
+        "rank": "Primary"
+      }
+    }, {
+      "date": "2024-07-01T00:25:58.613Z",
+      "type": "Cancel",
+      "cancelRecord": {
+        "userCancellationReason": "Technical issue"
+      }
+    }],
+    "state": "Canceled"
+  }
+},
+{
+  "subscription": {
+    "doc": {
+      "documentType": "Subscription",
+      "title": "1 Week Unlimited (Grindr - Gay Dating \u0026 Chat)"
+    },
+    "pricing": [{
+      "period": {
+        "unit": "WEEK",
+        "count": 1
+      },
+      "price": "$23.99",
+      "repeatedPricing": true
+    }],
+    "userChangeRecord": [{
+      "date": "2024-12-31T06:53:44.627Z",
+      "type": "UpdatePaymentMethod",
+      "updatePaymentMethodRecord": {
+        "paymentMethodAfterUpdate": {
+          "displayName": "Self"
+        },
+        "rank": "Backup"
+      }
+    }, {
+      "date": "2025-01-30T16:57:30.741Z",
+      "type": "Cancel"
+    }],
+    "state": "Canceled"
+  }
+},
+{
+  "subscription": {
+    "doc": {
+      "documentType": "Subscription",
+      "title": "1 Week Unlimited (Grindr - Gay Dating \u0026 Chat)"
+    },
+    "pricing": [{
+      "period": {
+        "unit": "WEEK",
+        "count": 1
+      },
+      "price": "$23.99",
+      "repeatedPricing": true
+    }],
+    "userChangeRecord": [{
+      "date": "2024-12-31T06:53:44.627Z",
+      "type": "UpdatePaymentMethod",
+      "updatePaymentMethodRecord": {
+        "paymentMethodAfterUpdate": {
+          "displayName": "Self"
+        },
+        "rank": "Backup"
+      }
+    }, {
+      "date": "2025-01-30T16:57:30.741Z",
+      "type": "Cancel"
+    }],
+    "state": "Canceled"
+  }
+}]

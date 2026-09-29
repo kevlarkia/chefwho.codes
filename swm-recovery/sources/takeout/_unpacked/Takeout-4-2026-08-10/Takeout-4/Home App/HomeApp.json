@@ -1,0 +1,27 @@
+{
+    "Home App Data": [
+        {"full_structures": [{
+            "owner_emails": ["frank@clintonfernandez.com"],
+            "owner_create_times": [{
+                        "value": {
+                                    "seconds": 1747547349,
+                                    "nanos": 344152000
+                        },
+                        "key": "frank@clintonfernandez.com"
+            }],
+            "structure": {
+                        "update_time": {
+                                    "seconds": 1747547477,
+                                    "nanos": 623656000
+                        },
+                        "create_time": {
+                                    "seconds": 1747547350,
+                                    "nanos": 302746000
+                        },
+                        "name": "Hjk",
+                        "personalized_nicknames": ["Hjk"],
+                        "personalized_ui_settings": {"favorites": {"category_type": "CATEGORY_TYPE_FAVORITES"}}
+            }
+}]}
+    ]
+}

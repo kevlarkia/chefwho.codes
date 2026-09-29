@@ -1,0 +1,1034 @@
+{
+    "App Settings": [],
+    "App Lists": [],
+    "Search Engines": [
+        {
+            "suggestions_url": "",
+            "favicon_url": "",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_TRUE",
+            "date_created": 13394229910256364,
+            "starter_pack_id": 4,
+            "url": "https://gemini.google.com/app?q={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "",
+            "sync_guid": "ec205736-edd7-4022-a9a3-b431fc000004",
+            "short_name": "Gemini",
+            "keyword": "@gemini",
+            "input_encodings": "",
+            "prepopulate_id": 0,
+            "last_modified": 13394229910256364
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_TRUE",
+            "date_created": 13394229910256363,
+            "starter_pack_id": 3,
+            "url": "chrome://tabs/?q={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "",
+            "sync_guid": "ec205736-edd7-4022-a9a3-b431fc000003",
+            "short_name": "Tabs",
+            "keyword": "@tabs",
+            "input_encodings": "",
+            "prepopulate_id": 0,
+            "last_modified": 13394229910256363
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_TRUE",
+            "date_created": 13394229910256361,
+            "starter_pack_id": 2,
+            "url": "chrome://history/?q={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "",
+            "sync_guid": "ec205736-edd7-4022-a9a3-b431fc000002",
+            "short_name": "History",
+            "keyword": "@history",
+            "input_encodings": "",
+            "prepopulate_id": 0,
+            "last_modified": 13394229910256361
+},
+        {
+            "suggestions_url": "https://www.bing.com/osjson.aspx?query={searchTerms}&language={language}",
+            "image_url_post_params": "imageBin={google:imageThumbnailBase64}",
+            "favicon_url": "https://www.bing.com/sa/simg/bing_p_rr_teal_min.ico",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 0,
+            "image_url": "https://www.bing.com/images/detail/search?iss=sbiupload&FORM=CHROMI#enterInsights",
+            "starter_pack_id": 0,
+            "url": "https://www.bing.com/search?q={searchTerms}",
+            "new_tab_url": "https://www.bing.com/chrome/newtab",
+            "originating_url": "",
+            "sync_guid": "485bf7d3-0215-45af-87dc-538868000003",
+            "short_name": "Microsoft Bing",
+            "keyword": "bing.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 3,
+            "last_modified": 13413294182337550
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13379250272197931,
+            "starter_pack_id": 0,
+            "url": "https://x.com/search?q={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "https://pro.x.com/os-x.xml",
+            "sync_guid": "ede5abd6-0c68-490a-b225-d1502f8ed13a",
+            "short_name": "X",
+            "keyword": "pro.x.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 0,
+            "last_modified": 13379250272197931
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://www.google.com/images/branding/product/ico/maps15_bnuw3a_32dp.ico",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13381217006117076,
+            "starter_pack_id": 0,
+            "url": "https://www.google.com/maps/search/{searchTerms}?hl=en&source=opensearch",
+            "new_tab_url": "",
+            "originating_url": "https://www.google.com/maps/preview/opensearch.xml?hl=en",
+            "sync_guid": "b7884e61-74e4-451a-8022-e20afa0957ef",
+            "short_name": "Google Maps",
+            "keyword": "maps.google.com",
+            "input_encodings": "",
+            "prepopulate_id": 0,
+            "last_modified": 13381217006117076
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://assets.wfcdn.com/st4/stores/common/wayfair/favicon.ico",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13385793363578474,
+            "starter_pack_id": 0,
+            "url": "https://www.wayfair.com/keyword.php?keyword={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "",
+            "sync_guid": "ad131b9c-87f5-4414-b6de-8cea588dcb4a",
+            "short_name": "wayfair.com",
+            "keyword": "wayfair.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 0,
+            "last_modified": 13385793363578474
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://d5fx445wy2wpk.cloudfront.net/icons/amznMusic_favicon.png",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13383260627611570,
+            "starter_pack_id": 0,
+            "url": "https://music.amazon.com/search/{searchTerms}?ref=dm_opensearch",
+            "new_tab_url": "",
+            "originating_url": "https://music.amazon.com/opensearch.xml",
+            "sync_guid": "2cda87a1-0185-4fcf-9cb3-b9b7ff27affd",
+            "short_name": "Amazon Music",
+            "keyword": "music.amazon.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 0,
+            "last_modified": 13383260627611570
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://www.gstatic.com/devrel-devsite/prod/v0113b933d5c9ba4165415ef34b487d624de9fe7d51074fd538a31c5fc879d909/developers/images/favicon-new.png",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13382797819484077,
+            "starter_pack_id": 0,
+            "url": "https://developers.google.com/s/results?q={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "https://developers.google.com/s/opensearch.xml",
+            "sync_guid": "ffc7bf41-14ce-4939-8392-45b27beb28fd",
+            "short_name": "Google for Developers",
+            "keyword": "developers.google.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 0,
+            "last_modified": 13382797819484077
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://static-cdn77.red-cdn.com/v3/img/skins/default/logo/xv.gay.red.svg",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13377044762656573,
+            "starter_pack_id": 0,
+            "url": "https://www.xvideos.red/?k={searchTerms}&premium=1",
+            "new_tab_url": "",
+            "originating_url": "",
+            "sync_guid": "d402c6b3-cd3f-4914-83b3-ea4f9ca99925",
+            "short_name": "xvideos.red",
+            "keyword": "xvideos.red",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 0,
+            "last_modified": 13377044762656573
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_TRUE",
+            "date_created": 13394229910256367,
+            "starter_pack_id": 5,
+            "url": "chrome://page/?q={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "",
+            "sync_guid": "ec205736-edd7-4022-a9a3-b431fc000005",
+            "short_name": "Page",
+            "keyword": "@page",
+            "input_encodings": "",
+            "prepopulate_id": 0,
+            "last_modified": 13394229910256367
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_TRUE",
+            "date_created": 13394229910256351,
+            "starter_pack_id": 1,
+            "url": "chrome://bookmarks/?q={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "",
+            "sync_guid": "ec205736-edd7-4022-a9a3-b431fc000001",
+            "short_name": "Bookmarks",
+            "keyword": "@bookmarks",
+            "input_encodings": "",
+            "prepopulate_id": 0,
+            "last_modified": 13394229910256351
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://github.com/favicon.ico",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13382795198473418,
+            "starter_pack_id": 0,
+            "url": "https://github.com/search?q={searchTerms}&ref=opensearch",
+            "new_tab_url": "",
+            "originating_url": "https://github.com/opensearch.xml",
+            "sync_guid": "a9fd9631-72e1-4c21-9009-4c43477280dd",
+            "short_name": "GitHub",
+            "keyword": "desktop.github.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 0,
+            "last_modified": 13382795198473418
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://www.google.com/images/branding/product/ico/maps15_bnuw3a_32dp.ico",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13381188058864913,
+            "starter_pack_id": 0,
+            "url": "https://www.google.com/maps/search/{searchTerms}?hl=en&source=opensearch",
+            "new_tab_url": "",
+            "originating_url": "https://www.google.com/maps/preview/opensearch.xml?hl=en",
+            "sync_guid": "bc83305d-620e-4bcc-8410-390c68bb81d1",
+            "short_name": "Google Maps",
+            "keyword": "maps.app.goo.gl",
+            "input_encodings": "",
+            "prepopulate_id": 0,
+            "last_modified": 13381188058864913
+},
+        {
+            "suggestions_url": "https://duckduckgo.com/ac/?q={searchTerms}&type=list",
+            "favicon_url": "https://duckduckgo.com/favicon.ico",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 0,
+            "starter_pack_id": 0,
+            "url": "https://duckduckgo.com/?q={searchTerms}",
+            "new_tab_url": "https://duckduckgo.com/chrome_newtab",
+            "originating_url": "",
+            "sync_guid": "485bf7d3-0215-45af-87dc-538868000092",
+            "short_name": "DuckDuckGo",
+            "keyword": "duckduckgo.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 92,
+            "last_modified": 13413294182337594
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13365708846710980,
+            "starter_pack_id": 0,
+            "url": "https://drive.google.com/drive/search?q={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "https://drive.google.com/opensearch.xml",
+            "sync_guid": "02d3eefe-1678-44d0-b249-467fe196dcd9",
+            "short_name": "Google Drive",
+            "keyword": "drive.google.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 0,
+            "last_modified": 13365708846710980
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13365082750870154,
+            "starter_pack_id": 0,
+            "url": "https://opensea.io/assets?search[query]={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "https://opensea.io/opensearch.xml",
+            "sync_guid": "4a91c3fe-a49c-4308-b953-bc2c75be6166",
+            "short_name": "OpenSea",
+            "keyword": "opensea.io",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 0,
+            "last_modified": 13365082750870154
+},
+        {
+            "suggestions_url": "{google:baseSuggestURL}search?{google:searchFieldtrialParameter}client={google:suggestClient}&gs_ri={google:suggestRid}&xssi=t&q={searchTerms}&{google:inputType}{google:omniboxFocusType}{google:cursorPosition}{google:currentPageUrl}{google:pageClassification}{google:clientCacheTimeToLive}{google:searchVersion}{google:sessionToken}{google:prefetchQuery}sugkey={google:suggestAPIKeyParameter}",
+            "image_url_post_params": "encoded_image={google:imageThumbnail},image_url={google:imageURL},sbisrc={google:imageSearchSource},original_width={google:imageOriginalWidth},original_height={google:imageOriginalHeight},processed_image_dimensions={google:processedImageDimensions}",
+            "favicon_url": "https://www.gstatic.com/images/branding/searchlogo/ico/favicon.ico",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 0,
+            "image_url": "{google:baseSearchByImageURL}upload",
+            "starter_pack_id": 0,
+            "url": "{google:baseURL}search?q={searchTerms}&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:language}{google:prefetchSource}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}",
+            "new_tab_url": "",
+            "originating_url": "",
+            "sync_guid": "485bf7d3-0215-45af-87dc-538868000001",
+            "short_name": "Google",
+            "keyword": "google.com",
+            "input_encodings": "UTF-8",
+            "alternate_urls": [
+                        "{google:baseURL}#q={searchTerms}",
+                        "{google:baseURL}search#q={searchTerms}",
+                        "{google:baseURL}webhp#q={searchTerms}",
+                        "{google:baseURL}s#q={searchTerms}",
+                        "{google:baseURL}s?q={searchTerms}"
+            ],
+            "prepopulate_id": 1,
+            "last_modified": 0
+},
+        {
+            "suggestions_url": "https://suggest.yandex.com/suggest-ff.cgi?part={searchTerms}&{google:cursorPosition}",
+            "image_url_post_params": "upfile={google:imageThumbnail},original_width={google:imageOriginalWidth},original_height={google:imageOriginalHeight},prg=1",
+            "favicon_url": "https://yastatic.net/s3/web4static/_/v2/v9YNE_BX0evwMHbDyd0NZv8ReK0.png",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 0,
+            "image_url": "https://yandex.com/images/search?rpt=imageview",
+            "starter_pack_id": 0,
+            "url": "https://yandex.com/{yandex:searchPath}?text={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "",
+            "sync_guid": "485bf7d3-0215-45af-87dc-538868000015",
+            "short_name": "Yandex",
+            "keyword": "yandex.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 15,
+            "last_modified": 13413294182337617
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13383548940212453,
+            "starter_pack_id": 0,
+            "url": "https://replit.com/search?query={searchTerms}&ref=opensearch",
+            "new_tab_url": "",
+            "originating_url": "https://replit.com/public/opensearch.xml",
+            "sync_guid": "add0b31e-b279-4d26-9c0c-b2fe3a7360df",
+            "short_name": "Replit",
+            "keyword": "replit.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 0,
+            "last_modified": 13383548940212453
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://cdn.sstatic.net/Sites/stackexchange/Img/favicon.ico",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13383980440656304,
+            "starter_pack_id": 0,
+            "url": "https://stackexchange.com/search?q={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "https://stackexchange.com/opensearch.xml",
+            "sync_guid": "bad44573-8786-406c-b024-f0cb5fde02d7",
+            "short_name": "Stack Exchange",
+            "keyword": "stackexchange.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 0,
+            "last_modified": 13383980440656304
+},
+        {
+            "suggestions_url": "https://search.yahoo.com/sugg/chrome?output=fxjson&appid=crmas_sfp&command={searchTerms}",
+            "favicon_url": "https://search.yahoo.com/favicon.ico",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 0,
+            "starter_pack_id": 0,
+            "url": "https://search.yahoo.com/search{google:pathWildcard}?ei={inputEncoding}&fr=crmas_sfp&p={searchTerms}",
+            "new_tab_url": "https://search.yahoo.com?fr=crmas_sfp",
+            "originating_url": "",
+            "sync_guid": "485bf7d3-0215-45af-87dc-538868000002",
+            "short_name": "Yahoo!",
+            "keyword": "yahoo.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 2,
+            "last_modified": 13413294182337570
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://www.urbandictionary.com/favicon-32x32.png",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13365084130403185,
+            "starter_pack_id": 0,
+            "url": "http://www.urbandictionary.com/define.php?term={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "https://www.urbandictionary.com/osd.xml",
+            "sync_guid": "388344b9-61f7-4438-afca-1840c5cec125",
+            "short_name": "Urban Dictionary",
+            "keyword": "urbandictionary.com",
+            "input_encodings": "",
+            "prepopulate_id": 0,
+            "last_modified": 13365084130403185
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://www.amazon.com/favicon.ico",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13365653441330426,
+            "starter_pack_id": 0,
+            "url": "https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords={searchTerms}&crid=JSUDHL3W5BKN&sprefix=art+ligh%2Caps%2C737",
+            "new_tab_url": "",
+            "originating_url": "",
+            "sync_guid": "d09b61db-0db4-4dc9-ae4e-7cd4b6aea642",
+            "short_name": "amazon.com",
+            "keyword": "amazon.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 0,
+            "last_modified": 13365653441330426
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13378680161113447,
+            "starter_pack_id": 0,
+            "url": "https://x.com/search?q={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "https://x.com/os-x.xml",
+            "sync_guid": "53bf332a-c2bc-4548-9f7a-e4b81d599b85",
+            "short_name": "X",
+            "keyword": "x.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 0,
+            "last_modified": 13378680161113447
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://www.youtube.com/s/desktop/9660ea89/img/favicon_32x32.png",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13359135231822007,
+            "starter_pack_id": 0,
+            "url": "https://www.youtube.com/results?search_query={searchTerms}&page={startPage?}&utm_source=opensearch",
+            "new_tab_url": "",
+            "originating_url": "https://www.youtube.com/opensearch?locale=en_US",
+            "sync_guid": "55bbc260-95ef-47dc-b236-6522ceb4fa4d",
+            "short_name": "YouTube",
+            "keyword": "youtube.com",
+            "input_encodings": "",
+            "prepopulate_id": 0,
+            "last_modified": 13359135231822007
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://squareup.com/favicon.ico",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13364598431582100,
+            "starter_pack_id": 0,
+            "url": "https://squareup.com/help/us/en/article/search?q={searchTerms}",
+            "new_tab_url": "",
+            "originating_url": "https://supportcenter-production-f.squarecdn.com/help/opensearch.xml",
+            "sync_guid": "83910844-697c-49be-9a12-f1f8f408b3c8",
+            "short_name": "Square Support",
+            "keyword": "squareup.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 0,
+            "last_modified": 13364598431582100
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://www.gstatic.com/android/market_images/web/favicon_v3.ico",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13355860286915708,
+            "starter_pack_id": 0,
+            "url": "https://play.google.com/store/search?q={searchTerms}&utm_source=opensearch",
+            "new_tab_url": "",
+            "originating_url": "https://play.google.com/opensearch.xml",
+            "sync_guid": "ca321410-450f-4bb0-8089-c106851c541f",
+            "short_name": "Google Play",
+            "keyword": "play.google.com",
+            "input_encodings": "",
+            "prepopulate_id": 0,
+            "last_modified": 13355860286915708
+},
+        {
+            "suggestions_url": "",
+            "favicon_url": "https://github.com/favicon.ico",
+            "safe_for_autoreplace": true,
+            "is_active": "ACTIVE_STATUS_UNSPECIFIED",
+            "date_created": 13383550422448497,
+            "starter_pack_id": 0,
+            "url": "https://github.com/search?q={searchTerms}&ref=opensearch",
+            "new_tab_url": "",
+            "originating_url": "https://github.com/opensearch.xml",
+            "sync_guid": "13f94180-ffa7-4310-b850-9dd9bc97c48b",
+            "short_name": "GitHub",
+            "keyword": "github.com",
+            "input_encodings": "UTF-8",
+            "prepopulate_id": 0,
+            "last_modified": 13383550422448498
+}
+    ],
+    "Apps": [
+        {
+            "app_launch_ordinal": "t",
+            "extension": {
+                        "incognito_enabled": true,
+                        "remote_install": false,
+                        "disable_reasons": 0,
+                        "update_url": "",
+                        "id": "ahfgeienlihckogmohjhadlkjgocpleb",
+                        "version": "0.2",
+                        "enabled": true
+            },
+            "page_ordinal": "n"
+}
+    ],
+    "Preferences": [
+        {
+            "name": "settings.a11y.read_anything.font_name",
+            "value": "\"Andika\""
+},
+        {
+            "name": "toolbar.tab_search_migration_complete",
+            "value": "true"
+},
+        {
+            "name": "cross_device.home.module.price_tracking.enabled",
+            "value": "{}"
+},
+        {
+            "name": "default_search_provider.synced_guid",
+            "value": "\"485bf7d3-0215-45af-87dc-538868000001\""
+},
+        {
+            "name": "search.suggest_enabled",
+            "value": "false"
+},
+        {
+            "name": "download.prompt_for_download",
+            "value": "true"
+},
+        {
+            "name": "profile.content_settings.exceptions.automatic_downloads",
+            "value": "{\"https://takeout.google.com:443,*\":{\"last_modified\":\"13413116980730460\",\"setting\":1}}"
+},
+        {
+            "name": "autofill.last_version_deduped",
+            "value": "145"
+},
+        {
+            "name": "cross_device.home.module.tips.enabled",
+            "value": "{}"
+},
+        {
+            "name": "profile.content_settings.exceptions.popups",
+            "value": "{}"
+},
+        {
+            "name": "promos.ios_password_last_impression_timestamp",
+            "value": "\"13358147580588040\""
+},
+        {
+            "name": "translate_force_trigger_on_english_count_for_backoff_1",
+            "value": "-1"
+},
+        {
+            "name": "profile.content_settings.exceptions.javascript",
+            "value": "{}"
+},
+        {
+            "name": "safebrowsing.enabled",
+            "value": "true"
+},
+        {
+            "name": "extensions.pinned_extensions",
+            "value": "[\"lmjegmlicamnimmfhcmpkclmigmmcbeh\",\"hdokiejnpimakedhajhdlcegeplioahd\",\"efaidnbmnnnibpcajpcglclefindmkaj\",\"pejdijmoenmkgeppbflobdenhhabjlaj\",\"ocggccaacacpienfcgmgcihoombokbbj\",\"fnmihdojmnkclgjpcoonokmkhjpjechg\",\"kigfbkddbfgbdbdekajodpggpkpfdjfp\",\"ljflmlehinmoeknoonhibbjpldiijjmm\"]"
+},
+        {
+            "name": "toolbar.pinned_cast_migration_complete",
+            "value": "true"
+},
+        {
+            "name": "search.contextual_search_enabled",
+            "value": "\"true\""
+},
+        {
+            "name": "cross_device.home.module.tab_resumption.enabled",
+            "value": "{}"
+},
+        {
+            "name": "profile.content_settings.exceptions.anti_abuse",
+            "value": "{}"
+},
+        {
+            "name": "browser.theme.color_scheme",
+            "value": "2"
+},
+        {
+            "name": "homepage",
+            "value": "\"http://clintonfernandez.com/\""
+},
+        {
+            "name": "translate_site_blocklist_with_time",
+            "value": "{}"
+},
+        {
+            "name": "custom_links.initialized",
+            "value": "true"
+},
+        {
+            "name": "cross_device.home.module.safety_check.enabled",
+            "value": "{}"
+},
+        {
+            "name": "profile.cookie_controls_mode",
+            "value": "0"
+},
+        {
+            "name": "performance_tuning.tab_discarding.exceptions_with_time",
+            "value": "{\"admin.google.com\":\"13382747602135000\",\"apps.google.com\":\"13382747602130000\",\"https://claude.ai/chats\":\"13356401143440000\",\"lastpass.com\":\"13382747602138000\",\"mail.google.com\":\"13357108169490000\",\"myaccount.google.com\":\"13382747602133000\",\"mydoctor.kaiserpermanente.org\":\"13362681724637000\",\"passwords.google.com\":\"13382747602139000\",\"www.googleadservices.com\":\"13356401025816000\"}"
+},
+        {
+            "name": "intl.selected_languages",
+            "value": "\"en-US,en\""
+},
+        {
+            "name": "price_tracking.email_notifications_enabled",
+            "value": "true"
+},
+        {
+            "name": "settings.a11y.enable_accessibility_image_labels_opt_in_accepted",
+            "value": "true"
+},
+        {
+            "name": "cross_device.omnibox.is_in_bottom_position",
+            "value": "{}"
+},
+        {
+            "name": "browser.show_fullscreen_toolbar",
+            "value": "true"
+},
+        {
+            "name": "accessibility.captions.live_caption_bubble_pinned",
+            "value": "true"
+},
+        {
+            "name": "settings.a11y.enable_accessibility_image_labels",
+            "value": "true"
+},
+        {
+            "name": "dom_distiller.reader_for_accessibility",
+            "value": "true"
+},
+        {
+            "name": "settings.a11y.read_anything.color_info",
+            "value": "3"
+},
+        {
+            "name": "autofill.credit_card_enabled",
+            "value": "true"
+},
+        {
+            "name": "cross_device.cross_platform_promos.ios_16th_active_day",
+            "value": "{\"0cW0vKzqqXBgG967rCc1Og==\":{\"update_time\":\"13417329766842762\",\"value\":\"13414838400000000\"}}"
+},
+        {
+            "name": "cross_device.home.module.magic_stack.enabled",
+            "value": "{}"
+},
+        {
+            "name": "browser.clear_data.hosted_apps_data",
+            "value": "true"
+},
+        {
+            "name": "sharing.vapid_key",
+            "value": "{\"vapid_creation_timestamp\":\"13355377158971482\",\"vapid_private_key\":\"MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgf8fmcw+htNtcHZCJRtTSoVcouHPFVuukLaCm6xvaryqhRANCAATx9GMGb1znkEnzKvhoHhM6J8cQuxS+dupIJjsE3t/13ZYAs8xwxU/jXrUmlFm1VicsgQQylYcdHoQXLnRUjRVr\"}"
+},
+        {
+            "name": "settings.a11y.read_anything.font_scale",
+            "value": "0.75"
+},
+        {
+            "name": "https_only_mode_enabled",
+            "value": "true"
+},
+        {
+            "name": "bookmark_bar.show_on_all_tabs",
+            "value": "true"
+},
+        {
+            "name": "ios.prerender.network_prediction_settings",
+            "value": "2"
+},
+        {
+            "name": "search.contextual_search_fully_opted_in",
+            "value": "true"
+},
+        {
+            "name": "promos.ios_password_impressions_counter",
+            "value": "1"
+},
+        {
+            "name": "omnibox.show_google_lens_shortcut",
+            "value": "false"
+},
+        {
+            "name": "accessibility.captions.live_caption_bubble_expanded",
+            "value": "false"
+},
+        {
+            "name": "settings.a11y.read_anything.links_enabled",
+            "value": "true"
+},
+        {
+            "name": "enable_do_not_track",
+            "value": "true"
+},
+        {
+            "name": "autofill.ai_last_version_deduped",
+            "value": "145"
+},
+        {
+            "name": "settings.a11y.read_anything.line_spacing",
+            "value": "1"
+},
+        {
+            "name": "profile.content_settings.exceptions.cookies",
+            "value": "{}"
+},
+        {
+            "name": "accessibility.captions.live_caption_language",
+            "value": "\"en-US\""
+},
+        {
+            "name": "ios.ntp.supervised.content_suggestions_enabled",
+            "value": "true"
+},
+        {
+            "name": "extensions.commands",
+            "value": "{}"
+},
+        {
+            "name": "toolbar.pinned_chrome_labs_migration_complete",
+            "value": "true"
+},
+        {
+            "name": "profile.content_settings.exceptions.local_fonts",
+            "value": "{}"
+},
+        {
+            "name": "webauthn.cablev2_pairings",
+            "value": "[]"
+},
+        {
+            "name": "ios.speechinput.voicesearch_locale",
+            "value": "\"\""
+},
+        {
+            "name": "privacy_sandbox.fake_notice.prompt_shown_time_sync",
+            "value": "\"13386722117911388\""
+},
+        {
+            "name": "accessibility.captions.live_caption_enabled",
+            "value": "false"
+},
+        {
+            "name": "browser.clear_data.time_period_basic",
+            "value": "2"
+},
+        {
+            "name": "browser.clear_data.browsing_history_basic",
+            "value": "false"
+},
+        {
+            "name": "profile.content_settings.exceptions.images",
+            "value": "{}"
+},
+        {
+            "name": "net.network_prediction_options",
+            "value": "3"
+},
+        {
+            "name": "cross_device.home.module.most_visited.enabled",
+            "value": "{}"
+},
+        {
+            "name": "profile.content_settings.exceptions.tracking_protection",
+            "value": "{}"
+},
+        {
+            "name": "profile.content_settings.exceptions.window_placement",
+            "value": "{}"
+}
+    ],
+    "Themes": [
+        {
+            "custom_theme_id": "bmanlajnpdncmhfkiccmbgeocgbncfln",
+            "custom_theme_update_url": "http://clients2.google.com/service/update2/crx",
+            "custom_theme_name": "Slinky Elegant",
+            "browser_color_scheme": "DARK",
+            "use_system_theme_by_default": false,
+            "use_custom_theme": true
+}
+    ],
+    "Priority Preferences": [
+        {"preference": {
+            "name": "autofill.name_and_email_profile_not_selected_counter",
+            "value": "0"
+}},
+        {"preference": {
+            "name": "credentials_enable_autosignin",
+            "value": "true"
+}},
+        {"preference": {
+            "name": "credentials_need_first_time_welcome",
+            "value": "false"
+}},
+        {"preference": {
+            "name": "credentials_enable_passwordalerts",
+            "value": "true"
+}},
+        {"preference": {
+            "name": "autofill.was_name_and_email_profile_used",
+            "value": "true"
+}},
+        {"preference": {
+            "name": "credentials_enable_service",
+            "value": "true"
+}},
+        {"preference": {
+            "name": "credentials_enable_sync",
+            "value": "true"
+}},
+        {"preference": {
+            "name": "autofill.name_and_email_profile_signature",
+            "value": "\"2826792456\""
+}},
+        {"preference": {
+            "name": "credentials_password_manager_warm_welcome_last_seen",
+            "value": "2024-04-23T08:29:05.072934Z"
+}},
+        {"preference": {
+            "name": "credentials_last_password_checkup_time",
+            "value": "2025-03-22T18:33:08.895902Z"
+}},
+        {"preference": {
+            "name": "profile.was_auto_sign_in_first_run_experience_shown",
+            "value": "true"
+}}
+    ],
+    "Web Apps": [
+        {
+            "relative_manifest_id": "web",
+            "theme_color": -1,
+            "icon_infos": [
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://cf-st.sc-cdn.net/dw/favicons/e9b6d2d3-dweb_slash_web-prod-web-v9/android-chrome-36x36.png",
+                                    "size_in_px": 36
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://cf-st.sc-cdn.net/dw/favicons/e9b6d2d3-dweb_slash_web-prod-web-v9/android-chrome-48x48.png",
+                                    "size_in_px": 48
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://cf-st.sc-cdn.net/dw/favicons/e9b6d2d3-dweb_slash_web-prod-web-v9/android-chrome-72x72.png",
+                                    "size_in_px": 72
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://cf-st.sc-cdn.net/dw/favicons/e9b6d2d3-dweb_slash_web-prod-web-v9/android-chrome-96x96.png",
+                                    "size_in_px": 96
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://cf-st.sc-cdn.net/dw/favicons/e9b6d2d3-dweb_slash_web-prod-web-v9/android-chrome-144x144.png",
+                                    "size_in_px": 144
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://cf-st.sc-cdn.net/dw/favicons/e9b6d2d3-dweb_slash_web-prod-web-v9/android-chrome-192x192.png",
+                                    "size_in_px": 192
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://cf-st.sc-cdn.net/dw/favicons/e9b6d2d3-dweb_slash_web-prod-web-v9/android-chrome-256x256.png",
+                                    "size_in_px": 256
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://cf-st.sc-cdn.net/dw/favicons/e9b6d2d3-dweb_slash_web-prod-web-v9/android-chrome-384x384.png",
+                                    "size_in_px": 384
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://cf-st.sc-cdn.net/dw/favicons/e9b6d2d3-dweb_slash_web-prod-web-v9/android-chrome-512x512.png",
+                                    "size_in_px": 512
+                        }
+            ],
+            "scope": "https://www.snapchat.com/web",
+            "start_url": "https://www.snapchat.com/web",
+            "name": "Snapchat",
+            "user_display_mode_default": "STANDALONE"
+},
+        {
+            "relative_manifest_id": "",
+            "icon_infos": [{
+                        "purpose": "ANY",
+                        "url": "https://claude.ai/images/icon-512x512.png",
+                        "size_in_px": 512
+            }],
+            "scope": "https://claude.ai/",
+            "start_url": "https://claude.ai/",
+            "name": "Claude",
+            "user_display_mode_default": "STANDALONE",
+            "trusted_icons": [{
+                        "purpose": "ANY",
+                        "url": "https://claude.ai/images/icon-512x512.png",
+                        "size_in_px": 512
+            }]
+},
+        {
+            "relative_manifest_id": "?app!versions=latest&source=pwa",
+            "theme_color": -13408298,
+            "icon_infos": [
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://acrobat.adobe.com/home/58355e8285/pwa/pwa-images/acrobat_reader_pro_standard_appicons_macos11_16x16@1x.png",
+                                    "size_in_px": 16
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://acrobat.adobe.com/home/58355e8285/pwa/pwa-images/acrobat_reader_pro_standard_appicons_macos11_32x32@1x.png",
+                                    "size_in_px": 32
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://acrobat.adobe.com/home/58355e8285/pwa/pwa-images/acrobat_reader_pro_standard_appicons_macos11_64x64@1x.png",
+                                    "size_in_px": 64
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://acrobat.adobe.com/home/58355e8285/pwa/pwa-images/acrobat_reader_pro_standard_appicons_macos11_128x128@1x.png",
+                                    "size_in_px": 128
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://acrobat.adobe.com/home/58355e8285/pwa/pwa-images/acrobat_reader_pro_standard_appicons_macos11_256x256@1x.png",
+                                    "size_in_px": 256
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://acrobat.adobe.com/home/58355e8285/pwa/pwa-images/acrobat_reader_pro_standard_appicons_macos11_512x512@1x.png",
+                                    "size_in_px": 512
+                        },
+                        {
+                                    "purpose": "MASKABLE",
+                                    "url": "https://acrobat.adobe.com/home/58355e8285/pwa/pwa-images/acrobat_web_maskable_icon.svg",
+                                    "size_in_px": 512
+                        }
+            ],
+            "scope": "https://acrobat.adobe.com/",
+            "start_url": "https://acrobat.adobe.com/?app!versions=latest&source=pwa",
+            "name": "Adobe Acrobat",
+            "user_display_mode_default": "STANDALONE"
+},
+        {
+            "relative_manifest_id": "",
+            "icon_infos": [{
+                        "purpose": "ANY",
+                        "url": "chrome://password-manager/images/password_manager_pwa_icon.svg",
+                        "size_in_px": 0
+            }],
+            "scope": "chrome://password-manager/",
+            "start_url": "chrome://password-manager/?source=pwa",
+            "name": "Google Password Manager",
+            "user_display_mode_default": "STANDALONE"
+},
+        {
+            "relative_manifest_id": "?lfhs=2",
+            "theme_color": -920588,
+            "icon_infos": [
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://www.gstatic.com/images/branding/product/1x/drive_2020q4_16dp.png",
+                                    "size_in_px": 16
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://www.gstatic.com/images/branding/product/1x/drive_2020q4_96dp.png",
+                                    "size_in_px": 96
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://www.gstatic.com/images/branding/product/2x/drive_2020q4_96dp.png",
+                                    "size_in_px": 192
+                        }
+            ],
+            "scope": "https://drive.google.com/",
+            "start_url": "https://drive.google.com/?lfhs=2",
+            "name": "Google Drive",
+            "user_display_mode_default": "STANDALONE",
+            "trusted_icons": [
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://www.gstatic.com/images/branding/product/1x/drive_2020q4_16dp.png",
+                                    "size_in_px": 16
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://www.gstatic.com/images/branding/product/1x/drive_2020q4_96dp.png",
+                                    "size_in_px": 96
+                        },
+                        {
+                                    "purpose": "ANY",
+                                    "url": "https://www.gstatic.com/images/branding/product/2x/drive_2020q4_96dp.png",
+                                    "size_in_px": 192
+                        }
+            ]
+}
+    ]
+}

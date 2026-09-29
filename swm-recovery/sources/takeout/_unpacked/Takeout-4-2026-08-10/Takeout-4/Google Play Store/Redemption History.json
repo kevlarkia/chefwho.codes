@@ -1,0 +1,40 @@
+[{
+  "redemptionHistory": {
+    "acquisition": [{
+      "document": {
+        "title": "Enjoy $2 off in MONOPOLY GO"
+      }
+    }],
+    "device": {
+      "model": "",
+      "carrier": "",
+      "manufacturer": "",
+      "deviceDisplayName": ""
+    },
+    "userCountry": "US",
+    "ipCountry": "US",
+    "status": "REDEEMED",
+    "redemptionChangeTime": "2024-04-13T00:44:48.435Z",
+    "formattedMoney": "$100.00"
+  }
+},
+{
+  "redemptionHistory": {
+    "acquisition": [{
+      "document": {
+        "title": "Enjoy $2 off in MONOPOLY GO"
+      }
+    }],
+    "device": {
+      "model": "",
+      "carrier": "",
+      "manufacturer": "",
+      "deviceDisplayName": ""
+    },
+    "userCountry": "US",
+    "ipCountry": "US",
+    "status": "PENDING",
+    "redemptionChangeTime": "2024-04-13T00:45:36.105Z",
+    "formattedMoney": "$100.00"
+  }
+}]

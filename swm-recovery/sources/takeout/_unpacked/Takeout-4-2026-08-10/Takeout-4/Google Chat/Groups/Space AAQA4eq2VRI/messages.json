@@ -1,0 +1,1596 @@
+{
+  "messages": [
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 2:10:55 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "GuHmsF5J7sY",
+      "message_id": "AAQA4eq2VRI/GuHmsF5J7sY/GuHmsF5J7sY"
+    },
+    {
+      "creator": {
+        "name": "Abang Translator",
+        "user_type": "Bot"
+      },
+      "created_date": "Saturday, August 23, 2025 at 2:10:55 AM UTC",
+      "text": "Welcome to Abang Translator! I can translate your messages to any language. \nPlease use a command to perform translations. Examples:\n`/spanish Hello everyone`\n`/arabic Semangat menjalani hari, semoga produktif!`\n`/japanese ¡Vamos a empezar!`\n`/russian Buenos dias`\n`/french Wie geht\u0027s?`\n\nBy default, the original message will be shown. Use `/config` to change this.\nTo see all available languages, use the `/translate` command.",
+      "annotations": [
+        {
+          "start_index": 133,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 134,
+          "length": 23,
+          "format_metadata": {
+            "format_type": "MONOSPACE"
+          }
+        },
+        {
+          "start_index": 157,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 159,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 160,
+          "length": 50,
+          "format_metadata": {
+            "format_type": "MONOSPACE"
+          }
+        },
+        {
+          "start_index": 210,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 212,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 213,
+          "length": 27,
+          "format_metadata": {
+            "format_type": "MONOSPACE"
+          }
+        },
+        {
+          "start_index": 240,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 242,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 243,
+          "length": 20,
+          "format_metadata": {
+            "format_type": "MONOSPACE"
+          }
+        },
+        {
+          "start_index": 263,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 265,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 266,
+          "length": 19,
+          "format_metadata": {
+            "format_type": "MONOSPACE"
+          }
+        },
+        {
+          "start_index": 285,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 340,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 341,
+          "length": 7,
+          "format_metadata": {
+            "format_type": "MONOSPACE"
+          }
+        },
+        {
+          "start_index": 348,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 406,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 407,
+          "length": 10,
+          "format_metadata": {
+            "format_type": "MONOSPACE"
+          }
+        },
+        {
+          "start_index": 417,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        }
+      ],
+      "topic_id": "jda5aFzK67I",
+      "message_id": "AAQA4eq2VRI/jda5aFzK67I/jda5aFzK67I"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 2:13:06 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "1Kgf1WA7ijc",
+      "message_id": "AAQA4eq2VRI/1Kgf1WA7ijc/1Kgf1WA7ijc"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 2:14:20 AM UTC",
+      "text": "💜 Celebration of Life 💜\n\nFriday, September 5th, 2025 @7pm\nAntelope Springs Church\n4555 PFE Rd\nRoseville, CA 95747",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "💐"
+          },
+          "reactor_emails": [
+            ""
+          ]
+        }
+      ],
+      "topic_id": "PwnOeshwIbo",
+      "message_id": "AAQA4eq2VRI/PwnOeshwIbo/PwnOeshwIbo"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 2:30:09 AM UTC",
+      "annotations": [
+        {
+          "start_index": 0,
+          "length": 0,
+          "drive_metadata": {
+            "id": "1ufaPBQ6zJXBFLoJQMGzfnxny2BNbr7pu",
+            "title": "SophiasPrayerPoem.docx",
+            "thumbnail_url": ""
+          }
+        }
+      ],
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "🙏"
+          },
+          "reactor_emails": [
+            ""
+          ]
+        }
+      ],
+      "topic_id": "y6dwuDoGy0g",
+      "message_id": "AAQA4eq2VRI/y6dwuDoGy0g/y6dwuDoGy0g"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 2:30:25 AM UTC",
+      "annotations": [
+        {
+          "start_index": 0,
+          "length": 0,
+          "drive_metadata": {
+            "id": "1CO8XJPgbGx3hsVaVXMEsfdW-YXKWrfTn",
+            "title": "Walk of Honor.docx",
+            "thumbnail_url": ""
+          }
+        }
+      ],
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "🫡"
+          },
+          "reactor_emails": [
+            ""
+          ]
+        }
+      ],
+      "topic_id": "9yJiZQz7aiM",
+      "message_id": "AAQA4eq2VRI/9yJiZQz7aiM/9yJiZQz7aiM"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 2:33:56 AM UTC",
+      "text": "https://gofund.me/065ebe84",
+      "annotations": [
+        {
+          "start_index": 0,
+          "length": 26,
+          "url_metadata": {
+            "title": "Donate to Healing together for Sophia!, organized by Marco Andrade",
+            "snippet": "Lets make Sophia’s birthday a happy one\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTo our family and friends,\n\n\n\n\n\n\n\n\n… Marco Andrade needs your support for Healing together for Sophia!",
+            "image_url": "https://lh5.googleusercontent.com/proxy/zaoMJmudlmd30XNR5VQcAyKazhAgRsGz6XJoPQsLzHbyCkLIkAN5Qh0fGC5wkxe1oP4ULI7HOvDnwUza4glYm5X2FKeBKqF0TjDwUqdjYsSIikzC29jV5lg",
+            "url": {
+              "private_do_not_access_or_else_safe_url_wrapped_value": "https://gofund.me/065ebe84"
+            }
+          }
+        }
+      ],
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "💜"
+          },
+          "reactor_emails": [
+            ""
+          ]
+        }
+      ],
+      "topic_id": "rwuopdNlX50",
+      "message_id": "AAQA4eq2VRI/rwuopdNlX50/rwuopdNlX50"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 2:35:47 AM UTC",
+      "text": "https://linktr.ee/LoveForSophia",
+      "annotations": [
+        {
+          "start_index": 0,
+          "length": 31,
+          "url_metadata": {
+            "title": "LoveForSophia | Instagram, Facebook | Linktree",
+            "snippet": "",
+            "image_url": "https://lh4.googleusercontent.com/proxy/ZzhQaNTeUqa8ZNjF9KFJTZNvGr0S-4gzTmJ7ziOwtj5Cd4LNlVpdZon689dOJ9W044nndx8muojPI9Xc0ec1tw",
+            "url": {
+              "private_do_not_access_or_else_safe_url_wrapped_value": "https://linktr.ee/LoveForSophia"
+            }
+          }
+        }
+      ],
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "❤️"
+          },
+          "reactor_emails": [
+            "",
+            "krista.r.knapp@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "qlc9EV39X0c",
+      "message_id": "AAQA4eq2VRI/qlc9EV39X0c/qlc9EV39X0c"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 2:50:00 AM UTC",
+      "text": "https://photos.app.goo.gl/pAG8U6RUZf8ZPhRN9",
+      "annotations": [
+        {
+          "start_index": 0,
+          "length": 43,
+          "url_metadata": {
+            "title": "Sophia · Jul 28 – Aug 22",
+            "snippet": "Shared album · Tap to view!",
+            "image_url": "https://lh3.googleusercontent.com/pw/AP1GczNoD9sfuE4sJBnMLWmRM7BEG2WnLzjY1jIbXub3V6K0Ic9hN20gwDEokwsa2zEDLeCE-OOg3NAwBR5rGLHpHeAdlv0E6I8qaK6O6CmMYpsA8ROoYg\u003dw528-h315-p-k",
+            "url": {
+              "private_do_not_access_or_else_safe_url_wrapped_value": "https://photos.app.goo.gl/pAG8U6RUZf8ZPhRN9"
+            }
+          }
+        }
+      ],
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "❤️"
+          },
+          "reactor_emails": [
+            "",
+            "krista.r.knapp@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "vYlWMPRSGM4",
+      "message_id": "AAQA4eq2VRI/vYlWMPRSGM4/vYlWMPRSGM4",
+      "message_labels": [
+        {
+          "label_type": "PINNED",
+          "creator": {
+            "name": "Deleted User",
+            "user_type": "Human"
+          }
+        }
+      ]
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human",
+        "acting_user": {
+          "name": "Google Tasks",
+          "user_id": "104752727170698952973",
+          "user_type": "Bot"
+        }
+      },
+      "created_date": "Saturday, August 23, 2025 at 2:51:51 AM UTC",
+      "annotations": [
+        {
+          "start_index": 0,
+          "length": 0,
+          "gsuite_integration_metadata": {
+            "tasks_data": {
+              "task_properties": {
+                "title": "Head count and List people coming ",
+                "completed": false,
+                "deleted": false,
+                "description": "So we are aware who is coming and to notify the church how many to expect"
+              },
+              "creation": {}
+            }
+          }
+        }
+      ],
+      "topic_id": "km2S_Lm8hY4",
+      "message_id": "AAQA4eq2VRI/km2S_Lm8hY4/-pyH1D670uo"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human",
+        "acting_user": {
+          "name": "Google Tasks",
+          "user_id": "104752727170698952973",
+          "user_type": "Bot"
+        }
+      },
+      "created_date": "Saturday, August 23, 2025 at 2:54:01 AM UTC",
+      "annotations": [
+        {
+          "start_index": 0,
+          "length": 0,
+          "gsuite_integration_metadata": {
+            "tasks_data": {
+              "task_properties": {
+                "title": "Gather as many photos and videos of Sophia before the celebration",
+                "completed": false,
+                "deleted": false,
+                "description": "I created a shared album anyone can access with that link and add their own pics/videos they have of her"
+              },
+              "creation": {}
+            }
+          }
+        }
+      ],
+      "topic_id": "nnxsndW3h30",
+      "message_id": "AAQA4eq2VRI/nnxsndW3h30/Hw8QxE9mvis"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human",
+        "acting_user": {
+          "name": "Google Tasks",
+          "user_id": "104752727170698952973",
+          "user_type": "Bot"
+        }
+      },
+      "created_date": "Saturday, August 23, 2025 at 2:58:55 AM UTC",
+      "annotations": [
+        {
+          "start_index": 0,
+          "length": 0,
+          "gsuite_integration_metadata": {
+            "tasks_data": {
+              "task_properties": {
+                "title": "Clean the House",
+                "completed": false,
+                "deleted": false,
+                "description": "I still want to finish more detailed cleaning and there’s a lot of organizing that needs to be completed"
+              },
+              "creation": {}
+            }
+          }
+        }
+      ],
+      "topic_id": "W7EUBGh5XuI",
+      "message_id": "AAQA4eq2VRI/W7EUBGh5XuI/uURkFZ7horE"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human",
+        "acting_user": {
+          "name": "Google Tasks",
+          "user_id": "104752727170698952973",
+          "user_type": "Bot"
+        }
+      },
+      "created_date": "Saturday, August 23, 2025 at 3:00:21 AM UTC",
+      "annotations": [
+        {
+          "start_index": 0,
+          "length": 0,
+          "gsuite_integration_metadata": {
+            "tasks_data": {
+              "task_properties": {
+                "title": "Dinner for the night of the celebration ",
+                "completed": false,
+                "deleted": false,
+                "description": "Need to know who’s bringing what and where the dinner will be held"
+              },
+              "creation": {}
+            }
+          }
+        }
+      ],
+      "topic_id": "RGyl53RsxNE",
+      "message_id": "AAQA4eq2VRI/RGyl53RsxNE/nB4Tq8qXZfI"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human",
+        "acting_user": {
+          "name": "Google Tasks",
+          "user_id": "104752727170698952973",
+          "user_type": "Bot"
+        }
+      },
+      "created_date": "Saturday, August 23, 2025 at 3:03:54 AM UTC",
+      "annotations": [
+        {
+          "start_index": 0,
+          "length": 0,
+          "gsuite_integration_metadata": {
+            "tasks_data": {
+              "task_properties": {
+                "title": "Keep the gofundme page alive!",
+                "completed": false,
+                "deleted": false,
+                "description": "Everyone needs to do their part and ensuring that it stays in everyone’s feeds and is posted everywhere. It has been posted on Facebook, Instagram, LinkedIn, Snapchat and Tik Tok. With maybe more sites to come!"
+              },
+              "creation": {}
+            }
+          }
+        }
+      ],
+      "topic_id": "eY0Jmz54DIw",
+      "message_id": "AAQA4eq2VRI/eY0Jmz54DIw/_wzVl5noMXo"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 3:06:01 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "lVzYj66dVjQ",
+      "message_id": "AAQA4eq2VRI/lVzYj66dVjQ/lVzYj66dVjQ"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 3:08:38 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "jPQQXCSFYVg",
+      "message_id": "AAQA4eq2VRI/jPQQXCSFYVg/jPQQXCSFYVg"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 3:09:43 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "sdGZHdpva0Y",
+      "message_id": "AAQA4eq2VRI/sdGZHdpva0Y/sdGZHdpva0Y"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 3:24:04 AM UTC",
+      "text": "https://chat.whatsapp.com/FiCJHAfVEjnJZ1nDmDuadK?mode\u003dems_copy_t",
+      "annotations": [
+        {
+          "start_index": 0,
+          "length": 64,
+          "url_metadata": {
+            "title": "Andrade Family ❤️I",
+            "snippet": "WhatsApp Group Invite",
+            "image_url": "https://lh3.googleusercontent.com/proxy/sc_4ro2jGEA84SMYy5BofekTa7jacZ-3q-OE6PL5WhXam0N280tO2bV0VqMYv6DbSzpergrQAasbX43eMX4jbFndcOGhWi6j0tH_q37yj6GEgA8UH98FfM_NDGLgIEJ9ezAFfP-6wcv5oEu7Rq9EDbakOAVR0T4UI1CpQuwjKxnImNTG8y9DW2qGuXvC23nqlDjARCr17wOMm0U-gzSK2tHYNGHonPFN82PcFA25UCyS98YWWWduPUL0RwY-eRHY0nLMJyeHoNEHcgZbpP93QE4bXLKSaekjRQ",
+            "url": {
+              "private_do_not_access_or_else_safe_url_wrapped_value": "https://chat.whatsapp.com/FiCJHAfVEjnJZ1nDmDuadK?mode\u003dems_copy_t"
+            }
+          }
+        }
+      ],
+      "topic_id": "ZCZ1XqugnYA",
+      "message_id": "AAQA4eq2VRI/ZCZ1XqugnYA/ZCZ1XqugnYA"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 3:25:45 AM UTC",
+      "text": "This a link to the family groupchat on  WhatsApp with my dads side of the family if anyone is willing to join that one",
+      "topic_id": "OFOq5RUPiWI",
+      "quoted_message_metadata": {
+        "creator": {
+          "name": "Deleted User",
+          "user_type": "Human"
+        },
+        "text": "https://chat.whatsapp.com/FiCJHAfVEjnJZ1nDmDuadK?mode\u003dems_copy_t",
+        "annotations": [
+          {
+            "start_index": 0,
+            "length": 64,
+            "url_metadata": {
+              "title": "Andrade Family ❤️I",
+              "snippet": "WhatsApp Group Invite",
+              "image_url": "https://lh3.googleusercontent.com/proxy/sc_4ro2jGEA84SMYy5BofekTa7jacZ-3q-OE6PL5WhXam0N280tO2bV0VqMYv6DbSzpergrQAasbX43eMX4jbFndcOGhWi6j0tH_q37yj6GEgA8UH98FfM_NDGLgIEJ9ezAFfP-6wcv5oEu7Rq9EDbakOAVR0T4UI1CpQuwjKxnImNTG8y9DW2qGuXvC23nqlDjARCr17wOMm0U-gzSK2tHYNGHonPFN82PcFA25UCyS98YWWWduPUL0RwY-eRHY0nLMJyeHoNEHcgZbpP93QE4bXLKSaekjRQ",
+              "url": {
+                "private_do_not_access_or_else_safe_url_wrapped_value": "https://chat.whatsapp.com/FiCJHAfVEjnJZ1nDmDuadK?mode\u003dems_copy_t"
+              }
+            }
+          }
+        ]
+      },
+      "message_id": "AAQA4eq2VRI/OFOq5RUPiWI/OFOq5RUPiWI"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 3:27:07 AM UTC",
+      "text": "This is the shared album people can add stuff to",
+      "topic_id": "cRhQPG4KIwc",
+      "quoted_message_metadata": {
+        "creator": {
+          "name": "Deleted User",
+          "user_type": "Human"
+        },
+        "text": "https://photos.app.goo.gl/pAG8U6RUZf8ZPhRN9",
+        "annotations": [
+          {
+            "start_index": 0,
+            "length": 43,
+            "url_metadata": {
+              "title": "Sophia · Jul 28 – Aug 22",
+              "snippet": "Shared album · Tap to view!",
+              "image_url": "https://lh3.googleusercontent.com/pw/AP1GczNoD9sfuE4sJBnMLWmRM7BEG2WnLzjY1jIbXub3V6K0Ic9hN20gwDEokwsa2zEDLeCE-OOg3NAwBR5rGLHpHeAdlv0E6I8qaK6O6CmMYpsA8ROoYg\u003dw528-h315-p-k",
+              "url": {
+                "private_do_not_access_or_else_safe_url_wrapped_value": "https://photos.app.goo.gl/pAG8U6RUZf8ZPhRN9"
+              }
+            }
+          }
+        ]
+      },
+      "message_id": "AAQA4eq2VRI/cRhQPG4KIwc/cRhQPG4KIwc"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 3:28:56 AM UTC",
+      "text": "This is a LinkTree it’s kind of a new thing. I’m adding it on the gofundme for people to have more access to different sites the gofundme page is at. It’s like an app for links basically",
+      "topic_id": "HsCiR--By6s",
+      "quoted_message_metadata": {
+        "creator": {
+          "name": "Deleted User",
+          "user_type": "Human"
+        },
+        "text": "https://linktr.ee/LoveForSophia",
+        "annotations": [
+          {
+            "start_index": 0,
+            "length": 31,
+            "url_metadata": {
+              "title": "LoveForSophia | Instagram, Facebook | Linktree",
+              "snippet": "",
+              "image_url": "https://lh4.googleusercontent.com/proxy/ZzhQaNTeUqa8ZNjF9KFJTZNvGr0S-4gzTmJ7ziOwtj5Cd4LNlVpdZon689dOJ9W044nndx8muojPI9Xc0ec1tw",
+              "url": {
+                "private_do_not_access_or_else_safe_url_wrapped_value": "https://linktr.ee/LoveForSophia"
+              }
+            }
+          }
+        ]
+      },
+      "message_id": "AAQA4eq2VRI/HsCiR--By6s/HsCiR--By6s"
+    },
+    {
+      "creator": {
+        "name": "Nathan Andrade",
+        "email": "peacablecard78@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 3:35:21 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "tGaBs6g9iPQ",
+      "message_id": "AAQA4eq2VRI/tGaBs6g9iPQ/tGaBs6g9iPQ"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 3:45:12 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "o9gyHpDNgmM",
+      "message_id": "AAQA4eq2VRI/o9gyHpDNgmM/o9gyHpDNgmM"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 3:51:27 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "Xeac5d3X3-I",
+      "message_id": "AAQA4eq2VRI/Xeac5d3X3-I/Xeac5d3X3-I"
+    },
+    {
+      "creator": {
+        "name": "Absolute Poll",
+        "user_type": "Bot"
+      },
+      "created_date": "Saturday, August 23, 2025 at 3:51:27 AM UTC",
+      "text": "Hello, My purpose is to support you in crafting polls that enhance teamwork and simplify the decision-making process.\n\nBelow is an example commands:\n`/poll` - You will need to fill out the topic and answers in the form that will be displayed.\n`/poll \"Which date works best for [event]?\" \"30 th February\" \"26 th March\" \"15 th April\"` - to create a poll with autofill \n\nAlternatively, you can create poll by mentioning me with question and answers. e.g *@Absolute Poll \"Your Question\" \"Answer 1\" \"Answer 2\"*\n\nWe trust that our service proves valuable to you. Should you have any inquiries or apprehensions, please feel free to reach out to us without hesitation.",
+      "annotations": [
+        {
+          "start_index": 149,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 150,
+          "length": 5,
+          "format_metadata": {
+            "format_type": "MONOSPACE"
+          }
+        },
+        {
+          "start_index": 155,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 243,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 244,
+          "length": 87,
+          "format_metadata": {
+            "format_type": "MONOSPACE"
+          }
+        },
+        {
+          "start_index": 331,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 451,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        },
+        {
+          "start_index": 452,
+          "length": 52,
+          "format_metadata": {
+            "format_type": "BOLD"
+          }
+        },
+        {
+          "start_index": 504,
+          "length": 1,
+          "format_metadata": {
+            "format_type": "HIDDEN"
+          }
+        }
+      ],
+      "topic_id": "m0U54pXmxWE",
+      "message_id": "AAQA4eq2VRI/m0U54pXmxWE/m0U54pXmxWE"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 3:55:52 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "2F0apP-G8ys",
+      "message_id": "AAQA4eq2VRI/2F0apP-G8ys/2F0apP-G8ys"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 4:00:26 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "vxehNfrPdbc",
+      "message_id": "AAQA4eq2VRI/vxehNfrPdbc/vxehNfrPdbc"
+    },
+    {
+      "creator": {
+        "name": "Absolute Poll",
+        "user_type": "Bot"
+      },
+      "created_date": "Saturday, August 23, 2025 at 4:05:39 AM UTC",
+      "topic_id": "17qXJB1moK8",
+      "message_id": "AAQA4eq2VRI/17qXJB1moK8/17qXJB1moK8"
+    },
+    {
+      "creator": {
+        "name": "margo breck",
+        "email": "margo.breck@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 4:17:09 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "zq6ppU9P4YI",
+      "message_id": "AAQA4eq2VRI/zq6ppU9P4YI/zq6ppU9P4YI"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 4:18:19 AM UTC",
+      "text": "@all thank you everyone for joining! This will make it so much easier for all of us to be on the same page and plan shit together so we’re all on the same page.",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "👍"
+          },
+          "reactor_emails": [
+            "margo.breck@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "A8o1YlAC_AY",
+      "message_id": "AAQA4eq2VRI/A8o1YlAC_AY/A8o1YlAC_AY"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 4:20:07 AM UTC",
+      "text": "Have a look through the app/chat. Let me know if you have any questions! Love you guys.",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "❤️"
+          },
+          "reactor_emails": [
+            "krista.r.knapp@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "E3xtsU3PSSE",
+      "message_id": "AAQA4eq2VRI/E3xtsU3PSSE/E3xtsU3PSSE"
+    },
+    {
+      "creator": {
+        "name": "Steven Hunter",
+        "email": "bullet4blink@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 4:28:20 AM UTC",
+      "text": "As far as the dinner afterwards. Is there an end time for the service at the church?",
+      "topic_id": "vPHhUAy9iq8",
+      "message_id": "AAQA4eq2VRI/vPHhUAy9iq8/vPHhUAy9iq8"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 5:31:24 AM UTC",
+      "text": "I am unsure. Wasn’t told one yet.",
+      "topic_id": "f4V-FaXdW0Q",
+      "quoted_message_metadata": {
+        "creator": {
+          "name": "Steven Hunter",
+          "email": "bullet4blink@gmail.com",
+          "user_type": "Human"
+        },
+        "text": "As far as the dinner afterwards. Is there an end time for the service at the church?"
+      },
+      "message_id": "AAQA4eq2VRI/f4V-FaXdW0Q/f4V-FaXdW0Q"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 6:20:14 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "Yna_qch1axM",
+      "message_id": "AAQA4eq2VRI/Yna_qch1axM/Yna_qch1axM"
+    },
+    {
+      "creator": {
+        "name": "Krista Knapp",
+        "email": "krista.r.knapp@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 6:56:16 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "QjcXQRPbagg",
+      "message_id": "AAQA4eq2VRI/QjcXQRPbagg/QjcXQRPbagg"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 8:01:05 AM UTC",
+      "text": "@all There is a link on the LinkTree added now. It’s a separate album for the public to add their own pics/vids. I added a few there just to get it started but just everyone else who’s not in this chat will add to that one. Of course feel free to check it out.",
+      "topic_id": "8MGWMvn9pXM",
+      "message_id": "AAQA4eq2VRI/8MGWMvn9pXM/8MGWMvn9pXM"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 9:27:00 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "Kn6aHnGaRxk",
+      "message_id": "AAQA4eq2VRI/Kn6aHnGaRxk/Kn6aHnGaRxk"
+    },
+    {
+      "creator": {
+        "name": "Lauren",
+        "email": "lskam678@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 9:49:55 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "BJQRKWpBT9I",
+      "message_id": "AAQA4eq2VRI/BJQRKWpBT9I/BJQRKWpBT9I"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 9:53:15 AM UTC",
+      "text": "There is probably going to be some duplicates and that’s fine. Just add what you have and we can sort that part out later.",
+      "topic_id": "DmRK5u7hodg",
+      "quoted_message_metadata": {
+        "creator": {
+          "name": "Deleted User",
+          "user_type": "Human"
+        },
+        "text": "This is the shared album people can add stuff to"
+      },
+      "message_id": "AAQA4eq2VRI/DmRK5u7hodg/DmRK5u7hodg"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 10:28:03 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "n5eHA3WNCCY",
+      "message_id": "AAQA4eq2VRI/n5eHA3WNCCY/n5eHA3WNCCY"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 10:57:16 AM UTC",
+      "topic_id": "Of1ZxjG80PE",
+      "message_id": "AAQA4eq2VRI/Of1ZxjG80PE/Of1ZxjG80PE"
+    },
+    {
+      "creator": {
+        "name": "Audrey Andrade",
+        "email": "aandrade1015@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 11:45:24 AM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "qaRH1Mzijkc",
+      "message_id": "AAQA4eq2VRI/qaRH1Mzijkc/qaRH1Mzijkc"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 11:48:46 AM UTC",
+      "text": "@Audrey Andrade 💞",
+      "topic_id": "dVeMH14bEFA",
+      "message_id": "AAQA4eq2VRI/dVeMH14bEFA/dVeMH14bEFA"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 11:50:00 AM UTC",
+      "text": "Sorry @Audrey Andrade it doesn’t allow people outside this “Organization” from Clint’s workspace to become Space Managers I guess.",
+      "topic_id": "WElovvHXSEM",
+      "message_id": "AAQA4eq2VRI/WElovvHXSEM/WElovvHXSEM"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 11:51:17 AM UTC",
+      "text": "I’ll just give more permissions generally to the group",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "❤️"
+          },
+          "reactor_emails": [
+            "aandrade1015@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "tRGBEv_-3Aw",
+      "message_id": "AAQA4eq2VRI/tRGBEv_-3Aw/tRGBEv_-3Aw"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 5:50:59 PM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "-P3I75MHgj0",
+      "message_id": "AAQA4eq2VRI/-P3I75MHgj0/-P3I75MHgj0"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 10:44:33 PM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "PvHjdyvAt7U",
+      "message_id": "AAQA4eq2VRI/PvHjdyvAt7U/PvHjdyvAt7U"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 10:51:55 PM UTC",
+      "text": "@Audrey Andrade audrey@thainmade.com",
+      "topic_id": "-DQ27TbPVJU",
+      "message_id": "AAQA4eq2VRI/-DQ27TbPVJU/-DQ27TbPVJU"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Saturday, August 23, 2025 at 10:52:01 PM UTC",
+      "text": "audrey@thainmade.com",
+      "topic_id": "F_YQ7xfCDv4",
+      "message_id": "AAQA4eq2VRI/F_YQ7xfCDv4/F_YQ7xfCDv4"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Sunday, August 24, 2025 at 6:32:43 PM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "91hS25cQjVw",
+      "message_id": "AAQA4eq2VRI/91hS25cQjVw/91hS25cQjVw"
+    },
+    {
+      "creator": {
+        "name": "Christina Ross",
+        "email": "ChristyRoss2008@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Sunday, August 24, 2025 at 6:33:56 PM UTC",
+      "text": "Updated room membership.",
+      "topic_id": "Z2ScSwJ9h_Y",
+      "message_id": "AAQA4eq2VRI/Z2ScSwJ9h_Y/Z2ScSwJ9h_Y"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Monday, August 25, 2025 at 3:04:34 AM UTC",
+      "text": "This a pdf file for anyone that wants to help more with the gofundme. Print it out and post it at Starbucks or hospitals or around town you see fit",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "❤️"
+          },
+          "reactor_emails": [
+            "margo.breck@gmail.com",
+            "krista.r.knapp@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "xc0p_IN34nk",
+      "message_id": "AAQA4eq2VRI/xc0p_IN34nk/xc0p_IN34nk"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Monday, August 25, 2025 at 3:06:00 AM UTC",
+      "attached_files": [
+        {
+          "original_name": "Fundraiser for Christina Ross by Marco Andrade - Healing together for Sophia!.pdf",
+          "export_name": "File-Fundraiser for Christina Ross by Marco Andrade - Healing together for Sophia!.pdf"
+        }
+      ],
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "❤️"
+          },
+          "reactor_emails": [
+            "krista.r.knapp@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "hJfn5LmJ6D4",
+      "message_id": "AAQA4eq2VRI/hJfn5LmJ6D4/hJfn5LmJ6D4"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Monday, August 25, 2025 at 3:29:06 AM UTC",
+      "text": "Just remember it helps to print it out in color. Pops out more.",
+      "topic_id": "N9s-MlSgfK0",
+      "message_id": "AAQA4eq2VRI/N9s-MlSgfK0/N9s-MlSgfK0"
+    },
+    {
+      "creator": {
+        "name": "margo breck",
+        "email": "margo.breck@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Tuesday, September 2, 2025 at 11:29:05 PM UTC",
+      "text": "Okay!",
+      "topic_id": "N9s-MlSgfK0",
+      "message_id": "AAQA4eq2VRI/N9s-MlSgfK0/Bqsx1EZn8I0"
+    },
+    {
+      "creator": {
+        "name": "Krista Knapp",
+        "email": "krista.r.knapp@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 12:35:05 PM UTC",
+      "text": "Hello everyone. Please send any last pictures or music you would suggest for the celebration. I will be finishing everything tomorrow but will need the items today to be included please.",
+      "topic_id": "rbRvt0IOVrg",
+      "message_id": "AAQA4eq2VRI/rbRvt0IOVrg/rbRvt0IOVrg"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 12:55:57 PM UTC",
+      "text": "Please remind me exactly where is that you’re putting it all on?",
+      "topic_id": "w52gqaGWtE0",
+      "message_id": "AAQA4eq2VRI/w52gqaGWtE0/w52gqaGWtE0"
+    },
+    {
+      "creator": {
+        "name": "Krista Knapp",
+        "email": "krista.r.knapp@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 12:56:20 PM UTC",
+      "text": "It is for her celebration of life",
+      "topic_id": "e1MRSNd6m88",
+      "message_id": "AAQA4eq2VRI/e1MRSNd6m88/e1MRSNd6m88"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 12:56:47 PM UTC",
+      "text": "Yes",
+      "topic_id": "-a4-dgoNQk8",
+      "message_id": "AAQA4eq2VRI/-a4-dgoNQk8/-a4-dgoNQk8"
+    },
+    {
+      "creator": {
+        "name": "Krista Knapp",
+        "email": "krista.r.knapp@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 12:57:14 PM UTC",
+      "text": "What do you mean where im putting it all on",
+      "topic_id": "V0nUPg-0StM",
+      "message_id": "AAQA4eq2VRI/V0nUPg-0StM/V0nUPg-0StM"
+    },
+    {
+      "creator": {
+        "name": "Krista Knapp",
+        "email": "krista.r.knapp@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 12:57:54 PM UTC",
+      "text": "Sorry if the message I sent didn\u0027t make sense. Lol",
+      "topic_id": "3eD_Ktv0AYY",
+      "message_id": "AAQA4eq2VRI/3eD_Ktv0AYY/3eD_Ktv0AYY"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 1:04:23 PM UTC",
+      "text": "Just so there is not so much confusion! \nMy Android - 4156371438\nMy iPhone - 9168604341",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "👍"
+          },
+          "reactor_emails": [
+            "krista.r.knapp@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "OLJJXq2WIaA",
+      "message_id": "AAQA4eq2VRI/OLJJXq2WIaA/OLJJXq2WIaA"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 11:12:54 PM UTC",
+      "text": "🌻 🍋👑 💜\n\nHere’s the final schedule for Sophia Elaina Andrade’s Celebration of Life!\n– Friday, 9/5/25. Thank you all for being part of this day — let’s keep things smooth, respectful, and full of love. 💛\n\n⸻\n\n🕕 6:00 PM – Setup\n👥 Marco / Clint / Pastor Frank / Assistants\n• 🎛️ Test audio \u0026 visuals\n• 🪑 Arrange chairs \u0026 seating\n• 🌸 Set up flowers \u0026 Sunday bar\n• 📖 Prepare guestbook \u0026 tables\n\n⸻\n\n🕖 7:00 PM – Opening\n🙏 Welcome \u0026 Prayer – Pastor Frank\n📖 Scriptures: Psalm 23, 1 Corinthians 15:55–57\n\n⸻\n\n🕢 7:20 PM – Walk of Honor Tribute\n🎤 Family Speakers\n\n⸻\n\n🕢 7:30 PM – Music\n🎶 Performance – John Patrick Shanley\n\n⸻\n\n🕗 8:00 PM – Video Collage\n📽️ Curated by Krista\n\n⸻\n\n🕗 8:10 PM – Message\n🕊️ Words of comfort – Pastor Frank\n\n⸻\n\n🕣 8:20–8:50 PM – Remembrances\n💬 Open floor – congregation \u0026 friends share memories\n\n⸻\n\n🕘 9:00 PM – Closing\n🙏 Final Prayer – Pastor Frank\n\n⸻\n\n🕤 9:10 PM – Wrap-Up\n🧹 Cleanup \u0026 Sign-up Coordination – led by Pastor Frank \u0026 Volunteers \n• Chairs, equipment, flowers, and final sweep\n\n⸻",
+      "topic_id": "Qwjs6f4s6B0",
+      "message_id": "AAQA4eq2VRI/Qwjs6f4s6B0/Qwjs6f4s6B0"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 11:14:56 PM UTC",
+      "text": "@all There will be a virtual Google Meet room hosted by me and hopefully @Audrey Andrade can co-host it! @Frank C. Fernandez and I are working on the official flyer both physical and virtual to be posted and presented",
+      "topic_id": "DXr5CMrMXgg",
+      "message_id": "AAQA4eq2VRI/DXr5CMrMXgg/DXr5CMrMXgg"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 11:16:39 PM UTC",
+      "text": "These will be handed out when guests leave as keepsakes for those attending the event.",
+      "attached_files": [
+        {
+          "original_name": "Image_20250903_161559_677.jpeg",
+          "export_name": "File-Image_20250903_161559_677.jpeg"
+        }
+      ],
+      "topic_id": "ObVRXJDahzk",
+      "message_id": "AAQA4eq2VRI/ObVRXJDahzk/ObVRXJDahzk"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 11:18:47 PM UTC",
+      "text": "@all the times are only estimates btw",
+      "topic_id": "9DxqR27lG7U",
+      "message_id": "AAQA4eq2VRI/9DxqR27lG7U/9DxqR27lG7U"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 11:23:15 PM UTC",
+      "text": "@Krista Knapp do you have a flash drive to copy the video collage to that I can give to Pastor Frank? He’s requesting a copy as soon as you’re able",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "👍"
+          },
+          "reactor_emails": [
+            "krista.r.knapp@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "sMgeZgwSLHU",
+      "message_id": "AAQA4eq2VRI/sMgeZgwSLHU/sMgeZgwSLHU"
+    },
+    {
+      "creator": {
+        "name": "Krista Knapp",
+        "email": "krista.r.knapp@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 11:27:34 PM UTC",
+      "text": "I can get one. I will have it ready by tomorrow afternoon is that ok?",
+      "topic_id": "so0ZsLncMgQ",
+      "message_id": "AAQA4eq2VRI/so0ZsLncMgQ/so0ZsLncMgQ"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 11:29:45 PM UTC",
+      "text": "I will let the Pastor know. Thank you baby!",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "❤️"
+          },
+          "reactor_emails": [
+            "krista.r.knapp@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "55hKx1lra1E",
+      "quoted_message_metadata": {
+        "creator": {
+          "name": "Krista Knapp",
+          "email": "krista.r.knapp@gmail.com",
+          "user_type": "Human"
+        },
+        "text": "I can get one. I will have it ready by tomorrow afternoon is that ok?"
+      },
+      "message_id": "AAQA4eq2VRI/55hKx1lra1E/55hKx1lra1E"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 11:34:30 PM UTC",
+      "text": "@all Other than a virtual live meeting for those who can’t physically be there, there will also be a build your own Sunday Bar for those attending, Clint and I will be reading off as the camera man for the live virtual meeting, and I will send the final draft invitation/ service papers here for everyone to review before officially posting it this evening!",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "❤️"
+          },
+          "reactor_emails": [
+            "krista.r.knapp@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "cnPr6-NhPx4",
+      "message_id": "AAQA4eq2VRI/cnPr6-NhPx4/cnPr6-NhPx4"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 11:37:36 PM UTC",
+      "text": "Once I am done communicating with the artist “JP” I will let you know the song of choice if you wish. I asked him to pick one from the playlist “4Sophie” I created on YouTube",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "❤️"
+          },
+          "reactor_emails": [
+            "krista.r.knapp@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "K0zUVYy8EP0",
+      "message_id": "AAQA4eq2VRI/K0zUVYy8EP0/K0zUVYy8EP0"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 11:40:19 PM UTC",
+      "text": "He is a talented Vocalist and I will be actually going to one of his performances in LA next weekend. He is the partner of a close friend who helped coordinate a lot of background things for me during this difficult time.",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "❤️"
+          },
+          "reactor_emails": [
+            "margo.breck@gmail.com",
+            "krista.r.knapp@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "mXFKaePFWjA",
+      "message_id": "AAQA4eq2VRI/mXFKaePFWjA/mXFKaePFWjA"
+    },
+    {
+      "creator": {
+        "name": "Krista Knapp",
+        "email": "krista.r.knapp@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 11:42:00 PM UTC",
+      "text": "You are welcome 😊",
+      "topic_id": "cFSMS1mRzu0",
+      "quoted_message_metadata": {
+        "creator": {
+          "name": "Deleted User",
+          "user_type": "Human"
+        },
+        "text": "I will let the Pastor know. Thank you baby!"
+      },
+      "message_id": "AAQA4eq2VRI/cFSMS1mRzu0/cFSMS1mRzu0"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 11:45:02 PM UTC",
+      "text": "Dress code will be addressed as , “Think of purple”",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "👍"
+          },
+          "reactor_emails": [
+            "krista.r.knapp@gmail.com"
+          ]
+        },
+        {
+          "emoji": {
+            "unicode": "❤️"
+          },
+          "reactor_emails": [
+            "krista.r.knapp@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "qM1dRJ6mpQ8",
+      "message_id": "AAQA4eq2VRI/qM1dRJ6mpQ8/qM1dRJ6mpQ8"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Wednesday, September 3, 2025 at 11:46:01 PM UTC",
+      "text": "No all black. Reminder! Not a funeral",
+      "topic_id": "y65QYkNrbS0",
+      "message_id": "AAQA4eq2VRI/y65QYkNrbS0/y65QYkNrbS0"
+    },
+    {
+      "creator": {
+        "name": "Krista Knapp",
+        "email": "krista.r.knapp@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Thursday, September 4, 2025 at 2:14:23 AM UTC",
+      "text": "Last call for pictures! Please send them to be included in the celebration",
+      "topic_id": "Pcr0I_-PJDg",
+      "message_id": "AAQA4eq2VRI/Pcr0I_-PJDg/Pcr0I_-PJDg"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Friday, September 5, 2025 at 12:40:45 AM UTC",
+      "text": "https://docs.google.com/presentation/d/13wTwGIaPxEY53K5c1ulxrf-K52F0gA3GH_OzmLLKigU/edit?usp\u003dsharing",
+      "annotations": [
+        {
+          "start_index": 0,
+          "length": 100,
+          "drive_metadata": {
+            "id": "13wTwGIaPxEY53K5c1ulxrf-K52F0gA3GH_OzmLLKigU",
+            "title": "Celebration of Life",
+            "thumbnail_url": ""
+          }
+        }
+      ],
+      "topic_id": "a1uHNnre-Rs",
+      "message_id": "AAQA4eq2VRI/a1uHNnre-Rs/a1uHNnre-Rs"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Friday, September 5, 2025 at 12:41:57 AM UTC",
+      "text": "@all the invitation is done! Please send to everyone that you have invited and to anyone else that you wanted to invite",
+      "topic_id": "rssSCPfPTo4",
+      "message_id": "AAQA4eq2VRI/rssSCPfPTo4/rssSCPfPTo4"
+    },
+    {
+      "creator": {
+        "name": "Deleted User",
+        "user_type": "Human"
+      },
+      "created_date": "Friday, September 5, 2025 at 12:43:52 AM UTC",
+      "text": "P.S. it’s invite only please only send to those were inviting don’t post publicly",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "❤️"
+          },
+          "reactor_emails": [
+            "krista.r.knapp@gmail.com"
+          ]
+        },
+        {
+          "emoji": {
+            "unicode": "👍"
+          },
+          "reactor_emails": [
+            "margo.breck@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "oCTjUerGcv4",
+      "quoted_message_metadata": {
+        "creator": {
+          "name": "Deleted User",
+          "user_type": "Human"
+        },
+        "text": "@all the invitation is done! Please send to everyone that you have invited and to anyone else that you wanted to invite"
+      },
+      "message_id": "AAQA4eq2VRI/oCTjUerGcv4/oCTjUerGcv4"
+    },
+    {
+      "creator": {
+        "name": "Krista Knapp",
+        "email": "krista.r.knapp@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Friday, September 5, 2025 at 1:17:10 AM UTC",
+      "text": "Looks beautiful",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "❤️"
+          },
+          "reactor_emails": [
+            "margo.breck@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "23n0Dh38m6Y",
+      "message_id": "AAQA4eq2VRI/23n0Dh38m6Y/23n0Dh38m6Y"
+    },
+    {
+      "creator": {
+        "name": "Krista Knapp",
+        "email": "krista.r.knapp@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Friday, September 5, 2025 at 1:17:15 AM UTC",
+      "text": "Are you going to print these?",
+      "topic_id": "WXThPJJdRfU",
+      "message_id": "AAQA4eq2VRI/WXThPJJdRfU/WXThPJJdRfU"
+    },
+    {
+      "creator": {
+        "name": "margo breck",
+        "email": "margo.breck@gmail.com",
+        "user_type": "Human"
+      },
+      "created_date": "Friday, September 5, 2025 at 3:09:27 AM UTC",
+      "text": "This is a beautiful tribute!! 💜",
+      "reactions": [
+        {
+          "emoji": {
+            "unicode": "💜"
+          },
+          "reactor_emails": [
+            "krista.r.knapp@gmail.com"
+          ]
+        }
+      ],
+      "topic_id": "ItdL6wbj72g",
+      "message_id": "AAQA4eq2VRI/ItdL6wbj72g/ItdL6wbj72g"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+autoReplyForMembersInOrg,autoReplyForMembersOutsideOrg,autoReplyForNonMembersInOrg,autoReplyForNonMembersOutsideOrg,customReplyTo,defaultMessageDenyNotificationText,description,footerText,groupEmailAddress,name,subjectPrefix,welcomeMessage
+,,,,,,Organization administrators have access to administer all resources belonging to the organization,,gcp-organization-admins@clintonfernandez.com,gcp-organization-admins,,

@@ -1,0 +1,57 @@
+{
+  "user": {
+    "name": "FC Andrade-Fernandez",
+    "email": "frank@clintonfernandez.com",
+    "user_type": "Human"
+  },
+  "membership_info": [
+    {
+      "group_id": "DM iyAKxMAAAAE",
+      "membership_state": "MEMBER_JOINED"
+    },
+    {
+      "group_id": "DM k7XcOMAAAAE",
+      "membership_state": "MEMBER_JOINED"
+    },
+    {
+      "group_id": "DM t5K7FCAAAAE",
+      "membership_state": "MEMBER_INVITED"
+    },
+    {
+      "group_id": "DM wLyLVMAAAAE",
+      "membership_state": "MEMBER_JOINED"
+    },
+    {
+      "group_id": "DM yZh0T8AAAAE",
+      "membership_state": "MEMBER_JOINED"
+    },
+    {
+      "group_id": "DM 5G6piSAAAAE",
+      "membership_state": "MEMBER_JOINED"
+    },
+    {
+      "group_id": "DM 6HgoJMAAAAE",
+      "membership_state": "MEMBER_JOINED"
+    },
+    {
+      "group_name": "ThainMade",
+      "group_id": "Space AAAAWuLJuX8",
+      "membership_state": "MEMBER_JOINED"
+    },
+    {
+      "group_name": "FCF",
+      "group_id": "Space AAAAzgrfZk0",
+      "membership_state": "MEMBER_JOINED"
+    },
+    {
+      "group_name": "Sophia\u0027s Celebration of Life",
+      "group_id": "Space AAQA0GX7ajI",
+      "membership_state": "MEMBER_JOINED"
+    },
+    {
+      "group_name": "Celebration of Life",
+      "group_id": "Space AAQA4eq2VRI",
+      "membership_state": "MEMBER_JOINED"
+    }
+  ]
+}

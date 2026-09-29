@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Transferred from admin@thainmade.com
+X-WR-TIMEZONE:UTC
+X-WR-CALDESC:On April 16\, 2024\, 6:00:21 AM UTC\, Google Workspace process
+ ed a request from frank@clintonfernandez.com (frank@clintonfernandez.com) t
+ o transfer ownership of Calendar events from admin@thainmade.com (admin@tha
+ inmade.com) to frank@clintonfernandez.com (frank@clintonfernandez.com).
+BEGIN:VEVENT
+DTSTART:20250423T040000Z
+DTEND:20250423T050000Z
+DTSTAMP:20260307T095322Z
+ORGANIZER;CN=Transferred from admin@thainmade.com:mailto:c_8d6b9ba98c81a7ad
+ 713aebbb76ccbe0dd024da64950afccb1bf2ac675e459cc8@group.calendar.google.com
+UID:q6esi30q0p6omeb797lt0mgskk@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=sh
+ aroncrouch@me.com;X-NUM-GUESTS=0:mailto:sharoncrouch@me.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/aci-vgcc-pjs
+CREATED:20250423T030402Z
+DESCRIPTION:Bring your membership card and identification and plan to allow
+  for time for parking and possible pre-appointment tasks. Wear a well-fitte
+ d mask if you have cold or flu symptoms or if COVID-19 levels are medium or
+  high in your community.\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nJoin with Google Meet: https://me
+ et.google.com/aci-vgcc-pjs\nOr dial: (US) +1 401-315-8498 PIN: 193864861#\n
+ More phone numbers: https://tel.meet/aci-vgcc-pjs?pin=2173695864857&hs=7\n\
+ nLearn more about Meet at: https://support.google.com/a/users/answer/928272
+ 0\n\nPlease do not edit this section.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20250423T030402Z
+LOCATION:2288 Auburn Blvd  Sacramento\, Ca 95821-1618
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Office visit with Sukhjit Singh-johl
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

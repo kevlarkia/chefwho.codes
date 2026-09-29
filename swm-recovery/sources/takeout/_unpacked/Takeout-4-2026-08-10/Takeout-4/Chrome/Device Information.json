@@ -1,0 +1,141 @@
+{
+    "Device Info": [
+        {
+            "sync_user_agent": "Chrome MAC 145.0.7632.117 (de4e5d6e13b995f5e04137970c0e8ec456017467-refs/branch-heads/7632@{#3101}) channel(stable)",
+            "device_type": "TYPE_MAC",
+            "chrome_version_info": {"version_number": "145.0.7632.117"},
+            "signin_scoped_device_id": "57f674c8-e75d-4c31-a7ad-489f950f0313",
+            "manufacturer": "Apple Inc.",
+            "cache_guid": "XGovVjkPeXtpaiGP9+m9yg==",
+            "device_form_factor": "DEVICE_FORM_FACTOR_DESKTOP",
+            "pulse_interval_in_minutes": 1440,
+            "feature_fields": {
+                        "send_tab_to_self_receiving_type": "SEND_TAB_RECEIVING_TYPE_CHROME_OR_UNSPECIFIED",
+                        "desktop_to_ios_promo_receiving_enabled": false,
+                        "send_tab_to_self_receiving_enabled": true
+            },
+            "invalidation_fields": {
+                        "instance_id_token": "dGDX6Ndb4eo:APA91bFN_9cBhZnaF7L6W66VTUD-s87Z6_mF8Y-jTY_B0ePUXEG1mWp_u19mJwSF_YiPoOvxiJRGt4wQIpYgotrpCEXa3oaEXxwCfArMBado-TQnVK_VkQ4",
+                        "interested_data_type_ids": [
+                                    32904,
+                                    37702,
+                                    45873,
+                                    1164238,
+                                    306270,
+                                    330441,
+                                    774329,
+                                    1033580,
+                                    41210,
+                                    48119,
+                                    88610,
+                                    50119,
+                                    96159,
+                                    150251,
+                                    154522,
+                                    163425,
+                                    411028,
+                                    601980,
+                                    673225,
+                                    1004874,
+                                    895275,
+                                    1141935,
+                                    1419865,
+                                    1438954,
+                                    1520954,
+                                    47745
+                        ]
+            },
+            "os_type": "OS_TYPE_MAC",
+            "last_updated_timestamp": 1772768880347,
+            "model": "Mac16,12",
+            "client_name": "MBA-AFStyle-Holdings",
+            "chrome_version": "145.0.7632.117"
+},
+        {
+            "sync_user_agent": "Chrome IOS-PHONE 145.0.7632.108 (41d16af42e7d306a8f0850216e163451cd510ffa-refs/branch-heads/7632@{#2903}) channel(stable)",
+            "device_type": "TYPE_PHONE",
+            "chrome_version_info": {"version_number": "145.0.7632.108"},
+            "signin_scoped_device_id": "782e731e-7a35-4826-9601-7997daa4beca",
+            "manufacturer": "Apple Inc.",
+            "cache_guid": "0cW0vKzqqXBgG967rCc1Og==",
+            "device_form_factor": "DEVICE_FORM_FACTOR_PHONE",
+            "pulse_interval_in_minutes": 1440,
+            "feature_fields": {
+                        "send_tab_to_self_receiving_type": "SEND_TAB_RECEIVING_TYPE_CHROME_OR_UNSPECIFIED",
+                        "desktop_to_ios_promo_receiving_enabled": false,
+                        "send_tab_to_self_receiving_enabled": true
+            },
+            "invalidation_fields": {
+                        "instance_id_token": "eWRMPiN_jQ8:APA91bFWWJNdw79Ps3le8Hueo1Q_Rb3-5doG0sYTp4ezgGCu5-r7lvFKCM2XTY5B6bdDBBvbCaX6MdPZ4AW-dXeLJRIa1XDK827G5SbQzb4KtKha-LYA4Gk",
+                        "interested_data_type_ids": [
+                                    32904,
+                                    37702,
+                                    45873,
+                                    1164238,
+                                    306270,
+                                    330441,
+                                    774329,
+                                    50119,
+                                    150251,
+                                    154522,
+                                    163425,
+                                    411028,
+                                    601980,
+                                    1004874,
+                                    895275,
+                                    1141935,
+                                    1239418,
+                                    1259076,
+                                    1429255,
+                                    47745
+                        ]
+            },
+            "os_type": "OS_TYPE_IOS",
+            "last_updated_timestamp": 1772856166842,
+            "model": "iPhone18,1",
+            "client_name": "iPhone",
+            "chrome_version": "145.0.7632.108"
+},
+        {
+            "sync_user_agent": "Chrome MAC 145.0.7632.160 (662e0d7961bd91ebe77fe6c52f369e45647af51c-refs/branch-heads/7632@{#3674}) channel(stable)",
+            "device_type": "TYPE_MAC",
+            "chrome_version_info": {"version_number": "145.0.7632.160"},
+            "signin_scoped_device_id": "c00e17e8-43bc-4896-835a-6664c4adebba",
+            "manufacturer": "Apple Inc.",
+            "cache_guid": "p8PlOMxypakcXUTjjbTk1Q==",
+            "device_form_factor": "DEVICE_FORM_FACTOR_DESKTOP",
+            "pulse_interval_in_minutes": 1440,
+            "feature_fields": {
+                        "send_tab_to_self_receiving_type": "SEND_TAB_RECEIVING_TYPE_CHROME_OR_UNSPECIFIED",
+                        "desktop_to_ios_promo_receiving_enabled": false,
+                        "send_tab_to_self_receiving_enabled": true
+            },
+            "invalidation_fields": {
+                        "instance_id_token": "cq1vmY0r-bk:APA91bH6_3lbAdSn9C9BbvTSVZaknaMp79lGebbx5dmIlpAIj76XTaf-RZ4uXj1mh-sGl9hBagZ7lQaDA2sFEfCp0OM5HUJilevKnRVY4RTb5znxp0JF9UY",
+                        "interested_data_type_ids": [
+                                    37702,
+                                    45873,
+                                    1164238,
+                                    306270,
+                                    1033580,
+                                    41210,
+                                    88610,
+                                    154522,
+                                    163425,
+                                    601980,
+                                    895275,
+                                    1141935,
+                                    1419865,
+                                    1438954,
+                                    1520954,
+                                    47745
+                        ]
+            },
+            "os_type": "OS_TYPE_MAC",
+            "last_updated_timestamp": 1772868538534,
+            "model": "Mac16,12",
+            "client_name": "Mac16,12",
+            "chrome_version": "145.0.7632.160"
+}
+    ]
+}

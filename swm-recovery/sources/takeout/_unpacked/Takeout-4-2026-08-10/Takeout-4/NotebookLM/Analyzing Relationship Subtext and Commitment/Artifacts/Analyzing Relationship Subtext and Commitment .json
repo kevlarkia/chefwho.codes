@@ -1,0 +1,18 @@
+{
+  "title": "Analyzing Relationship Subtext and Commitment",
+  "type": "ARTIFACT_TYPE_AUDIO_OVERVIEW",
+  "sources": [{
+    "sourceId": {
+      "id": "d07854e9-e8f2-46bb-8259-b6990ef5a870"
+    }
+  }, {
+    "sourceId": {
+      "id": "0dcb125c-9238-43a4-bbd2-aaab0d2c40bf"
+    }
+  }, {
+    "sourceId": {
+      "id": "b9e20ab8-e4b1-4791-9d73-c5fc0b611a9b"
+    }
+  }],
+  "status": "ARTIFACT_STATUS_READY"
+}

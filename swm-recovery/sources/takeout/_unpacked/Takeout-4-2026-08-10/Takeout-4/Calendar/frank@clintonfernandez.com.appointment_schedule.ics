@@ -1,0 +1,117 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+X-WR-CALNAME:frank@clintonfernandez.com
+X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VEVENT
+DTSTART:20260302T170000Z
+DTEND:20260303T010000Z
+RRULE:FREQ=WEEKLY;BYDAY=MO
+DTSTAMP:20260225T061509Z
+UID:0lcted9g3vst806u73it7683ig0@google.com
+X-GOOGLE-EID:0lcted9g3vst806u73it7683ig0
+CREATED:20260225T061509Z
+DESCRIPTION:Settings:\nType: Appointment schedule\nAppointment duration (in
+  minutes): 30\nScheduling window: 60 days in advance to 4 hours before\nBuf
+ fer time (in minutes): Not set\nMaximum bookings per day: Not set\nLocation
+  and conferencing: Meet\nScheduling conflicts: Avoid\nBooking form: First n
+ ame\; Last name\; Email\;\nBooking confirmations and reminders: 24 hr befor
+ e meeting\; \nCo-hosts: Not set\nCalendars checked for availability: frank@
+ clintonfernandez.com\nPrice: Not set\nCancellation policy: Not set\nGuest p
+ ermissions: Not set\nVisibility on Calendar: Visible
+LAST-MODIFIED:20260225T061509Z
+SEQUENCE:0
+STATUS:TENTATIVE
+SUMMARY:30 min with FC
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260224T170000Z
+DTEND:20260225T010000Z
+RRULE:FREQ=WEEKLY;BYDAY=TU
+DTSTAMP:20260225T061509Z
+UID:0lcted9g3vst806u73it7683ig1@google.com
+X-GOOGLE-EID:0lcted9g3vst806u73it7683ig1
+CREATED:20260225T061509Z
+DESCRIPTION:Settings:\nType: Appointment schedule\nAppointment duration (in
+  minutes): 30\nScheduling window: 60 days in advance to 4 hours before\nBuf
+ fer time (in minutes): Not set\nMaximum bookings per day: Not set\nLocation
+  and conferencing: Meet\nScheduling conflicts: Avoid\nBooking form: First n
+ ame\; Last name\; Email\;\nBooking confirmations and reminders: 24 hr befor
+ e meeting\; \nCo-hosts: Not set\nCalendars checked for availability: frank@
+ clintonfernandez.com\nPrice: Not set\nCancellation policy: Not set\nGuest p
+ ermissions: Not set\nVisibility on Calendar: Visible
+LAST-MODIFIED:20260225T061509Z
+SEQUENCE:0
+STATUS:TENTATIVE
+SUMMARY:30 min with FC
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260225T170000Z
+DTEND:20260226T010000Z
+RRULE:FREQ=WEEKLY;BYDAY=WE
+DTSTAMP:20260225T061509Z
+UID:0lcted9g3vst806u73it7683ig2@google.com
+X-GOOGLE-EID:0lcted9g3vst806u73it7683ig2
+CREATED:20260225T061509Z
+DESCRIPTION:Settings:\nType: Appointment schedule\nAppointment duration (in
+  minutes): 30\nScheduling window: 60 days in advance to 4 hours before\nBuf
+ fer time (in minutes): Not set\nMaximum bookings per day: Not set\nLocation
+  and conferencing: Meet\nScheduling conflicts: Avoid\nBooking form: First n
+ ame\; Last name\; Email\;\nBooking confirmations and reminders: 24 hr befor
+ e meeting\; \nCo-hosts: Not set\nCalendars checked for availability: frank@
+ clintonfernandez.com\nPrice: Not set\nCancellation policy: Not set\nGuest p
+ ermissions: Not set\nVisibility on Calendar: Visible
+LAST-MODIFIED:20260225T061509Z
+SEQUENCE:0
+STATUS:TENTATIVE
+SUMMARY:30 min with FC
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260226T170000Z
+DTEND:20260227T010000Z
+RRULE:FREQ=WEEKLY;BYDAY=TH
+DTSTAMP:20260225T061509Z
+UID:0lcted9g3vst806u73it7683ig3@google.com
+X-GOOGLE-EID:0lcted9g3vst806u73it7683ig3
+CREATED:20260225T061509Z
+DESCRIPTION:Settings:\nType: Appointment schedule\nAppointment duration (in
+  minutes): 30\nScheduling window: 60 days in advance to 4 hours before\nBuf
+ fer time (in minutes): Not set\nMaximum bookings per day: Not set\nLocation
+  and conferencing: Meet\nScheduling conflicts: Avoid\nBooking form: First n
+ ame\; Last name\; Email\;\nBooking confirmations and reminders: 24 hr befor
+ e meeting\; \nCo-hosts: Not set\nCalendars checked for availability: frank@
+ clintonfernandez.com\nPrice: Not set\nCancellation policy: Not set\nGuest p
+ ermissions: Not set\nVisibility on Calendar: Visible
+LAST-MODIFIED:20260225T061509Z
+SEQUENCE:0
+STATUS:TENTATIVE
+SUMMARY:30 min with FC
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260227T170000Z
+DTEND:20260228T010000Z
+RRULE:FREQ=WEEKLY;BYDAY=FR
+DTSTAMP:20260225T061509Z
+UID:0lcted9g3vst806u73it7683ig4@google.com
+X-GOOGLE-EID:0lcted9g3vst806u73it7683ig4
+CREATED:20260225T061509Z
+DESCRIPTION:Settings:\nType: Appointment schedule\nAppointment duration (in
+  minutes): 30\nScheduling window: 60 days in advance to 4 hours before\nBuf
+ fer time (in minutes): Not set\nMaximum bookings per day: Not set\nLocation
+  and conferencing: Meet\nScheduling conflicts: Avoid\nBooking form: First n
+ ame\; Last name\; Email\;\nBooking confirmations and reminders: 24 hr befor
+ e meeting\; \nCo-hosts: Not set\nCalendars checked for availability: frank@
+ clintonfernandez.com\nPrice: Not set\nCancellation policy: Not set\nGuest p
+ ermissions: Not set\nVisibility on Calendar: Visible
+LAST-MODIFIED:20260225T061509Z
+SEQUENCE:0
+STATUS:TENTATIVE
+SUMMARY:30 min with FC
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

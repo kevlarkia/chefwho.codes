@@ -1,0 +1,117 @@
+[{
+  "promotionHistory": {
+    "instanceContext": {
+      "country": "US",
+      "document": {
+        "title": "Enjoy $2 off in MONOPOLY GO"
+      },
+      "totalQuantity": "1",
+      "expiryTime": "2024-04-27T00:44:47.339Z",
+      "formattedMoney": "$100.00"
+    },
+    "promotionHistory": {
+      "promotionState": [{
+        "status": "FAILED",
+        "timestamp": "2024-03-23T02:06:52.809880Z",
+        "device": {
+          "model": "",
+          "carrier": "",
+          "manufacturer": "",
+          "deviceDisplayName": ""
+        },
+        "userCountry": "US",
+        "userLocale": {
+          "languageCode": "en_US",
+          "country": "US"
+        }
+      }, {
+        "status": "FAILED",
+        "timestamp": "2024-03-23T20:11:54.099935Z",
+        "device": {
+          "model": "",
+          "carrier": "",
+          "manufacturer": "",
+          "deviceDisplayName": ""
+        },
+        "userCountry": "US",
+        "userLocale": {
+          "languageCode": "en_US",
+          "country": "US"
+        }
+      }, {
+        "status": "FAILED",
+        "timestamp": "2024-03-23T20:14:20.412237Z",
+        "device": {
+          "model": "",
+          "carrier": "",
+          "manufacturer": "",
+          "deviceDisplayName": ""
+        },
+        "userCountry": "US",
+        "userLocale": {
+          "languageCode": "en_US",
+          "country": "US"
+        }
+      }, {
+        "status": "ACTIVE",
+        "timestamp": "2024-04-13T00:44:48.433078Z",
+        "device": {
+          "model": "",
+          "carrier": "",
+          "manufacturer": "",
+          "deviceDisplayName": ""
+        },
+        "userCountry": "US",
+        "userLocale": {
+          "languageCode": "en_US",
+          "country": "US"
+        }
+      }]
+    },
+    "lastModificationTime": "2024-04-13T00:44:48.748442Z"
+  }
+},
+{
+  "promotionHistory": {
+    "instanceContext": {
+      "country": "US",
+      "document": {
+        "title": "Enjoy $2 off in MONOPOLY GO"
+      },
+      "totalQuantity": "1",
+      "expiryTime": "2024-04-27T00:45:35.966Z"
+    },
+    "promotionHistory": {
+      "promotionState": [{
+        "status": "FAILED",
+        "timestamp": "2024-03-23T20:06:28.830151Z",
+        "device": {
+          "model": "",
+          "carrier": "",
+          "manufacturer": "",
+          "deviceDisplayName": ""
+        },
+        "userCountry": "US",
+        "userLocale": {
+          "languageCode": "en_US",
+          "country": "US"
+        }
+      }, {
+        "status": "FAILED",
+        "timestamp": "2024-03-23T20:08:13.348798Z",
+        "device": {
+          "model": "",
+          "carrier": "",
+          "manufacturer": "",
+          "deviceDisplayName": ""
+        },
+        "userCountry": "US",
+        "userLocale": {
+          "languageCode": "en_US",
+          "country": "US"
+        }
+      }]
+    },
+    "lastModificationTime": "2024-04-13T00:45:36.226377Z"
+  }
+}]
