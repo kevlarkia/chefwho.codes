@@ -1,2 +1,0 @@
-autoReplyForMembersInOrg,autoReplyForMembersOutsideOrg,autoReplyForNonMembersInOrg,autoReplyForNonMembersOutsideOrg,customReplyTo,defaultMessageDenyNotificationText,description,footerText,groupEmailAddress,name,subjectPrefix,welcomeMessage
-,,,,,,Logging-monitoring viewers have read-only access to a defined subset of both ingested logs and monitoring data.,,gcp-logging-monitoring-viewers@clintonfernandez.com,gcp-logging-monitoring-viewers,,

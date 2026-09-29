@@ -1,2 +1,0 @@
-autoReplyForMembersInOrg,autoReplyForMembersOutsideOrg,autoReplyForNonMembersInOrg,autoReplyForNonMembersOutsideOrg,customReplyTo,defaultMessageDenyNotificationText,description,footerText,groupEmailAddress,name,subjectPrefix,welcomeMessage
-,,,,,,Hybrid Connectivity administrators are responsible for creating network devices such as Cloud VPN instances and cloud routers.,,gcp-hybrid-connectivity-admins@clintonfernandez.com,gcp-hybrid-connectivity-admins,,

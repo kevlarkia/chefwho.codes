@@ -1,2 +1,0 @@
-autoReplyForMembersInOrg,autoReplyForMembersOutsideOrg,autoReplyForNonMembersInOrg,autoReplyForNonMembersOutsideOrg,customReplyTo,defaultMessageDenyNotificationText,description,footerText,groupEmailAddress,name,subjectPrefix,welcomeMessage
-,,,,,,"Security administrators are responsible for establishing and managing security policies for the entire organization, including access management and organization constraint policies",,gcp-security-admins@clintonfernandez.com,gcp-security-admins,,

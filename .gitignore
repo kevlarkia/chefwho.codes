@@ -30,6 +30,8 @@ Thumbs.db
 # SWM recovery: keep source metadata; ignore proprietary ingested originals
 swm-recovery/sources/**/content/**
 !swm-recovery/sources/**/content/README.md
+swm-recovery/sources/takeout/
+swm-recovery/tmp-alcare-chop/
 
 .vercel
 .env*
