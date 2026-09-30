@@ -31,6 +31,7 @@ they lack write access to that separate repo; see
 | Workflow lint | `actionlint` | Yes |
 | ESLint | `npm run lint` | Local / PR hygiene |
 | TypeScript | `npm run typecheck` | Local / PR hygiene |
+| Canon tests | `npm test` | Local / PR hygiene |
 | Build | `npm run build` | Local / PR hygiene |
 
 Pre-existing MD041 warning in `.github/PULL_REQUEST_TEMPLATE.md` — safe
@@ -56,6 +57,10 @@ full list. No secrets are required for local development.
 | `app/` | Next.js App Router pages and API routes |
 | `content/blog/` | Markdown blog posts |
 | `lib/` | Shared TypeScript helpers |
+| `app/canon/` | Canon two-track instrument. Live record stays in this browser |
+| `lib/canon/` | Rule, pipe, shelf, and specimen |
+| `docs/kanon-handoff-2026-09-27.md` | 27 September handoff, before the spelling was locked |
+| `docs/canon-2026-09-29.md` | Spelling locked as Canon, and the two weights |
 | `swm-recovery/` | SWM extraction suite (prompts, templates, plugin) |
 | `rose-rocket-engine/` | Mirrored AI newsletter engine + CI/test staging |
 | `docs/SYSTEMS_HEALTH.md` | Ecosystem maintenance runbook for AI + operator hygiene |
@@ -69,6 +74,13 @@ full list. No secrets are required for local development.
   locally, pass `"#node_modules"` to exclude `node_modules/`.
 - The blog `[slug]` route uses Next.js 16 async params — `params` is a
   `Promise` and must be awaited.
+- Canon is spelled Canon. The browser key remains `kanon-v1`. Do not
+  fill the acronym, the Bitcoin title, or the listening decision. A
+  fight is measured with the floor (58) and the current bar because no
+  separate cutoff was stored.
+- A Canon storage failure stays on screen. A write that throws, and a
+  write from another tab, leave the stored record in place. Standing
+  has to be a number, zero or greater. No upper cap was stored.
 - SWM brand sources are authorized but Mac-local (`/Users/fcaf/...`).
   Cloud agents cannot ingest them until the operator runs
   `swm-recovery/sources/brand-assets/INGEST_FROM_MAC.sh` and commits
