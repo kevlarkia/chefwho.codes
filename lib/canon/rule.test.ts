@@ -21,7 +21,7 @@ import {
   verifyEntry,
 } from "./record";
 import { barFor, canCarry, parseStandingInput, weigh } from "./rule";
-import { booksIn, seedShelf } from "./shelf";
+import { booksIn, mergeShelf, seedShelf } from "./shelf";
 import { specimenEntries, specimenSources } from "./specimen";
 import type { Entry, Source } from "./types";
 
@@ -417,6 +417,29 @@ test("moving a book does not remove it from the shelf", () => {
   assert.equal(
     shelf.find((book) => book.id === "book-bitcoin-starting")?.title,
     "A starting book on Bitcoin",
+  );
+  const secret = shelf.find((book) => book.title === "The Secret");
+  assert.equal(secret, undefined);
+  const mental = shelf.find((book) => book.id === "book-marco-mental-radio");
+  assert.equal(mental?.title, "Mental Radio");
+  assert.equal(mental?.author, "Upton Sinclair");
+  assert.equal(mental?.place, "to-get");
+  assert.equal(
+    shelf.filter((book) => book.title.startsWith("Perceptual Augmentation Techniques")).length,
+    1,
+  );
+  assert.equal(
+    shelf.find((book) => book.id === "book-marco-psychic-warrior")?.place,
+    "to-get",
+  );
+  assert.equal(shelf.find((book) => book.id === "book-remote-viewing")?.place, "read");
+  const ids = shelf.map((book) => book.id);
+  assert.equal(new Set(ids).size, ids.length);
+  const merged = mergeShelf(shelf.filter((book) => book.id !== "book-marco-mental-radio"));
+  assert.equal(merged.find((book) => book.id === "book-marco-mental-radio")?.place, "to-get");
+  assert.equal(
+    merged.filter((book) => book.id === "book-meditations" && book.place === "to-get").length,
+    1,
   );
   const greene = shelf.filter((book) => book.author === "Robert Greene");
   assert.deepEqual(

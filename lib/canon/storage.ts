@@ -1,5 +1,6 @@
 import { parseCopy } from "./copy";
 import { createInitialState } from "./record";
+import { mergeShelf } from "./shelf";
 import { openLocalStorage, readKey, writeKey, type KeyValueStore } from "./safe-storage";
 import type { Book, BookPlace, RecordState, Talk } from "./types";
 import { COPY_KIND, RECORD_STORAGE_KEY } from "./types";
@@ -124,7 +125,8 @@ export function parseStoredRecord(raw: string): RecordState | null {
   if (!parsed.ok) {
     return null;
   }
-  const shelf = parseShelf(stored.shelf);
+  const parsedShelf = parseShelf(stored.shelf);
+  const shelf = parsedShelf ? mergeShelf(parsedShelf) : null;
   const talks = parseTalks(stored.talks);
   if (!shelf || !talks) {
     return null;

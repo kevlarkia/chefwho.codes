@@ -1,8 +1,10 @@
+import { marcoShelf } from "./shelf-marco-2026-09-29";
 import type { Book, BookPlace } from "./types";
 
 export const LEFT_OFF_THE_SHELF = [
   "HBR Guide to Your Personal Growth was cut off at the top of the page and was not placed on either list.",
   "A trailing police fragment on that page was not part of the library. The fragment itself was not kept.",
+  "The Secret was not placed. Marco Andrade asked for a synopsis before he approves it. Looked up, and not treated as his citation: Rhonda Byrne, Atria Books/Beyond Words, 2006. The book says thought, called the law of attraction, brings what a person wants. He has not approved it.",
 ] as const;
 
 function book(
@@ -169,7 +171,13 @@ export function seedShelf(): Book[] {
       "",
       "to-get",
     ),
+    ...marcoShelf(),
   ];
+}
+
+export function mergeShelf(stored: Book[]): Book[] {
+  const seen = new Set(stored.map((item) => item.id));
+  return [...stored, ...seedShelf().filter((item) => !seen.has(item.id))];
 }
 
 export function moveBook(shelf: Book[], id: string, place: BookPlace): Book[] {
