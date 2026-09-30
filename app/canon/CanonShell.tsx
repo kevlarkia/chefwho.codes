@@ -110,8 +110,9 @@ function CanonFrame({ children }: { children: ReactNode }) {
         <p className="lede">
           Pronounced canon. Spelled Canon. The record kept under the earlier
           spelling stays in this browser. The words behind the letters stay
-          open. canon.observer is owned. Stated 30 September 2026. No registrar
-          and no price were given.
+          open. canon.observer is owned. It is registered on Cloudflare.
+          Stated 30 September 2026. The message spelled it Cloud fair. No
+          price was given. The storage door is still not switched on.
         </p>
       </header>
       <nav className="canon-rooms" aria-label="Rooms">
