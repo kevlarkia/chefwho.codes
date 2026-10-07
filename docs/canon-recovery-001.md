@@ -22,13 +22,18 @@ PRIME_DIRECTIVE_01, as stated: preserve all canonical knowledge.
 
 ## Same-day library add
 
-A Lance Eliot startup-pitch book was filed the same day. The title was
-not in this note. This note does not add a shelf line and does not
-rename one.
+A Lance Eliot startup-pitch book was filed the same day as the journey.
+The title was not in the 7 October note. This note does not add a shelf
+line and does not rename one.
 
-The shelf already holds one Lance Eliot title, from the 27 September
-handoff: Sociotechnical Insights and AI Driverless Cars, Practical
-Innovations in AI and Machine Learning.
+The shelf already holds that startup-pitch title, from Marco Andrade's
+29 September 2026 list, placed to-get: How to Win a Startup Pitch
+Competition: Successful Insights from a Topnotch Judge for Boosting
+Your Startup.
+
+The shelf also holds a second Lance Eliot title, from the 27 September
+handoff, placed read: Sociotechnical Insights and AI Driverless Cars,
+Practical Innovations in AI and Machine Learning.
 
 ## Left out
 
@@ -47,5 +52,5 @@ is in this file.
 - Part 2 v1.1
 - 24-HOUR BRIEF
 
-Paste the next body when it is in hand. A missing body is not
-reconstructed.
+The 24-HOUR BRIEF text is not a file in this repo. Paste the next body
+when it is in hand. A missing body is not reconstructed.
