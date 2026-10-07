@@ -61,7 +61,7 @@ full list. No secrets are required for local development.
 | `lib/canon/` | Rule, pipe, shelf, and specimen |
 | `docs/kanon-handoff-2026-09-27.md` | 27 September handoff, before the spelling was locked |
 | `docs/canon-2026-09-29.md` | Spelling locked as Canon, and the two weights |
-| `docs/canon-recovery-001.md` | Founding extract. Later bodies are pasted, not reconstructed |
+| `docs/canon-recovery-001.md` | Short extract. The founding body is not in this file. Later bodies are pasted, not reconstructed |
 | `swm-recovery/` | SWM extraction suite (prompts, templates, plugin) |
 | `rose-rocket-engine/` | Mirrored AI newsletter engine + CI/test staging |
 | `docs/SYSTEMS_HEALTH.md` | Ecosystem maintenance runbook for AI + operator hygiene |

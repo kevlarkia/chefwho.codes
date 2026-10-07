@@ -1,8 +1,9 @@
 # Canon recovery 001
 
-Recorded 7 October 2026. Recovery 001 is closed. The founding body was
-filed. This file holds the extract that was stated. It is not a
-reconstruction of the body.
+Recorded 7 October 2026. Recovery 001 is open. The founding body was
+not filed. This file holds the short extract that was stated: the
+name, the function, and PRIME_DIRECTIVE_01. It is not the Journey
+text.
 
 ## Source
 
