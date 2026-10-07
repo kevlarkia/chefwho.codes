@@ -84,7 +84,8 @@ npm run lint
 carry. What is not provable waits. The live record stays in this
 browser under `kanon-v1`. It is not a shared database. Decisions from
 27 and 29 September 2026 are in `docs/kanon-handoff-2026-09-27.md` and
-`docs/canon-2026-09-29.md`.
+`docs/canon-2026-09-29.md`. The founding extract is in
+`docs/canon-recovery-001.md`.
 
 ## Blog Content
 
