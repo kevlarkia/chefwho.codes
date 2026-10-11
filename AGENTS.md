@@ -56,6 +56,7 @@ full list. No secrets are required for local development.
 | `app/` | Next.js App Router pages and API routes |
 | `content/blog/` | Markdown blog posts |
 | `lib/` | Shared TypeScript helpers |
+| `voices/` | Personal writing voices. `fc-fernandez-voice.md` is FC Fernandez's voice |
 | `swm-recovery/` | SWM extraction suite (prompts, templates, plugin) |
 | `rose-rocket-engine/` | Mirrored AI newsletter engine + CI/test staging |
 | `docs/SYSTEMS_HEALTH.md` | Ecosystem maintenance runbook for AI + operator hygiene |
