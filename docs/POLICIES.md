@@ -131,6 +131,7 @@ npm run dev            # Start dev server (http://localhost:3000)
 | `app/` | Next.js App Router | Personal site UI, routes, API endpoints |
 | `content/blog/` | Markdown blog posts | Blog content only, no code |
 | `lib/` | Shared TypeScript utilities | Reusable helpers, type-safe |
+| `voices/` | Personal writing voices | Voice profiles only, not site copy and not brand standards |
 | `swm-recovery/` | SWM extraction suite | Operational recovery tooling, separate from site |
 | `rose-rocket-engine/` | Newsletter toolkit mirror | CI/pytest staging for upstream repo |
 | `docs/` | Repository documentation | Systems health, migration, policies, guides |
@@ -138,6 +139,7 @@ npm run dev            # Start dev server (http://localhost:3000)
 ### Separation of Concerns
 
 - **Personal site** (`app/`, `content/`) — Marketing presence, blog, contact form
+- **Writing voices** (`voices/`) — Personal voice profiles, kept off the public blog
 - **SWM recovery toolkit** (`swm-recovery/`) — Brand asset extraction, prompt harvesting
 - **Rose Rocket Engine** (`rose-rocket-engine/`) — Upstream mirror, cannot push directly
 - **Documentation** (`docs/`) — Cross-cutting concerns, maintenance, planning
