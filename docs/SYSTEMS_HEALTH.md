@@ -77,6 +77,9 @@ Local Mac (operator-only; cloud agents cannot see `/Users/...`):
    `swm-recovery/sources/brand-assets/INGEST_FROM_MAC.sh` when sources
    are reachable, then record a new run under `swm-recovery/runs/`.
 4. Prefer search over creating new folder taxonomies mid-session.
+5. Design scattered across lanes: on the Mac, run the prompt in
+   `docs/DESIGN_CORPUS_HUNTER.md`. The hunt writes a manifest. Files
+   move only after `Design hunt: consolidate`.
 
 Drive:
 
@@ -112,6 +115,7 @@ without opening random Desktop dumps.
 | Duplicate instruction docs | Parallel CLAUDE/AGENTS/Notion copies | Pick one canonical surface; link others |
 | Endless folder redesign | Fatigue reorganization | Archive aggressively; search > browse |
 | SWM recovery stuck | Mac paths not ingested | Operator ingest script + new run note |
+| Design files scattered across lanes | No single design drawer | Run the design corpus hunter on the Mac |
 
 ## Out of scope for this runbook
 
@@ -124,6 +128,7 @@ without opening random Desktop dumps.
 - `AGENTS.md` — this repository's agent contract
 - `kevlarkia/swm-system` → `GOVERNANCE.md` — cross-agent operating posture
 - `swm-recovery/README.md` — SWM extraction operating mode
+- `docs/DESIGN_CORPUS_HUNTER.md` — Mac design hunt and consolidate phrases
 - Notion: Personal Cognitive Charter v1.1
 - Notion: CLOUT Intake and Routing Controls
 - Notion: Fernandez Filing System v1.0

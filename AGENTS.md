@@ -59,6 +59,7 @@ full list. No secrets are required for local development.
 | `swm-recovery/` | SWM extraction suite (prompts, templates, plugin) |
 | `rose-rocket-engine/` | Mirrored AI newsletter engine + CI/test staging |
 | `docs/SYSTEMS_HEALTH.md` | Ecosystem maintenance runbook for AI + operator hygiene |
+| `docs/DESIGN_CORPUS_HUNTER.md` | Mac prompt that gathers design files into one archive drawer |
 | `docs/SWM_ENTERPRISE_MIGRATION_PLAN.md` | SWM → chefwho.codes consolidation plan under SWa Works enterprise |
 
 ### Gotchas
@@ -73,6 +74,9 @@ full list. No secrets are required for local development.
   Cloud agents cannot ingest them until the operator runs
   `swm-recovery/sources/brand-assets/INGEST_FROM_MAC.sh` and commits
   metadata (content stays gitignored).
+- The design corpus hunter (`docs/DESIGN_CORPUS_HUNTER.md`) runs on the
+  operator Mac. Cloud agents that cannot read `/Users/fcaf` stop and do
+  not invent a file list. Filing waits for `Design hunt: consolidate`.
 - Keep AI instructions truthful. If project status changes, update this
   file in the same PR — stale `AGENTS.md` is high-friction debt.
 
